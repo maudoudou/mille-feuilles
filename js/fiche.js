@@ -5,9 +5,19 @@ window.MFpret(function () {
   var q = new URLSearchParams(location.search);
   if (q.get('mini')) document.body.classList.add('mini');
   var Pq = +q.get('p') || 0;
-  var ids = q.get('id') ? q.get('id').split(',') : ['chili-con-carne', 'recette-membre'];
+  var ids = q.get('id') ? q.get('id').split(',') : ['chili-con-carne', 'cheesecake-rapide'];
   function li(it, m) { var f = U.quantite(it, m); return '<li><span><b>' + f.q + '</b> ' + U.esc(f.n) + '</span></li>'; }
+  // Recette membre : titre, accroche et invitation à la liste d'attente, rien d'autre.
+  function ficheMembre(r) {
+    var s = MF.situation(r.situation);
+    return '<article class="a4" style="--c-sit:' + s.couleur + '">' +
+      '<header class="a4-tete" style="--c:' + s.couleur + ';--ink:' + s.ink + '"><div class="haut"><span class="sit">' + U.esc(s.nom) + '</span></div><h1>' + U.esc(r.titre) + '</h1></header>' +
+      '<div class="encart" style="--c:var(--boucle-dor);margin:40px 56px"><p style="font-weight:800;font-size:24px;line-height:1.2">Une recette de l\u2019intercalaire «\u00a0' + U.esc(s.nom) + '\u00a0», réservée aux membres.</p>' +
+      '<p>L\u2019abonnement n\u2019est pas encore ouvert. Rejoignez la liste d\u2019attente, on vous écrit à l\u2019ouverture.</p>' +
+      '<a class="btn btn--encre" target="_top" href="tarifs.html#liste-attente">Rejoindre la liste d\u2019attente <span class="fl" aria-hidden="true">→</span></a></div></article>';
+  }
   function fiche(r) {
+    if (r.apercu) return ficheMembre(r);
     var P = Math.max(1, Math.min(8, Pq || r.personnesBase)), s = MF.situation(r.situation), idx = MF.TOUTES_SITUATIONS.indexOf(s), num = r.num;
     var tags = [r.batch ? 'Batch' : '', r.regime === 'vegan' ? 'Végan' : r.regime === 'vege' ? 'Végétarien' : r.regime === 'base' ? 'Avec et sans viande' : '', r.gluten ? '' : 'Sans gluten', r.saisons.length === 4 ? 'Toute l\u2019année' : ''].filter(Boolean);
     var ing = '', g = null; r.ingredients.forEach(function (it) { if (it.groupe !== g) { if (g !== null) ing += '</ul>'; g = it.groupe; ing += (g ? '<h3 style="--c:' + s.couleur + ';color:' + s.ink + '">' + U.esc(g) + '</h3>' : '') + '<ul>'; } ing += li(it, P); }); ing += '</ul>';

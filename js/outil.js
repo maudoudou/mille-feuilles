@@ -1,7 +1,7 @@
 /* Mille Feuilles · l'outil « on mange quoi ? » (recettes.html).
    Écrans par ancre : #questions, #resultats, #fiche/<id>, #semaine, #membre/<raison>.
    L'état (personnes, filtres, semaine, cases cochées) est gardé dans le navigateur.
-   L'abonnement est SIMULÉ (bouton « Devenir membre ») : à brancher sur votre paiement. */
+   L'abonnement n'est pas ouvert : les recettes membres sont de simples aperçus, et l'outil renvoie vers la liste d'attente (tarifs.html#liste-attente). */
 window.MFpret(function () {
   var app = document.getElementById('app');
   if (!app || !window.MF || !window.MFU) return;
@@ -13,6 +13,7 @@ window.MFpret(function () {
   var e = {};
   try { e = JSON.parse(localStorage.getItem(CLE)) || {}; } catch (x) { e = {}; }
   e = Object.assign({}, defaut, e);
+  e.membre = false; // efface l'ancien mode de démonstration gardé dans le navigateur
   var q = new URLSearchParams(location.search);
   if (q.get('p')) { e.p = Math.max(1, Math.min(6, +q.get('p') || 2)); e.step = 1; }
   if (q.get('sit')) { e.sit = [q.get('sit')]; }
@@ -199,8 +200,7 @@ window.MFpret(function () {
       (r.variantes && !verrou ? '<div class="chips" role="group" aria-label="Version" style="margin-top:18px">' + vb('deux', 'Les deux') + vb('viande', 'Tout avec viande') + vb('vege', 'Tout sans viande') + '</div>' : '') +
       (r.sansViande && !verrou ? '<div class="encart sans-viande" style="--c:#9599EA"><p style="font-weight:800;font-size:24px;line-height:1.15">L\u2019assiette sans viande</p>' + (r.sansViande.soeur ? '<p>Même base, sans viande&nbsp;: <a href="#fiche/' + r.sansViande.soeur + '" style="font-weight:700">' + esc(r.sansViande.titre) + ' →</a></p>' : '<p style="font-weight:700">' + esc(r.sansViande.texte) + '</p>') + '</div>' : '') +
       (verrou ?
-        '<div class="grid-2" style="margin-top:26px;align-items:start"><div class="ing"><h2>Ingrédients</h2><ul>' + groupesIng[0].items.slice(0, 3).map(function (it) { return '<li><b>' + it.q + '</b> ' + esc(it.n) + '</li>'; }).join('') + '</ul><p class="muted" style="margin-top:10px">et la suite de la fiche…</p></div>' +
-        '<div class="encart" style="--c:var(--boucle-dor)"><p style="font-weight:800;font-size:24px;line-height:1.2">Cette recette fait partie du classeur complet.</p><p>Elle est réservée aux membres, avec 449 autres. Les 50 recettes gratuites restent à vous.</p><a class="btn btn--encre" href="#membre/recette">Voir l\u2019abonnement <span class="fl" aria-hidden="true">→</span></a></div></div>' :
+        '<div class="encart" style="--c:var(--boucle-dor);margin-top:26px"><p style="font-weight:800;font-size:24px;line-height:1.2">Cette recette fait partie du classeur complet.</p><p>Elle est réservée aux membres. L\u2019abonnement n\u2019est pas encore ouvert : rejoignez la liste d\u2019attente. Les 50 recettes gratuites restent à vous.</p><a class="btn btn--encre" href="tarifs.html#liste-attente">Rejoindre la liste d\u2019attente <span class="fl" aria-hidden="true">→</span></a></div>' :
         '<div class="fiche-corps"><div class="ing"><h2>Ingrédients</h2>' + ing + '</div><div class="et"><h2>Étapes</h2>' + et + '</div></div>' +
         '<div class="row fiche-actions"><button type="button" class="btn" data-a="ajoute" data-v="' + r.id + '">' + (ajoute ? 'Ajoutée à ma semaine' : 'Ajouter à ma semaine') + '</button>' +
         '<a href="fiche.html?id=' + r.id + '&amp;p=' + P + '" style="font-weight:700">Imprimer la fiche en A4</a>' +
@@ -228,7 +228,7 @@ window.MFpret(function () {
   }
 
   function ecranMembre(raison) {
-    var T = { semaine: 'Le menu de la semaine fait partie de l\u2019abonnement.', filtres: 'Ce filtre fait partie de l\u2019abonnement.', recette: 'Cette recette fait partie de l\u2019abonnement.', tarifs: 'Devenir membre.' };
+    var T = { semaine: 'Le menu de la semaine fait partie de l\u2019abonnement.', filtres: 'Ce filtre fait partie de l\u2019abonnement.', recette: 'Cette recette fait partie de l\u2019abonnement.', tarifs: 'L\u2019abonnement n\u2019est pas encore ouvert.' };
     var an = e.formule === 'an';
     var li = function (x, c) { return '<li style="--c:' + c + '">' + x + '</li>'; };
     return '<section class="wrap ecran" data-label="e. Passage membre">' +
@@ -239,9 +239,9 @@ window.MFpret(function () {
       '<div class="encart deplie" style="--c:var(--boucle-dor);border-radius:6px 24px 24px 24px"><h2 class="t-m">Avec l\u2019abonnement</h2>' +
       '<div class="bascule" role="group" aria-label="Formule"><button type="button" class="chip" aria-pressed="' + an + '" data-a="formule" data-v="an">À l\u2019année</button><button type="button" class="chip" aria-pressed="' + !an + '" data-a="formule" data-v="mois">Au mois</button></div>' +
       '<p class="row" style="gap:6px 12px;align-items:baseline"><span style="font-weight:800;font-size:50px;line-height:1;letter-spacing:-.02em">' + (an ? '29\u00a0€' : '3,90\u00a0€') + '</span><span style="font-weight:700">' + (an ? 'par an, et le classeur PDF offert' : 'par mois') + '</span></p>' +
-      '<ul class="liste-onglets">' + ['Les 500 recettes du classeur', 'Tous les filtres, dont goûts, saison et batch', 'Le menu de la semaine, à changer d\u2019un geste', 'La liste de courses calculée et rangée par rayon', 'Vos recettes favorites'].concat(an ? ['Le classeur PDF à imprimer, offert'] : []).map(function (x) { return li(x, E); }).join('') + '</ul>' +
-      '<button type="button" class="btn btn--encre btn--plein" data-a="devenir" data-v="' + raison + '">Devenir membre <span class="fl" aria-hidden="true">→</span></button>' +
-      '<p class="small">Sans engagement. Vous arrêtez quand vous voulez, depuis votre compte.</p></div>' +
+      '<ul class="liste-onglets">' + ['Plus de 700 recettes du classeur', 'Tous les filtres, dont goûts, saison et batch', 'Le menu de la semaine, à changer d\u2019un geste', 'La liste de courses calculée et rangée par rayon', 'Vos recettes favorites'].concat(an ? ['Le classeur PDF à imprimer, offert'] : []).map(function (x) { return li(x, E); }).join('') + '</ul>' +
+      '<a class="btn btn--encre btn--plein" href="tarifs.html#liste-attente">Rejoindre la liste d\u2019attente <span class="fl" aria-hidden="true">→</span></a>' +
+      '<p class="small">On vous écrit à l\u2019ouverture de l\u2019abonnement.</p></div>' +
       '<div class="encart" style="--c:var(--blanc);border:1px solid var(--filet)"><h2 style="font-size:24px">Déjà à vous, sans compte</h2><ul class="liste-onglets">' +
       ['50 recettes, sans créer de compte', 'Les filtres situation, régime, budget, temps et allergènes', 'Les quantités ajustées au nombre de personnes', 'Les fiches à imprimer en A4', 'La feuille du jeudi, chaque semaine par email'].map(function (x) { return li(x, '#9CCBEF'); }).join('') +
       '</ul><a class="btn btn--contour" href="#resultats">Continuer gratuitement</a><p><a href="tarifs.html">Comparer toutes les offres</a></p></div></div></section>';
@@ -304,7 +304,6 @@ window.MFpret(function () {
       case 'coche': var c = Object.assign({}, e.coche); c[v] = !c[v]; return set({ coche: c });
       case 'imprimer': return window.print();
       case 'formule': return set({ formule: v });
-      case 'devenir': e.membre = true; remplirSemaine(); garde(); location.hash = v === 'semaine' || v === 'tarifs' ? 'semaine' : 'resultats'; return;
       case 'demo-gratuit': e.membre = false; garde(); location.hash = 'resultats'; return;
     }
   });

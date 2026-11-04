@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - data/recettes.json
+      - data/membres-apercu.json
       - images/recettes/**
       - scripts/generer_recettes.py
       - .github/workflows/generer-recettes.yml

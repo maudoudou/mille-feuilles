@@ -40,9 +40,23 @@
       photo: 'images/recettes/' + r.image
     };
   }
+  // Recette membre : titre et filtres seulement. Le contenu n'est jamais en ligne.
+  function apercu(r) {
+    return {
+      id: r.slug, num: r.id, titre: r.titre, type: r.type, situation: r.situation, apercu: true,
+      regime: r.situation === 'base' ? 'base' : r.regime === 'végan' ? 'vegan' : r.regime === 'végétarien' ? 'vege' : 'tout',
+      porc: !!r.contient_porc, gluten: r.allergenes.indexOf('gluten') > -1, lactose: r.allergenes.indexOf('lait') > -1,
+      allergenes: r.allergenes.map(function (a) { return ALLERG[a] || a; }),
+      budget: r.budget_portion, prep: r.temps_minutes, cuisson: 0, total: r.temps_minutes,
+      batch: false, saisons: 'peah', libre: false, note: '', notesPdf: '', personnesBase: 4,
+      ingredients: [], etapes: [], sansViande: null, photo: 'images/recettes/' + r.image
+    };
+  }
   function demarrer(doc) {
     var parId = {}; doc.recettes.forEach(function (r) { parId[r.id] = r; });
-    var R = doc.recettes.map(function (r) { return convertir(r, parId); });
+    (doc.apercus || []).forEach(function (r) { parId[r.id] = r; });
+    var R = doc.recettes.map(function (r) { return convertir(r, parId); })
+      .concat((doc.apercus || []).map(apercu)).sort(function (a, b) { return a.num - b.num; });
     var compte = {}; R.forEach(function (r) { compte[r.situation] = (compte[r.situation] || 0) + 1; });
     var S = doc.situations.map(function (s) {
       return { key: s.key, nom: s.nom, couleur: s.couleur || COUL[s.key], ink: s.key === 'budget' ? '#F8F5F4' : '#534741', question: QUESTION[s.key] || '', nombre: compte[s.key] || 0 };
@@ -54,9 +68,10 @@
     };
     pret = true; attente.splice(0).forEach(function (cb) { cb(); });
   }
-  fetch(new URL('data/recettes.json', document.currentScript ? document.currentScript.src.replace(/js\/donnees\.js.*$/, '') : location.href))
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(demarrer)
+  var base = document.currentScript ? document.currentScript.src.replace(/js\/donnees\.js.*$/, '') : location.href;
+  var lire = function (f) { return fetch(new URL(f, base)).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); };
+  Promise.all([lire('data/recettes.json'), lire('data/membres-apercu.json').catch(function () { return { recettes: [] }; })])
+    .then(function (x) { x[0].apercus = x[1].recettes; demarrer(x[0]); })
     .catch(function (e) {
       console.error('Mille Feuilles : impossible de lire data/recettes.json', e);
       var app = document.getElementById('app');

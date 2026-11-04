@@ -14,10 +14,11 @@ window.MFpret(function () {
   if (MF && U) {
     pile(document.getElementById('pile-accueil'), ['recette-membre', 'chili-con-carne', 'tartiflette'], 'toutes testées chez nous');
     pile(document.getElementById('pile-classeur'), ['dahl-de-lentilles-corails', 'tiramisu-express', 'quiche-lorraine']);
-    pile(document.getElementById('pile-produit'), ['recette-membre', 'ratatouille', 'couscous-express'], '500 comme ça');
+    pile(document.getElementById('pile-produit'), ['recette-membre', 'ratatouille', 'couscous-express'], 'plus de 700 comme ça');
     var ap = document.getElementById('apercus');
     if (ap) {
-      ap.innerHTML = [['chili-con-carne', 'Une base, deux assiettes'], ['recette-membre', 'Dimanche, on retrousse les manches'], ['dahl-de-lentilles-corails', 'Petit budget'], ['recette-membre', 'On reçoit']].map(function (x) {
+      ap.innerHTML = ['chili-con-carne', 'cheesecake-rapide', 'dahl-de-lentilles-corails', 'poulet-aux-clementines'].map(function (id) {
+        var x = [id, MF.situation(MF.recette(id).situation).nom];
         return '<figure><a href="fiche.html?id=' + x[0] + '" aria-label="Voir la fiche en grand"><div class="mini"><iframe src="fiche.html?id=' + x[0] + '&amp;mini=1" title="Aperçu de fiche" loading="lazy" tabindex="-1"></iframe></div></a><figcaption>' + x[1] + '</figcaption></figure>';
       }).join('');
       var fit = function () { ap.querySelectorAll('.mini').forEach(function (m) { var f = m.querySelector('iframe'); f.style.transform = 'scale(' + (m.clientWidth / 794) + ')'; }); };

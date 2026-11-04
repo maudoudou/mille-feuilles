@@ -30,7 +30,7 @@ Le fichier `.nojekyll` empêche GitHub de retraiter le site.
 - `js/pages.js` : piles de recettes, exemples, aperçus du classeur, formulaires d'inscription, bascule année ou mois.
 - `js/outil.js` : l'outil complet (filtres, quantités, variantes avec et sans viande, semaine, glisser pour changer, liste de courses, état gardé dans le navigateur).
 - `js/fiche.js` : construit les fiches A4 à partir des données.
-- `data/recettes.json` : la base complète du classeur : 727 recettes, 529 salées et 198 sucrées. 50 sont gratuites (40 salées, 10 sucrées). Champs : id, slug, titre, type, situation, regime, budget_portion, temps_minutes, personnes_base, batch, saison, allergenes, ingredients, etapes, version_sans_viande, gratuit, image, a_verifier. Les champs absents du PDF sont estimés et listés dans `a_verifier`.
+- `data/recettes.json` : les 50 recettes gratuites, seules publiées en entier. `data/membres-apercu.json` : titres et filtres des recettes membres, sans contenu, recalculé par le script. `recettes-membres.json` : les 677 recettes membres complètes, ignoré par Git : **ce fichier n'existe que sur cet ordinateur, sauvegardez-le**. Pour rendre une recette gratuite, déplacez-la de ce fichier vers `data/recettes.json`, puis lancez le script. Champs : id, slug, titre, type, situation, regime, budget_portion, temps_minutes, personnes_base, batch, saison, allergenes, ingredients, etapes, version_sans_viande, gratuit, image, a_verifier. Les champs absents du PDF sont estimés et listés dans `a_verifier`.
 - `photos-a-faire.csv` : suivi des photos (id, titre, nom du fichier, statut). S'ouvre dans Excel ou Numbers. À ne pas forcément mettre en ligne.
 
 ### Ressources

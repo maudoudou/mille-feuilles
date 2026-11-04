@@ -130,7 +130,23 @@ def charger():
         vus.add(r['slug'])
         if r['situation'] not in cles:
             sys.exit(f'Situation inconnue pour {r["slug"]} : {r["situation"]}')
-    return cles, doc['recettes']
+    return cles, doc['recettes'] + lire_apercus({r['slug'] for r in doc['recettes']})
+
+
+def lire_apercus(gratuits):
+    """Recettes membres réduites à leur titre et leurs filtres : ni ingrédients ni étapes.
+
+    Sur cet ordinateur, recettes-membres.json met à jour data/membres-apercu.json.
+    Sur GitHub, où ce fichier n'existe pas, l'aperçu déjà enregistré est utilisé.
+    """
+    source, cible = RACINE / 'recettes-membres.json', RACINE / 'data/membres-apercu.json'
+    if source.is_file():
+        champs = ('id', 'slug', 'titre', 'type', 'situation', 'regime', 'contient_porc', 'temps_minutes', 'budget_portion', 'allergenes', 'image')
+        membres = json.loads(source.read_text(encoding='utf-8'))['recettes']
+        lignes = [{c: r[c] for c in champs} for r in membres]
+        cible.write_text(json.dumps({'recettes': lignes}, ensure_ascii=False, indent=0) + '\n', encoding='utf-8')
+    apercus = json.loads(cible.read_text(encoding='utf-8'))['recettes'] if cible.is_file() else []
+    return [dict(r, gratuit='non') for r in apercus if r['slug'] not in gratuits]
 
 
 def a_photo(r):
@@ -237,7 +253,7 @@ def description(r, s):
 
 def voisines(r, recettes):
     """3 recettes de la même situation : les gratuites d'abord, puis les recettes membres."""
-    meme = [x for x in recettes if x['situation'] == r['situation']]
+    meme = sorted((x for x in recettes if x['situation'] == r['situation']), key=lambda x: x['id'])
     k = meme.index(r)
     tour = meme[k + 1:] + meme[:k]
     return ([x for x in tour if libre(x)] + [x for x in tour if not libre(x)])[:NB_LIENS]
