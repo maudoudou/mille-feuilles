@@ -1,6 +1,0 @@
-/* Bases du document : fond Pot au Lait, texte Encre, liens Encre soulignés. */
-body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-sans);font-size:var(--size-body);line-height:var(--leading-body);-webkit-font-smoothing:antialiased;text-wrap:pretty}
-a{color:var(--link);text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1.5px;transition:color var(--duration-hover) ease}
-a:hover{color:var(--encre-hover)}
-::selection{background:var(--selection);color:var(--encre)}
-:focus-visible{outline:none;box-shadow:var(--focus-ring);border-radius:6px}

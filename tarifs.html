@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tarifs · Mille Feuilles</title>
+<meta name="description" content="Gratuit pour commencer. L'abonnement Mille Feuilles : 500 recettes, menu de la semaine et liste de courses, 29 € par an.">
+<link rel="icon" href="assets/monogramme.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam&amp;display=swap">
+<link rel="stylesheet" href="css/mille-feuilles.css">
+<script src="data/recettes.js" defer></script>
+<script src="js/commun.js" defer></script>
+<script src="js/pages.js" defer></script>
+</head>
+<body>
+<header class="wrap entete">
+  <a class="lien" href="recettes.html">Recettes</a>
+  <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo src="assets/logo.svg" alt="mille feuilles" height="60"></a>
+  <a class="lien" href="index.html">Accueil</a>
+</header>
+<main>
+<section class="wrap" style="padding-top:clamp(12px,3vw,40px);padding-bottom:40px">
+  <h1 class="t-xl" style="font-size:clamp(46px,9vw,84px);max-width:13ch">Gratuit pour commencer.</h1>
+  <p class="chapo" style="margin-top:16px;max-width:36ch">Cinquante recettes sans compte. L'abonnement, quand vous voulez tout le classeur et le menu de la semaine.</p>
+  <div class="grid-2" style="margin-top:clamp(28px,5vw,48px);align-items:start">
+    <article class="deplie stack" style="gap:0;background:var(--boucle-dor);border-radius:6px 28px 28px 28px;padding:clamp(26px,5vw,48px)" data-tarif>
+      <h2 style="font-size:clamp(32px,4.6vw,42px)">Membre</h2>
+      <div role="group" aria-label="Formule" class="bascule" style="margin-top:20px">
+        <button type="button" class="chip" aria-pressed="true" data-formule="an">À l'année</button>
+        <button type="button" class="chip" aria-pressed="false" data-formule="mois">Au mois</button>
+      </div>
+      <p class="row" style="margin-top:22px;gap:6px 12px;align-items:baseline"><span data-prix style="font-weight:800;font-size:clamp(54px,8vw,70px);line-height:1;letter-spacing:-.03em">29&nbsp;€</span><span data-prix-sous style="font-weight:700;font-size:19px">par an, soit 2,42&nbsp;€ par mois</span></p>
+      <ul class="liste-onglets" style="margin-top:22px">
+        <li>Les 500 recettes du classeur</li>
+        <li>Tous les filtres, dont goûts, saison et batch cooking</li>
+        <li>Le menu de la semaine, à changer d'un geste</li>
+        <li>La liste de courses calculée et rangée par rayon</li>
+        <li>Vos recettes favorites</li>
+        <li data-an-seul>Le classeur PDF à imprimer, offert</li>
+      </ul>
+      <a class="btn btn--encre btn--plein" style="margin-top:28px" href="recettes.html#membre/tarifs">Devenir membre <span class="fl" aria-hidden="true">→</span></a>
+      <p class="small" style="margin-top:12px">Sans engagement. Vous arrêtez quand vous voulez, depuis votre compte.</p>
+      <span class="note" style="margin-top:18px">à l'année, le classeur papier est dans le prix</span>
+    </article>
+    <div>
+      <div class="offre-ligne" style="--c:var(--bleuet)"><h3><i aria-hidden="true"></i>Gratuit</h3><span class="prix">0&nbsp;€</span><p>50 recettes, les filtres situation, régime, budget, temps et allergènes, et les quantités ajustées. Sans compte, sans carte.</p><a href="recettes.html">Chercher un repas →</a></div>
+      <div class="offre-ligne" style="--c:var(--praline)"><h3><i aria-hidden="true"></i>Le classeur PDF</h3><span class="prix">24,90&nbsp;€</span><p>Les 500 recettes à imprimer, avec intercalaires, planning et liste de courses. Une fois, sans abonnement.</p><a href="classeur.html">Voir le classeur →</a></div>
+      <div class="offre-ligne" style="--c:var(--haricot)"><h3><i aria-hidden="true"></i>La feuille du jeudi</h3><span class="prix">0&nbsp;€</span><p>Chaque jeudi par email, un menu de la semaine et sa liste de courses.</p><a href="feuille-du-jeudi.html">S'inscrire →</a></div>
+    </div>
+  </div>
+</section>
+<section class="wrap section" style="padding-top:clamp(32px,5vw,56px)">
+  <h2 class="t-m" style="margin-bottom:18px">Ce qui change avec l'abonnement</h2>
+  <div style="overflow-x:auto">
+    <table class="comparatif">
+      <thead><tr><th scope="col"><span class="visually-hidden">Fonction</span></th><th scope="col">Gratuit</th><th scope="col" class="membre">Membre</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Recettes</th><td>50</td><td class="membre">500</td></tr>
+        <tr><th scope="row">Filtres situation, régime, budget, temps, allergènes</th><td>Oui</td><td class="membre">Oui</td></tr>
+        <tr><th scope="row">Quantités de 1 à 6 personnes</th><td>Oui</td><td class="membre">Oui</td></tr>
+        <tr><th scope="row">Fiches à imprimer en A4</th><td>Oui</td><td class="membre">Oui</td></tr>
+        <tr><th scope="row">Filtres goûts, saison, batch cooking</th><td>Non</td><td class="membre">Oui</td></tr>
+        <tr><th scope="row">Menu de la semaine</th><td>Non</td><td class="membre">Oui</td></tr>
+        <tr><th scope="row">Liste de courses automatique</th><td>Non</td><td class="membre">Oui</td></tr>
+        <tr><th scope="row">Classeur PDF offert</th><td>Non</td><td class="membre">À l'année</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="wrap" style="padding-bottom:clamp(56px,8vw,96px)">
+  <h2 class="t-m" style="margin-bottom:12px">Vos questions</h2>
+  <div class="faq">
+    <details><summary>Faut-il un compte pour les recettes gratuites&nbsp;?</summary><p>Non. Vous filtrez, vous ouvrez une fiche, vous cuisinez. Le compte ne sert qu'à l'abonnement.</p></details>
+    <details><summary>Comment arrêter l'abonnement&nbsp;?</summary><p>Depuis votre compte, en un clic. Vous gardez l'accès jusqu'à la fin de la période payée.</p></details>
+    <details><summary>Le classeur offert, je le reçois quand&nbsp;?</summary><p>Dès la souscription à l'année, par email, en PDF à imprimer.</p></details>
+    <details><summary>J'ai déjà acheté le classeur. Et maintenant&nbsp;?</summary><p>Il reste à vous. L'abonnement ajoute l'outil&nbsp;: filtres, menu de la semaine et liste de courses.</p></details>
+  </div>
+</section>
+</main>
+<footer class="pied">
+  <div class="wrap pied-grille">
+    <div class="stack">
+      <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo="lait" src="assets/logo-lait.svg" alt="mille feuilles" height="64"></a>
+      <p style="max-width:40ch">Une collection de Studio Mille Pages, le studio de mise en page de Maud Lenoir, à Rouen. Chaque recette a été cuisinée chez nous.</p>
+      <a href="https://studiomillepages.fr" style="font-weight:700">Voir le studio →</a>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="recettes.html">Recettes</a><a href="tarifs.html">Tarifs</a><a href="classeur.html">Le classeur</a><a href="feuille-du-jeudi.html">La feuille du jeudi</a><a href="mailto:bonjour@studiomillepages.fr">Contact</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

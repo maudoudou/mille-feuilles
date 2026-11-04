@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La feuille du jeudi · Mille Feuilles</title>
+<meta name="description" content="Chaque jeudi, un menu de la semaine et sa liste de courses, par email. Gratuit.">
+<link rel="icon" href="assets/monogramme.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam&amp;display=swap">
+<link rel="stylesheet" href="css/mille-feuilles.css">
+<script src="data/recettes.js" defer></script>
+<script src="js/commun.js" defer></script>
+<script src="js/pages.js" defer></script>
+</head>
+<body>
+<header class="wrap entete">
+  <a class="lien" href="recettes.html">Recettes</a>
+  <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo src="assets/logo.svg" alt="mille feuilles" height="60"></a>
+  <a class="lien" href="index.html">Accueil</a>
+</header>
+<main>
+<section class="wrap" style="padding-top:clamp(12px,3vw,40px);padding-bottom:clamp(56px,8vw,96px)">
+  <div class="grid-2" style="align-items:start">
+    <div class="stack" style="gap:0">
+      <h1 class="t-xl" style="font-size:clamp(52px,10vw,92px)">La feuille du jeudi.</h1>
+      <p class="chapo" style="margin-top:18px">Chaque jeudi matin, le menu de la semaine qui vient et sa liste de courses. Gratuit, par email.</p>
+      <div style="margin-top:28px;max-width:500px;border:1.5px solid var(--filet-fort);border-radius:24px"><form class="stack" data-newsletter action="#" method="post" style="background:var(--lait);border-radius:24px;padding:clamp(24px,4vw,34px)">
+        <div class="stack" data-avant>
+          <label class="champ" for="nl-jeudi">Votre adresse email<input id="nl-jeudi" name="email" type="email" required autocomplete="email" placeholder="prenom@exemple.fr"></label>
+          <button class="btn btn--plein" type="submit">Recevoir la feuille du jeudi</button>
+          <p class="small">Un email par semaine, le jeudi matin. Un clic en bas de chaque feuille pour vous désinscrire.</p>
+        </div>
+        <div class="stack" data-apres hidden>
+          <p style="font-weight:800;font-size:28px;line-height:1.15">Inscription notée.</p>
+          <p>Un email de confirmation vient de partir. Cliquez sur le lien, et la première feuille arrive jeudi.</p>
+        </div>
+      </form></div>
+      <span class="note" style="margin-top:24px">le jeudi, pour avoir le temps des courses</span>
+    </div>
+    <div class="stack">
+      <h2 class="t-m">Dans chaque feuille</h2>
+      <ul class="tabs" style="max-width:none">
+        <li style="--i:0"><div class="tab-sit" style="--c:var(--boucle-dor);--i:0;font-size:21px"><span>Le menu de la semaine<small>Cinq dîners, chacun sous son intercalaire, et un dessert du dimanche.</small></span></div></li>
+        <li style="--i:1"><div class="tab-sit" style="--c:var(--bleuet);--i:1;font-size:21px"><span>La liste de courses<small>Triée par rayon, à imprimer ou à garder sur le téléphone.</small></span></div></li>
+        <li style="--i:2"><div class="tab-sit" style="--c:var(--guimauve);--i:2;font-size:21px"><span>Un mot de ma part<small>Ce qu'on a mangé chez nous, ce qui a raté, ce qui a plu.</small></span></div></li>
+        <li style="--i:3"><div class="tab-sit" style="--c:var(--haricot);--i:3;font-size:21px"><span>Une recette à goûter<small>Tirée de l'abonnement, pour l'essayer avant.</small></span></div></li>
+      </ul>
+      <p style="margin-top:10px"><a href="email/feuille-du-jeudi.html">Lire une feuille en exemple</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied">
+  <div class="wrap pied-grille">
+    <div class="stack">
+      <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo="lait" src="assets/logo-lait.svg" alt="mille feuilles" height="64"></a>
+      <p style="max-width:40ch">Une collection de Studio Mille Pages, le studio de mise en page de Maud Lenoir, à Rouen. Chaque recette a été cuisinée chez nous.</p>
+      <a href="https://studiomillepages.fr" style="font-weight:700">Voir le studio →</a>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="recettes.html">Recettes</a><a href="tarifs.html">Tarifs</a><a href="classeur.html">Le classeur</a><a href="feuille-du-jeudi.html">La feuille du jeudi</a><a href="mailto:bonjour@studiomillepages.fr">Contact</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

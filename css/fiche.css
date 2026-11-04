@@ -1,0 +1,52 @@
+/* Mille Feuilles · fiche recette A4 (fiche.html). 210 × 297 mm, une recette par page. */
+@page{size:A4;margin:0}
+.page-fiche{background:#E6E0DD}
+.barre{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;max-width:794px;margin:0 auto;padding:20px 16px}
+.feuilles{display:flex;flex-direction:column;align-items:center;gap:40px;padding:0 0 60px}
+.mini .barre{display:none}
+.mini .feuilles{padding:0;gap:0}
+.mini.page-fiche{background:#fff;overflow:hidden}
+.a4{position:relative;width:794px;height:1123px;flex:none;display:flex;flex-direction:column;background:#fff;overflow:hidden;font-size:16px;line-height:1.5;color:var(--encre)}
+.a4-tete{position:relative;background:var(--c);color:var(--ink);padding:44px 300px 34px 56px;min-height:330px;display:flex;flex-direction:column;gap:14px}
+.a4-tete .haut{display:flex;align-items:center;gap:14px}
+.a4-tete .sit{display:inline-block;padding:6px 18px 6px 14px;border-radius:0 14px 14px 0;background:var(--lait);color:var(--encre);font-weight:800;font-size:16px}
+.a4-tete .num{font-family:var(--serif);font-size:30px;line-height:1}
+.a4-tete h1{font-size:44px;line-height:1;letter-spacing:-.035em}
+.a4-tete .meta{display:flex;flex-wrap:wrap;gap:4px 22px;font-weight:700;font-size:19px}
+.a4-tete .meta b{font-weight:400}
+.a4-tete .tags{display:flex;flex-wrap:wrap;gap:6px}
+.a4-tete .tags span{padding:2px 12px;border-radius:999px;background:var(--lait);color:var(--encre);font-weight:700;font-size:13px}
+.a4-photo{position:absolute;right:56px;top:46px;width:228px;height:270px;transform:rotate(3deg);border:8px solid #fff;border-radius:4px;background:#fff}
+.a4-photo .photo{aspect-ratio:auto;height:100%;--c:var(--lait)!important}
+.a4-photo .attente{color:var(--encre)!important;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:10px}
+.a4-photo .attente .feuilles{width:70%}
+.a4-photo .attente .feuilles i{height:22px;background:var(--c-sit)!important;opacity:1!important}
+.a4-photo .ruban{position:absolute;left:50%;top:-16px;width:90px;height:26px;margin-left:-45px;background:var(--boucle-dor);opacity:.85;transform:rotate(-4deg)}
+.a4-corps{padding:30px 74px 0 56px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px}
+.a4-corps h2{font-size:19px;letter-spacing:-.01em;margin-bottom:8px}
+.a4-ing{background:var(--lait);border-radius:18px;padding:20px 22px}
+.a4-ing ul{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-direction:column;gap:5px;font-size:15px;line-height:1.35}
+.a4-ing li{display:flex;gap:9px;align-items:baseline}
+.a4-ing li::before{content:"";flex:none;width:12px;height:12px;border:1.5px solid var(--encre);border-radius:3px;transform:translateY(1px)}
+.a4-ing h3,.a4-et h3{display:inline-block;margin:10px 0 6px;padding:3px 12px 3px 9px;border-radius:0 10px 10px 0;background:var(--c);font-size:15px;letter-spacing:0}
+.a4-et ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.a4-et li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.a4-et .n{flex:none;display:grid;place-items:center;width:32px;height:27px;border-radius:0 9px 9px 0;background:var(--c);font-weight:800;font-size:15px}
+.a4-note{margin-top:20px;font-size:24px}
+.a4-tabs{position:absolute;right:0;top:360px;width:20px;display:flex;flex-direction:column;gap:4px}
+.a4-tabs i{display:block;height:58px;border-radius:7px 0 0 7px;background:var(--c)}
+.a4-tabs i.ici{width:34px;margin-left:-14px}
+.a4-pied{margin:14px 56px 30px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-top:16px;border-top:1px solid var(--filet)}
+.a4-pied svg{height:46px;width:auto}
+.a4-pied .sign{font-size:13px;text-align:right;line-height:1.4}
+.a4-pied .sign b{display:block;font-size:14px}
+@media print{
+  .page-fiche{background:#fff}
+  .feuilles{gap:0;padding:0}
+  .a4{break-after:page;page-break-after:always}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media (max-width:820px){.feuilles{zoom:var(--z,1)}}
+.a4-notes{flex:1;min-height:0;margin:26px 74px 0 56px;overflow:hidden;display:flex;flex-direction:column}
+.a4-notes h2{font-family:var(--main);font-weight:400;font-size:24px;letter-spacing:0;transform:rotate(-1.5deg);transform-origin:left;margin-bottom:4px}
+.a4-notes i{display:block;flex:none;height:34px;border-bottom:1px solid var(--filet-fort)}

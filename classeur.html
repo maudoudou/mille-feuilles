@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Le classeur Mille Feuilles · 500 recettes à imprimer</title>
+<meta name="description" content="Le classeur Mille Feuilles : 500 recettes rangées par situation, intercalaires, planning et liste de courses. PDF A4, 24,90 €.">
+<link rel="icon" href="assets/monogramme.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam&amp;display=swap">
+<link rel="stylesheet" href="css/mille-feuilles.css">
+<script src="data/recettes.js" defer></script>
+<script src="js/commun.js" defer></script>
+<script src="js/pages.js" defer></script>
+</head>
+<body>
+<header class="wrap entete">
+  <a class="lien" href="index.html">Accueil</a>
+  <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo src="assets/logo.svg" alt="mille feuilles" height="60"></a>
+  <a class="lien" href="recettes.html">Recettes</a>
+</header>
+<main>
+<section class="wrap" style="padding-top:clamp(12px,3vw,40px);padding-bottom:clamp(48px,7vw,88px)">
+  <div class="grid-2">
+    <div class="pile" id="pile-produit"></div>
+    <div class="stack" style="gap:0">
+      <h1 class="serif" style="font-size:clamp(46px,7vw,76px);line-height:1">Le classeur Mille&nbsp;Feuilles</h1>
+      <p class="chapo" style="margin-top:16px">500 recettes de tous les jours, rangées par situation, pour ne plus se demander chaque soir ce qu'on mange.</p>
+      <dl class="fiche-produit">
+        <dt>Contenu</dt><dd>500 recettes, 7 intercalaires, planning, liste de courses</dd>
+        <dt>Format</dt><dd>PDF A4 en couleur, une recette par page</dd>
+        <dt>Lecture</dt><dd>Imprimé, sur tablette ou sur téléphone</dd>
+        <dt>Envoi</dt><dd>Par email, juste après le paiement</dd>
+      </dl>
+      <div class="row" style="margin-top:28px"><span style="font-weight:800;font-size:50px;line-height:1;letter-spacing:-.02em">24,90&nbsp;€</span><a class="btn" href="#acheter" data-achat>Acheter le classeur <span class="fl" aria-hidden="true">→</span></a></div>
+      <p class="small" style="margin-top:14px">Paiement sécurisé par carte. Le fichier est à vous, sans abonnement. Offert avec l'abonnement annuel.</p>
+    </div>
+  </div>
+</section>
+<section style="background:var(--violet)">
+  <div class="wrap section">
+    <h2 class="t-l" style="max-width:16ch">Feuilletez quelques pages.</h2>
+    <p style="margin-top:12px;font-weight:700;font-size:19px;max-width:40ch">De vraies fiches du classeur, telles que vous les imprimerez.</p>
+    <div class="apercus" id="apercus"></div>
+    <span class="note" style="margin-top:20px">chaque recette tient sur une seule page</span>
+  </div>
+</section>
+<section class="wrap section">
+  <h2 class="t-l" style="max-width:18ch;margin-bottom:clamp(24px,4vw,36px)">Ce qu'il y a derrière chaque intercalaire.</h2>
+  <ul class="tabs">
+    <li style="--i:0"><a class="tab-sit" href="recettes.html?sit=chrono#resultats" style="--c:#F4CC71;--ink:#534741;--i:0"><span>20 minutes chrono<small>Il faut aller vite</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:1"><a class="tab-sit" href="recettes.html?sit=frigo#resultats" style="--c:#9CCBEF;--ink:#534741;--i:1"><span>Frigo presque vide<small>Le frigo fait la tête</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:2"><a class="tab-sit" href="recettes.html?sit=base#resultats" style="--c:#9599EA;--ink:#534741;--i:2"><span>Une base, deux assiettes<small>Avec et sans viande, à la même table</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:3"><a class="tab-sit" href="recettes.html?sit=manches#resultats" style="--c:#FF8FC2;--ink:#534741;--i:3"><span>Dimanche, on retrousse les manches<small>Brioches, tartes, gâteaux, pain</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:4"><a class="tab-sit" href="recettes.html?sit=recoit#resultats" style="--c:#62B47E;--ink:#534741;--i:4"><span>On reçoit<small>Tout se prépare avant la sonnette</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:5"><a class="tab-sit" href="recettes.html?sit=reconfort#resultats" style="--c:#F6AA95;--ink:#534741;--i:5"><span>Réconfort<small>Les plats doudous des soirs gris</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:6"><a class="tab-sit" href="recettes.html?sit=budget#resultats" style="--c:#534741;--ink:#F8F5F4;--i:6"><span>Petit budget<small>Bien manger avec presque rien</small></span><span aria-hidden="true">→</span></a></li>
+  </ul>
+  <div class="grid-2" style="margin-top:clamp(40px,6vw,64px);align-items:start;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+    <div class="stack"><h3 class="t-m" style="font-size:24px">Sur chaque fiche</h3><p>Portions, temps, budget par portion, ingrédients, étapes numérotées, et une note de ma part quand elle aide.</p></div>
+    <div class="stack"><h3 class="t-m" style="font-size:24px">Le planning de la semaine</h3><p>Une page à remplir le jeudi&nbsp;: un dîner par soir, piochés dans les intercalaires. À réimprimer autant que vous voulez.</p></div>
+    <div class="stack"><h3 class="t-m" style="font-size:24px">La liste de courses</h3><p>Rangée par rayon, avec deux colonnes&nbsp;: ce qu'il reste, ce qu'il faut acheter.</p><span class="note">on la colle sur le frigo</span></div>
+  </div>
+</section>
+<section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
+  <h2 class="t-l" style="margin-bottom:16px">Avant d'acheter.</h2>
+  <div class="faq">
+    <details><summary>Je reçois un livre papier&nbsp;?</summary><p>Non, un PDF envoyé par email juste après le paiement. Vous l'enregistrez sur votre téléphone ou votre ordinateur, et il est à vous.</p></details>
+    <details><summary>Comment l'imprimer&nbsp;?</summary><p>En A4, chez vous ou en reprographie, en couleur ou en noir et blanc. Vous pouvez n'imprimer qu'un intercalaire, ou une seule recette.</p></details>
+    <details><summary>Ça se lit bien sur téléphone&nbsp;?</summary><p>Oui. Une recette tient sur une page, en caractères assez grands pour la lire posée sur le plan de travail.</p></details>
+    <details><summary>Et si je mange peu de viande&nbsp;?</summary><p>Chaque intercalaire a ses recettes végétariennes. L'intercalaire «&nbsp;Une base, deux assiettes&nbsp;» sert les deux à la même table.</p></details>
+  </div>
+  <div class="emplacement">Emplacement réservé aux avis de lecteurs. À remplir avec de vrais retours.</div>
+</section>
+<section style="background:var(--boucle-dor)">
+  <div class="wrap row" style="justify-content:space-between;padding-top:clamp(44px,7vw,80px);padding-bottom:clamp(44px,7vw,80px)">
+    <div class="stack"><h2 class="t-l">500 réponses à «&nbsp;on mange quoi&nbsp;?&nbsp;»</h2><p style="font-size:20px">PDF A4, envoyé par email. 24,90&nbsp;€, une seule fois.</p></div>
+    <a class="btn btn--encre" href="#acheter" data-achat>Acheter le classeur <span class="fl" aria-hidden="true">→</span></a>
+  </div>
+</section>
+</main>
+<footer class="pied">
+  <div class="wrap pied-grille">
+    <div class="stack">
+      <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo="lait" src="assets/logo-lait.svg" alt="mille feuilles" height="64"></a>
+      <p style="max-width:40ch">Une collection de Studio Mille Pages, le studio de mise en page de Maud Lenoir, à Rouen. Chaque recette a été cuisinée chez nous.</p>
+      <a href="https://studiomillepages.fr" style="font-weight:700">Voir le studio →</a>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="recettes.html">Recettes</a><a href="tarifs.html">Tarifs</a><a href="classeur.html">Le classeur</a><a href="feuille-du-jeudi.html">La feuille du jeudi</a><a href="mailto:bonjour@studiomillepages.fr">Contact</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

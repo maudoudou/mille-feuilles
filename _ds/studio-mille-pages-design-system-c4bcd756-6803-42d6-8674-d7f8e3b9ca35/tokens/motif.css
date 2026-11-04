@@ -1,5 +1,0 @@
-/* Le motif du pli : animation de dépliage, de gauche à droite, pli par pli (~0,4 s). */
-@keyframes smp-pli-deplie{0%{transform:scaleX(0);opacity:0}100%{transform:scaleX(1);opacity:1}}
-@media (prefers-reduced-motion:reduce){
-  [data-smp-plis] *{animation:none !important;transform:none !important;opacity:1 !important}
-}

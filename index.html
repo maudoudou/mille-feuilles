@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mille Feuilles · On mange quoi ?</title>
+<meta name="description" content="Des recettes de tous les jours, rangées par situation : 20 minutes chrono, frigo presque vide, une base deux assiettes. Gratuit pour commencer.">
+<link rel="icon" href="assets/monogramme.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam&amp;display=swap">
+<link rel="stylesheet" href="css/mille-feuilles.css">
+<script src="data/recettes.js" defer></script>
+<script src="js/commun.js" defer></script>
+<script src="js/pages.js" defer></script>
+</head>
+<body>
+<header class="wrap entete">
+  <a class="lien" href="recettes.html">Recettes</a>
+  <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo src="assets/logo.svg" alt="mille feuilles" height="60"></a>
+  <a class="lien" href="tarifs.html">Tarifs</a>
+</header>
+<main>
+<section class="wrap" style="padding-top:clamp(12px,3vw,40px);padding-bottom:clamp(48px,7vw,88px)">
+  <div class="grid-2">
+    <div class="stack" style="gap:0">
+      <h1 class="t-xl">On mange quoi&nbsp;?</h1>
+      <p class="chapo" style="margin-top:clamp(18px,3vw,28px)">Dites-nous combien vous êtes et quel genre de soir c'est. Mille Feuilles vous propose des recettes testées à la maison, avec les bonnes quantités et la liste de courses.</p>
+      <div class="deplie" style="margin-top:28px;background:var(--boucle-dor);border-radius:6px 24px 24px 24px;padding:clamp(22px,4vw,32px)">
+        <p style="font-weight:800;font-size:clamp(26px,4vw,32px);line-height:1.1;letter-spacing:-.02em">Vous êtes combien ce soir&nbsp;?</p>
+        <div style="margin-top:18px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px" class="nb-pers">
+          <a href="recettes.html?p=1#questions" aria-label="1 personne" style="display:grid;place-items:center;min-height:64px;border-radius:16px;background:var(--lait);text-decoration:none;font-weight:800;font-size:28px">1</a>
+          <a href="recettes.html?p=2#questions" aria-label="2 personnes" style="display:grid;place-items:center;min-height:64px;border-radius:16px;background:var(--lait);text-decoration:none;font-weight:800;font-size:28px">2</a>
+          <a href="recettes.html?p=3#questions" aria-label="3 personnes" style="display:grid;place-items:center;min-height:64px;border-radius:16px;background:var(--lait);text-decoration:none;font-weight:800;font-size:28px">3</a>
+          <a href="recettes.html?p=4#questions" aria-label="4 personnes" style="display:grid;place-items:center;min-height:64px;border-radius:16px;background:var(--lait);text-decoration:none;font-weight:800;font-size:28px">4</a>
+          <a href="recettes.html?p=5#questions" aria-label="5 personnes" style="display:grid;place-items:center;min-height:64px;border-radius:16px;background:var(--lait);text-decoration:none;font-weight:800;font-size:28px">5</a>
+          <a href="recettes.html?p=6#questions" aria-label="6 personnes" style="display:grid;place-items:center;min-height:64px;border-radius:16px;background:var(--lait);text-decoration:none;font-weight:800;font-size:28px">6</a>
+        </div>
+        <p class="small" style="margin-top:14px;font-weight:700">Gratuit, sans compte. 50 recettes pour commencer.</p>
+      </div>
+    </div>
+    <div class="pile" id="pile-accueil" aria-label="Trois recettes au hasard"></div>
+  </div>
+</section>
+
+<section class="wrap section" style="padding-top:clamp(24px,4vw,48px)">
+  <h2 class="t-l" style="max-width:16ch">Ou partez de votre soirée.</h2>
+  <p style="margin:12px 0 clamp(24px,4vw,36px);max-width:46ch">Les recettes ne sont pas rangées par ingrédient, mais par situation, derrière sept intercalaires de couleur.</p>
+  <ul class="tabs">
+    <li style="--i:0"><a class="tab-sit" href="recettes.html?sit=chrono#resultats" style="--c:#F4CC71;--ink:#534741;--i:0"><span>20 minutes chrono<small>Il faut aller vite</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:1"><a class="tab-sit" href="recettes.html?sit=frigo#resultats" style="--c:#9CCBEF;--ink:#534741;--i:1"><span>Frigo presque vide<small>Le frigo fait la tête</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:2"><a class="tab-sit" href="recettes.html?sit=base#resultats" style="--c:#9599EA;--ink:#534741;--i:2"><span>Une base, deux assiettes<small>Avec et sans viande, à la même table</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:3"><a class="tab-sit" href="recettes.html?sit=manches#resultats" style="--c:#FF8FC2;--ink:#534741;--i:3"><span>Dimanche, on retrousse les manches<small>Brioches, tartes, gâteaux, pain</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:4"><a class="tab-sit" href="recettes.html?sit=recoit#resultats" style="--c:#62B47E;--ink:#534741;--i:4"><span>On reçoit<small>Tout se prépare avant la sonnette</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:5"><a class="tab-sit" href="recettes.html?sit=reconfort#resultats" style="--c:#F6AA95;--ink:#534741;--i:5"><span>Réconfort<small>Les plats doudous des soirs gris</small></span><span aria-hidden="true">→</span></a></li>
+    <li style="--i:6"><a class="tab-sit" href="recettes.html?sit=budget#resultats" style="--c:#534741;--ink:#F8F5F4;--i:6"><span>Petit budget<small>Bien manger avec presque rien</small></span><span aria-hidden="true">→</span></a></li>
+  </ul>
+</section>
+
+<section class="section" style="background:var(--blanc)">
+  <div class="wrap">
+    <div class="row" style="justify-content:space-between;align-items:flex-end">
+      <h2 class="t-l" style="max-width:14ch">Ce soir, par exemple.</h2>
+      <a href="recettes.html#resultats" style="font-weight:700">Toutes les recettes →</a>
+    </div>
+    <ul class="cartes" id="exemples-accueil" style="margin-top:20px"></ul>
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="t-l" style="margin-bottom:clamp(24px,4vw,40px)">Comment ça marche.</h2>
+  <ol class="etapes">
+    <li style="--i:0"><span class="num" style="--c:var(--boucle-dor)">1</span><div><h3>Répondez à quelques questions.</h3><p>Combien vous êtes, quel genre de soir, quel budget. Ou passez directement aux filtres.</p></div></li>
+    <li style="--i:1"><span class="num" style="--c:var(--bleuet)">2</span><div><h3>Choisissez une recette.</h3><p>Les quantités sont calculées pour votre foyer. Pour les couples qui ne mangent pas pareil, la version avec et sans viande est sur la même fiche.</p></div></li>
+    <li style="--i:2"><span class="num" style="--c:var(--guimauve)">3</span><div><h3>Composez votre semaine.</h3><p>Avec l'abonnement, sept dîners à changer d'un geste, et la liste de courses rangée par rayon.</p></div></li>
+  </ol>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(40px,6vw,72px)">
+  <div style="background:var(--violet);border-radius:28px;padding:clamp(26px,5vw,52px)" class="grid-2">
+    <div class="stack">
+      <h2 class="t-l" style="max-width:14ch">Tout le classeur, et le menu de la semaine.</h2>
+      <p style="font-weight:700;max-width:40ch">500 recettes, tous les filtres, sept dîners prêts et la liste de courses calculée. À l'année, le classeur PDF est offert.</p>
+    </div>
+    <div class="stack" style="align-items:flex-start;background:var(--lait);border-radius:22px;padding:clamp(22px,4vw,32px)">
+      <p class="row" style="gap:6px 12px;align-items:baseline"><span style="font-weight:800;font-size:52px;line-height:1;letter-spacing:-.03em">29&nbsp;€</span><span style="font-weight:700">par an, ou 3,90&nbsp;€ par mois</span></p>
+      <a class="btn btn--encre" href="tarifs.html">Voir les tarifs <span class="fl" aria-hidden="true">→</span></a>
+      <p class="small">Les 50 recettes gratuites restent gratuites.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
+  <div class="grid-2">
+    <div class="pile" id="pile-classeur" style="aspect-ratio:5/4"></div>
+    <div class="stack">
+      <h2 class="serif t-l">Le classeur, sur papier</h2>
+      <p style="max-width:40ch">Les 500 recettes en PDF à imprimer, avec les intercalaires de couleur, le planning de la semaine et la liste de courses à compléter.</p>
+      <p class="row"><span style="font-weight:800;font-size:32px">24,90&nbsp;€</span><a href="classeur.html" style="font-weight:700;font-size:19px">Voir le classeur →</a></p>
+      <span class="note">on l'a imprimé, perforé, et il vit sur l'étagère</span>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bleuet)">
+  <div class="wrap section grid-2" style="align-items:start">
+    <div class="stack">
+      <h2 class="t-l" style="max-width:12ch">La feuille du jeudi.</h2>
+      <p style="font-size:20px;max-width:34ch">Chaque jeudi matin, un menu pour la semaine qui vient et sa liste de courses. Le jeudi, pour avoir le temps des courses du week-end. Gratuit.</p>
+      <a href="email/feuille-du-jeudi.html" style="font-weight:700">Lire une feuille en exemple →</a>
+    </div>
+    <form class="stack" data-newsletter action="#" method="post" style="background:var(--lait);border-radius:24px;padding:clamp(24px,4vw,34px)">
+        <div class="stack" data-avant>
+          <label class="champ" for="nl-accueil">Votre adresse email<input id="nl-accueil" name="email" type="email" required autocomplete="email" placeholder="prenom@exemple.fr"></label>
+          <button class="btn btn--encre btn--plein" type="submit">Recevoir la feuille du jeudi</button>
+          <p class="small">Un email par semaine, le jeudi matin. Un clic en bas de chaque feuille pour vous désinscrire.</p>
+        </div>
+        <div class="stack" data-apres hidden>
+          <p style="font-weight:800;font-size:28px;line-height:1.15">Inscription notée.</p>
+          <p>Un email de confirmation vient de partir. Cliquez sur le lien, et la première feuille arrive jeudi.</p>
+        </div>
+      </form>
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="t-l" style="margin-bottom:16px">Vos questions.</h2>
+  <div class="faq">
+    <details><summary>Qui écrit les recettes&nbsp;?</summary><p>Moi, Maud. Elles viennent du classeur que j'ai construit pour notre couple, et chacune a été cuisinée chez nous.</p></details>
+    <details><summary>Je peux utiliser l'outil sans payer&nbsp;?</summary><p>Oui. 50 recettes, les filtres de base et les quantités ajustées sont gratuits, sans compte.</p></details>
+    <details><summary>Ça se lit bien dans la cuisine, sur téléphone&nbsp;?</summary><p>C'est pensé pour ça&nbsp;: gros caractères, une étape par ligne, des boutons faciles à toucher avec les mains pleines de farine.</p></details>
+    <details><summary>Je préfère le papier.</summary><p>Le classeur PDF à imprimer existe toujours, à 24,90&nbsp;€, sans abonnement. Chaque fiche de l'outil s'imprime aussi en A4.</p></details>
+    <details><summary>Je peux l'offrir&nbsp;?</summary><p>Oui. Le classeur PDF s'offre par email, ou imprimé et glissé dans un vrai classeur.</p></details>
+  </div>
+</section>
+</main>
+<footer class="pied">
+  <div class="wrap pied-grille">
+    <div class="stack">
+      <a class="logo" href="index.html" aria-label="mille feuilles, accueil"><img data-logo="lait" src="assets/logo-lait.svg" alt="mille feuilles" height="64"></a>
+      <p style="max-width:40ch">Une collection de Studio Mille Pages, le studio de mise en page de Maud Lenoir, à Rouen. Chaque recette a été cuisinée chez nous.</p>
+      <a href="https://studiomillepages.fr" style="font-weight:700">Voir le studio →</a>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="recettes.html">Recettes</a><a href="tarifs.html">Tarifs</a><a href="classeur.html">Le classeur</a><a href="feuille-du-jeudi.html">La feuille du jeudi</a><a href="mailto:bonjour@studiomillepages.fr">Contact</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
