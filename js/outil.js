@@ -2,13 +2,13 @@
    Écrans par ancre : #questions, #resultats, #fiche/<id>, #semaine, #membre/<raison>.
    L'état (personnes, filtres, semaine, cases cochées) est gardé dans le navigateur.
    L'abonnement est SIMULÉ (bouton « Devenir membre ») : à brancher sur votre paiement. */
-(function () {
+window.MFpret(function () {
   var app = document.getElementById('app');
   if (!app || !window.MF || !window.MFU) return;
   var MF = window.MF, U = window.MFU, E = '#534741', L = '#F8F5F4';
   var JOURS = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
   var CLE = 'mf-outil-v1';
-  var defaut = { p: 2, step: 0, sit: [], budget: null, regime: 'tout', temps: null, sg: false, sl: false, allerg: [], mode: null, saison: null, exclus: [],
+  var defaut = { p: 2, step: 0, plat: null, sit: [], budget: null, regime: 'tout', temps: null, sg: false, sl: false, allerg: [], mode: null, saison: null, exclus: [],
     filtres: false, variant: 'deux', fp: null, semaine: [], coche: {}, membre: false, formule: 'an', ajoute: null };
   var e = {};
   try { e = JSON.parse(localStorage.getItem(CLE)) || {}; } catch (x) { e = {}; }
@@ -24,6 +24,7 @@
 
   /* ---------- filtres ---------- */
   function correspond(r, sansSit) {
+    if (e.plat && r.type !== (e.plat === 'sucre' ? 'sucré' : 'salé')) return false;
     if (!sansSit && e.sit.length && e.sit.indexOf(r.situation) < 0) return false;
     if (e.regime === 'vegetarien' && !(r.regime === 'vege' || r.regime === 'vegan' || r.regime === 'base')) return false;
     if (e.regime === 'vegan' && !(r.regime === 'vegan')) return false;
@@ -51,11 +52,11 @@
 
   /* ---------- semaine ---------- */
   function poolSemaine() {
-    var p = MF.RECETTES.filter(function (r) { return r.situation !== 'manches' && correspond(r, true); });
-    return p.length >= 7 ? p : MF.RECETTES.filter(function (r) { return r.situation !== 'manches'; });
+    var p = MF.RECETTES.filter(function (r) { return r.type !== 'sucré' && correspond(r, true) && (e.membre || r.libre); });
+    return p.length >= 7 ? p : MF.RECETTES.filter(function (r) { return r.type !== 'sucré'; });
   }
   function remplirSemaine() {
-    var pref = ['couscous-express', 'curry-patates-douces', 'chili', 'lentilles-saucisses', 'dahl', 'bourguignon-vege', 'recette-membre'];
+    var pref = ['couscous-express', 'recette-membre', 'chili-con-carne', 'recette-membre', 'dahl-de-lentilles-corails', 'recette-membre', 'recette-membre'];
     var pool = poolSemaine();
     e.semaine = pref.every(function (id) { return pool.some(function (r) { return r.id === id; }); }) ? pref : JOURS.map(function (d, i) { return pool[i % pool.length].id; });
     garde();
@@ -70,7 +71,7 @@
   }
   function courses() {
     var tot = {}, ordre = [];
-    function add(it, m) { var k = it.n + '|' + it.u; if (!tot[k]) { tot[k] = { it: it, q: 0 }; ordre.push(k); } tot[k].q += it.q * m; }
+    function add(it, m) { if (/^(eau|sel|poivre|sel (&|et) poivre)\b/i.test(it.n)) return; if (it.q == null) { var kk = 'x|' + it.n; if (!tot[kk]) { tot[kk] = { it: it, q: null }; ordre.push(kk); } return; } var k = it.n + '|' + it.u; if (!tot[k]) { tot[k] = { it: it, q: 0 }; ordre.push(k); } tot[k].q += it.q * m; }
     e.semaine.forEach(function (id) {
       var r = MF.recette(id); if (!r) return;
       r.ingredients.forEach(function (it) { add(it, e.p); });
@@ -78,7 +79,7 @@
     });
     return MF.RAYONS.map(function (ray) {
       return { rayon: ray, items: ordre.filter(function (k) { return tot[k].it.rayon === ray; }).map(function (k) {
-        var f = U.quantite(Object.assign({}, tot[k].it, { q: tot[k].q }), 1); return { k: k, q: f.q, n: f.n, on: !!e.coche[k] };
+        var f = tot[k].q == null ? { q: '', n: tot[k].it.n } : U.quantite(Object.assign({}, tot[k].it, { q: tot[k].q }), 1); return { k: k, q: f.q, n: f.n, on: !!e.coche[k] };
       }) };
     }).filter(function (g) { return g.items.length; });
   }
@@ -96,9 +97,9 @@
     var s = MF.situation(r.situation), verrou = !r.libre && !e.membre;
     return '<li class="carte" style="--c:' + s.couleur + '"><a href="#fiche/' + r.id + '" style="--i:' + Math.min(i, 10) + '">' + U.cadrePhoto(r, s) +
       '<div class="corps"><span class="sit">' + esc(s.nom) + '</span><h3>' + esc(r.titre) + '</h3>' +
-      '<span class="meta"><span>' + r.prep + ' min</span><span>' + U.euro(r.budget) + ' / pers.</span><span>pour ' + e.p + '</span></span>' +
+      '<span class="meta"><span>' + r.total + ' min</span><span>' + U.euro(r.budget) + ' / pers.</span><span>pour ' + e.p + '</span></span>' +
       (verrou ? '<span class="pastille">Recette membre</span>' : '') +
-      (r.note && !verrou && i < 8 ? '<span class="note">' + esc(r.note) + '</span>' : '') + '</div></a></li>';
+      (r.note && !verrou && i < 3 ? '<span class="note">' + esc(r.note) + '</span>' : '') + '</div></a></li>';
   }
 
   /* ---------- écrans ---------- */
@@ -129,6 +130,7 @@
   function groupes() {
     var m = e.membre;
     var G = [
+      ['Salé ou sucré', [chip('Salé', e.plat === 'sale', 'f-plat', 'sale'), chip('Sucré', e.plat === 'sucre', 'f-plat', 'sucre')]],
       ['Situation', MF.SITUATIONS.map(function (s) { return chip(s.nom, e.sit.indexOf(s.key) > -1, 'f-sit', s.key, false, s.couleur); })],
       ['Régime', [['tout', 'Tout'], ['flexitarien', 'Flexitarien'], ['vegetarien', 'Végétarien'], ['vegan', 'Végan'], ['sansporc', 'Sans porc']].map(function (b) { return chip(b[1], e.regime === b[0], 'f-regime', b[0]); }).concat([chip('Sans gluten', e.sg, 'f-sg', 1), chip('Sans lactose', e.sl, 'f-sl', 1)])],
       ['Budget par portion', [['b1', 'Moins de 2 €'], ['b2', '2 à 4 €'], ['b3', 'Plus de 4 €']].map(function (b) { return chip(b[1], e.budget === b[0], 'f-budget', b[0]); })],
@@ -146,6 +148,7 @@
   function ecranResultats() {
     var res = resultats(), libres = res.filter(function (r) { return r.libre; }).length;
     var actifs = [];
+    if (e.plat) actifs.push([e.plat === 'sucre' ? 'Sucré' : 'Salé', 'f-plat', e.plat]);
     e.sit.forEach(function (k) { actifs.push([MF.situation(k).nom, 'f-sit', k]); });
     if (e.regime !== 'tout') actifs.push([{ flexitarien: 'Flexitarien', vegetarien: 'Végétarien', vegan: 'Végan', sansporc: 'Sans porc' }[e.regime], 'f-regime', 'tout']);
     if (e.budget) actifs.push([{ b1: 'Moins de 2 €', b2: '2 à 4 €', b3: 'Plus de 4 €' }[e.budget], 'f-budget', e.budget]);
@@ -170,7 +173,8 @@
 
   function ecranFiche(id) {
     var r = MF.recette(id) || MF.RECETTES[0], s = MF.situation(r.situation), P = e.fp || e.p, verrou = !r.libre && !e.membre;
-    var groupesIng = [{ t: '', items: r.ingredients.map(function (it) { return U.quantite(it, P); }) }];
+    var groupesIng = []; r.ingredients.forEach(function (it) { var g = groupesIng[groupesIng.length - 1]; if (!g || g.t !== it.groupe) { g = { t: it.groupe || '', items: [] }; groupesIng.push(g); } g.items.push(U.quantite(it, P)); });
+    if (!groupesIng.length) groupesIng.push({ t: '', items: [] });
     var groupesEt = [{ t: r.variantes ? 'La base commune' : '', st: r.etapes }];
     if (r.variantes) {
       var nv = e.variant === 'deux' ? Math.ceil(P / 2) : e.variant === 'viande' ? P : 0, ng = P - nv;
@@ -193,6 +197,7 @@
       '<div class="row" style="justify-content:space-between;margin-top:22px"><div class="row" style="gap:10px"><span style="font-weight:700">Pour</span>' + compteur('fpers', pW(P)) + '</div>' +
       (r.note && !verrou ? '<span class="note">' + esc(r.note) + '</span>' : '') + '</div>' +
       (r.variantes && !verrou ? '<div class="chips" role="group" aria-label="Version" style="margin-top:18px">' + vb('deux', 'Les deux') + vb('viande', 'Tout avec viande') + vb('vege', 'Tout sans viande') + '</div>' : '') +
+      (r.sansViande && !verrou ? '<div class="encart sans-viande" style="--c:#9599EA"><p style="font-weight:800;font-size:24px;line-height:1.15">L\u2019assiette sans viande</p>' + (r.sansViande.soeur ? '<p>Même base, sans viande&nbsp;: <a href="#fiche/' + r.sansViande.soeur + '" style="font-weight:700">' + esc(r.sansViande.titre) + ' →</a></p>' : '<p style="font-weight:700">' + esc(r.sansViande.texte) + '</p>') + '</div>' : '') +
       (verrou ?
         '<div class="grid-2" style="margin-top:26px;align-items:start"><div class="ing"><h2>Ingrédients</h2><ul>' + groupesIng[0].items.slice(0, 3).map(function (it) { return '<li><b>' + it.q + '</b> ' + esc(it.n) + '</li>'; }).join('') + '</ul><p class="muted" style="margin-top:10px">et la suite de la fiche…</p></div>' +
         '<div class="encart" style="--c:var(--boucle-dor)"><p style="font-weight:800;font-size:24px;line-height:1.2">Cette recette fait partie du classeur complet.</p><p>Elle est réservée aux membres, avec 449 autres. Les 50 recettes gratuites restent à vous.</p><a class="btn btn--encre" href="#membre/recette">Voir l\u2019abonnement <span class="fl" aria-hidden="true">→</span></a></div></div>' :
@@ -268,7 +273,8 @@
     var a = b.getAttribute('data-a'), v = b.getAttribute('data-v');
     switch (a) {
       case 'q-p': return suivante({ p: +v });
-      case 'q-sit': return suivante({ sit: v ? [v] : [] });
+      case 'q-sit': return suivante({ sit: v ? [v] : [], plat: v === 'manches' ? 'sucre' : v ? 'sale' : null });
+      case 'f-plat': return set({ plat: e.plat === v ? null : v });
       case 'q-budget': return suivante({ budget: v || null });
       case 'q-regime': return suivante({ regime: v });
       case 'q-temps': return suivante({ temps: v ? +v : null });
@@ -287,7 +293,7 @@
       case 'f-mode': return set({ mode: e.mode === v ? null : v });
       case 'f-saison': return set({ saison: e.saison === v ? null : v });
       case 'f-exclus': return set({ exclus: bascule(e.exclus, v) });
-      case 'raz': return set({ sit: [], budget: null, regime: 'tout', temps: null, sg: false, sl: false, allerg: [], mode: null, saison: null, exclus: [] });
+      case 'raz': return set({ plat: null, sit: [], budget: null, regime: 'tout', temps: null, sg: false, sl: false, allerg: [], mode: null, saison: null, exclus: [] });
       case 'membre': location.hash = 'membre/' + v; return;
       case 'variant': return set({ variant: v });
       case 'ajoute': if (!e.membre) { location.hash = 'membre/semaine'; return; } e.semaine[6] = v; e.anim = 6; return set({ ajoute: v });
@@ -321,4 +327,4 @@
   app.addEventListener('pointercancel', function () { if (drag) { drag.el.style.transform = ''; drag = null; } });
 
   rendre();
-})();
+});

@@ -45,9 +45,10 @@
     }).join(' ');
   }
   function quantite(it, mult) {
+    if (it.q == null) return { q: '', n: it.n };
     var q = it.q * mult, de = voy.test(it.n) ? 'd\u2019' : 'de ';
     if (it.u === 'g' || it.u === 'ml') { var r = q < 50 ? Math.round(q / 5) * 5 : Math.round(q / 10) * 10; if (r >= 1000 && it.u === 'g') return { q: (r / 1000).toString().replace('.', ',') + '\u00a0kg', n: de + it.n }; return { q: (r || 5) + '\u00a0' + it.u, n: de + it.n }; }
-    if (it.u) { var u = Math.round(q * 2) / 2 || .5; return { q: FR(u) + '\u00a0' + (u > 1 && it.u === 'tranche' ? 'tranches' : it.u), n: de + it.n }; }
+    if (it.u) { var u = Math.round(q * 2) / 2 || .5; return { q: FR(u) + '\u00a0' + (u > 1 && !/^(càs|càc|cm)$/.test(it.u) && !/[sx]$/.test(it.u) ? (/(eau|al)$/.test(it.u) ? it.u.replace(/al$/, 'au') + 'x' : it.u + 's') : it.u), n: de + it.n }; }
     var k = Math.ceil(q * 2) / 2; return { q: FR(k), n: plur(it.n, k) };
   }
   function euro(v) { return v.toFixed(2).replace('.', ',') + '\u00a0€'; }
@@ -56,7 +57,7 @@
   function cadrePhoto(r, sit, extra) {
     return '<div class="photo ' + (extra || '') + '" style="--c:' + sit.couleur + ';--ink:' + sit.ink + '">' +
       '<img src="' + r.photo + '" alt="' + esc(r.titre) + '" loading="lazy" onload="this.parentNode.classList.add(\'a-img\')" onerror="this.remove()">' +
-      '<div class="attente" aria-hidden="true"><span class="feuilles"><i></i><i></i><i></i></span><span>photo à venir</span></div></div>';
+      '<div class="attente" aria-hidden="true"><b>' + esc(r.titre) + '</b><span>' + esc(sit.nom) + '</span></div></div>';
   }
   function maj(root) { logos(root); notes(root); photos(root); }
   window.MFU = { logoSVG: logoSVG, maj: maj, quantite: quantite, euro: euro, duree: duree, esc: esc, cadrePhoto: cadrePhoto };

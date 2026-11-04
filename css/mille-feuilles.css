@@ -99,12 +99,9 @@ p{margin:0}
 .photo{position:relative;aspect-ratio:4/3;background:var(--c,var(--boucle-dor));overflow:hidden}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;color:transparent;transition:opacity .3s var(--ease)}
 .photo.a-img img{opacity:1}
-.photo .attente{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:space-between;padding:14px 16px;color:var(--ink,var(--encre))}
-.photo .attente .feuilles{display:flex;flex-direction:column;gap:4px;width:42%}
-.photo .attente .feuilles i{display:block;height:14px;border-radius:0 8px 8px 0;background:var(--lait)}
-.photo .attente .feuilles i:nth-child(2){margin-left:12%;opacity:.75}
-.photo .attente .feuilles i:nth-child(3){margin-left:24%;opacity:.5}
-.photo .attente span{font-size:14px;font-weight:700}
+.photo .attente{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:clamp(14px,4%,22px);color:var(--ink,var(--encre));overflow:hidden}
+.photo .attente b{font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:.98;letter-spacing:-.035em;text-wrap:balance;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.photo .attente span{align-self:flex-start;padding:3px 12px 3px 9px;border-radius:0 10px 10px 0;background:var(--lait);color:var(--encre);font-size:14px;font-weight:700}
 .photo.a-img .attente{display:none}
 
 /* Champs et pastilles de filtre */
@@ -224,7 +221,8 @@ input[type=email],input[type=text]{width:100%;min-height:58px;padding:14px 18px;
 .fiche-meta b{font-weight:400}
 .fiche-photo{aspect-ratio:auto;min-height:260px;background:var(--lait)}
 .fiche-photo .attente{color:var(--encre)}
-.fiche-photo .attente .feuilles i{background:var(--c)}
+.fiche-photo .attente b{font-size:clamp(30px,4vw,46px)}
+.fiche-photo .attente span{background:var(--c);color:var(--ink)}
 .fiche-corps{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(24px,4vw,56px);align-items:start}
 .ing h2,.et h2{font-size:26px;margin-bottom:6px}
 .ing ul{list-style:none;margin:0;padding:0}
@@ -237,6 +235,7 @@ input[type=email],input[type=text]{width:100%;min-height:58px;padding:14px 18px;
 .et .n{flex:none;display:grid;place-items:center;width:40px;height:34px;border-radius:0 10px 10px 0;background:var(--c);font-weight:800;font-size:17px}
 .fiche-actions{margin-top:34px;padding-top:26px;border-top:1px solid var(--filet)}
 .fiche-actions .btn{min-width:min(100%,340px)}
+.sans-viande{margin-top:22px;max-width:780px}
 .encart{background:var(--c);border-radius:24px;padding:clamp(24px,4vw,34px);display:flex;flex-direction:column;gap:14px;align-items:flex-start}
 .semaine-grille{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(28px,4vw,48px);align-items:start}
 .jours{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}

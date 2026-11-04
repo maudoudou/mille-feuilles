@@ -18,9 +18,9 @@
 .a4-tete .tags span{padding:2px 12px;border-radius:999px;background:var(--lait);color:var(--encre);font-weight:700;font-size:13px}
 .a4-photo{position:absolute;right:56px;top:46px;width:228px;height:270px;transform:rotate(3deg);border:8px solid #fff;border-radius:4px;background:#fff}
 .a4-photo .photo{aspect-ratio:auto;height:100%;--c:var(--lait)!important}
-.a4-photo .attente{color:var(--encre)!important;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:10px}
-.a4-photo .attente .feuilles{width:70%}
-.a4-photo .attente .feuilles i{height:22px;background:var(--c-sit)!important;opacity:1!important}
+.a4-photo .attente{color:var(--encre)!important}
+.a4-photo .attente b{font-size:26px}
+.a4-photo .attente span{background:var(--c-sit)!important}
 .a4-photo .ruban{position:absolute;left:50%;top:-16px;width:90px;height:26px;margin-left:-45px;background:var(--boucle-dor);opacity:.85;transform:rotate(-4deg)}
 .a4-corps{padding:30px 74px 0 56px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px}
 .a4-corps h2{font-size:19px;letter-spacing:-.01em;margin-bottom:8px}
@@ -50,3 +50,6 @@
 .a4-notes{flex:1;min-height:0;margin:26px 74px 0 56px;overflow:hidden;display:flex;flex-direction:column}
 .a4-notes h2{font-family:var(--main);font-weight:400;font-size:24px;letter-spacing:0;transform:rotate(-1.5deg);transform-origin:left;margin-bottom:4px}
 .a4-notes i{display:block;flex:none;height:34px;border-bottom:1px solid var(--filet-fort)}
+.a4-bas{margin:22px 74px 0 56px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.45}
+.a4-bas b{display:inline-block;margin-right:8px;padding:1px 10px 1px 8px;border-radius:0 8px 8px 0;background:var(--c-sit);font-size:14px}
+.a4-sv b{background:#9599EA}

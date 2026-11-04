@@ -1,3 +1,0 @@
-Déposez ici une photo par recette, nommée comme son identifiant dans data/recettes.js : chili.jpg, brioche.jpg, dahl.jpg…
-Format conseillé : JPG, 1200 x 900 px (4:3), moins de 250 Ko.
-Tant qu'il n'y a pas de photo, le site affiche un aplat de la couleur de l'intercalaire.

@@ -25,16 +25,18 @@ Le fichier `.nojekyll` empêche GitHub de retraiter le site.
 ### Styles et scripts
 - `css/mille-feuilles.css` : la feuille de style unique (couleurs, typographie, boutons, intercalaires, cartes, outil, animations, réduction des mouvements).
 - `css/fiche.css` : mise en page A4 et réglages d'impression.
+- `js/donnees.js` : lit `data/recettes.json` et prépare les recettes pour les autres scripts (le site doit être ouvert depuis son adresse en ligne : un double-clic sur le fichier ne permet pas de lire le JSON).
 - `js/commun.js` : sur toutes les pages. Remplace l'image du logo par le SVG en ligne pour l'animer, fait « s'écrire » les notes manuscrites, et fournit le calcul des quantités et le cadre photo.
 - `js/pages.js` : piles de recettes, exemples, aperçus du classeur, formulaires d'inscription, bascule année ou mois.
 - `js/outil.js` : l'outil complet (filtres, quantités, variantes avec et sans viande, semaine, glisser pour changer, liste de courses, état gardé dans le navigateur).
 - `js/fiche.js` : construit les fiches A4 à partir des données.
-- `data/recettes.js` : la base de recettes (40 de démonstration) et les sept situations. C'est le seul fichier à modifier pour ajouter des recettes.
+- `data/recettes.json` : la base complète du classeur : 727 recettes, 529 salées et 198 sucrées. 50 sont gratuites (40 salées, 10 sucrées). Champs : id, slug, titre, type, situation, regime, budget_portion, temps_minutes, personnes_base, batch, saison, allergenes, ingredients, etapes, version_sans_viande, gratuit, image, a_verifier. Les champs absents du PDF sont estimés et listés dans `a_verifier`.
+- `photos-a-faire.csv` : suivi des photos (id, titre, nom du fichier, statut). S'ouvre dans Excel ou Numbers. À ne pas forcément mettre en ligne.
 
 ### Ressources
 - `assets/logo.svg`, `assets/logo-lait.svg` : votre logo, en couleur sur fond clair et en version lait sur fond Encre.
 - `assets/monogramme.svg` : favicon (les quatre onglets).
-- `assets/photos/recettes/` : déposez `<id>.jpg` (exemple : `chili.jpg`, 1 200 × 900 px). La photo remplace l'aplat de couleur partout : cartes, piles, fiche, A4.
+- `images/recettes/` : déposez `<slug>.webp` (exemple : `chili-con-carne.webp`, 1 200 × 900 px). La photo remplace la carte typographique partout : cartes, fiche, A4.
 - `fonts/` : Pacaembu (licence d'essai : vérifiez la licence avant la mise en ligne publique) et IM Fell English. L'écriture manuscrite Kalam vient de Google Fonts.
 
 ## Palette
@@ -51,5 +53,5 @@ Le fichier `.nojekyll` empêche GitHub de retraiter le site.
 - **Paiement** : les boutons « Acheter le classeur » (`href="#acheter"`, attribut `data-achat`) attendent votre lien de paiement (Stripe Payment Link, Lemon Squeezy, Gumroad…).
 - **Abonnement** : dans l'outil, « Devenir membre » est simulé (bouton de démonstration). Un vrai abonnement demande un service de comptes et de paiement (par exemple Memberstack ou Outseta, compatibles avec un site statique).
 - **Newsletter** : remplacez `action="#"` des formulaires `data-newsletter` par l'adresse d'inscription de votre outil d'emailing.
-- **Données** : les budgets par portion sont estimés. Les recettes marquées `demo:1` dans `data/recettes.js` ne viennent pas du classeur : remplacez-les.
+- **Données** : relisez les champs listés dans `a_verifier` (situation, budget, saison, allergènes surtout).
 - **Avis** : l'emplacement réservé de `classeur.html` attend de vrais retours.

@@ -1,0 +1,4 @@
+Déposez ici une photo par recette, au format WebP, nommée exactement comme dans le champ image de data/recettes.json
+(voir aussi photos-a-faire.csv) : chili-con-carne.webp, tartiflette.webp…
+Format conseillé : 1200 x 900 px (4:3), moins de 200 Ko.
+Tant que le fichier n'existe pas, le site affiche une carte typographique aux couleurs de l'intercalaire.
