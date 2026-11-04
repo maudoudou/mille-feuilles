@@ -1,7 +1,5 @@
 User-agent: *
-Disallow: /email/
 Disallow: /fiche.html
 Disallow: /data/
-Disallow: /photos-a-faire.csv
 
 Sitemap: https://millefeuilles.studiomillepages.fr/sitemap.xml

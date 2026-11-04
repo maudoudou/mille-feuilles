@@ -12,12 +12,12 @@ window.MFpret(function () {
     el.innerHTML = ids.map(feuille).join('') + (note ? '<span class="note">' + note + '</span>' : '');
   }
   if (MF && U) {
-    pile(document.getElementById('pile-accueil'), ['recette-membre', 'chili-con-carne', 'tartiflette'], 'toutes testées chez nous');
-    pile(document.getElementById('pile-classeur'), ['dahl-de-lentilles-corails', 'tiramisu-express', 'quiche-lorraine']);
-    pile(document.getElementById('pile-produit'), ['recette-membre', 'ratatouille', 'couscous-express'], 'plus de 700 comme ça');
+    pile(document.getElementById('pile-accueil'), ['cheesecake-rapide', 'chili-con-carne', 'couscous-express'], 'toutes testées chez nous');
+    pile(document.getElementById('pile-classeur'), ['dahl-de-lentilles-corail', 'brownie-aux-haricots-rouges', 'hachis-parmentier']);
+    pile(document.getElementById('pile-produit'), ['poulet-aux-clementines', 'cake-aux-fruits', 'couscous-express'], 'plus de 700 comme ça');
     var ap = document.getElementById('apercus');
     if (ap) {
-      ap.innerHTML = ['chili-con-carne', 'cheesecake-rapide', 'dahl-de-lentilles-corails', 'poulet-aux-clementines'].map(function (id) {
+      ap.innerHTML = ['chili-con-carne', 'cheesecake-rapide', 'dahl-de-lentilles-corail', 'poulet-aux-clementines'].map(function (id) {
         var x = [id, MF.situation(MF.recette(id).situation).nom];
         return '<figure><a href="fiche.html?id=' + x[0] + '" aria-label="Voir la fiche en grand"><div class="mini"><iframe src="fiche.html?id=' + x[0] + '&amp;mini=1" title="Aperçu de fiche" loading="lazy" tabindex="-1"></iframe></div></a><figcaption>' + x[1] + '</figcaption></figure>';
       }).join('');

@@ -130,23 +130,7 @@ def charger():
         vus.add(r['slug'])
         if r['situation'] not in cles:
             sys.exit(f'Situation inconnue pour {r["slug"]} : {r["situation"]}')
-    return cles, doc['recettes'] + lire_apercus({r['slug'] for r in doc['recettes']})
-
-
-def lire_apercus(gratuits):
-    """Recettes membres réduites à leur titre et leurs filtres : ni ingrédients ni étapes.
-
-    Sur cet ordinateur, recettes-membres.json met à jour data/membres-apercu.json.
-    Sur GitHub, où ce fichier n'existe pas, l'aperçu déjà enregistré est utilisé.
-    """
-    source, cible = RACINE / 'recettes-membres.json', RACINE / 'data/membres-apercu.json'
-    if source.is_file():
-        champs = ('id', 'slug', 'titre', 'type', 'situation', 'regime', 'contient_porc', 'temps_minutes', 'budget_portion', 'allergenes', 'image')
-        membres = json.loads(source.read_text(encoding='utf-8'))['recettes']
-        lignes = [{c: r[c] for c in champs} for r in membres]
-        cible.write_text(json.dumps({'recettes': lignes}, ensure_ascii=False, indent=0) + '\n', encoding='utf-8')
-    apercus = json.loads(cible.read_text(encoding='utf-8'))['recettes'] if cible.is_file() else []
-    return [dict(r, gratuit='non') for r in apercus if r['slug'] not in gratuits]
+    return cles, doc['recettes']
 
 
 def a_photo(r):
@@ -208,18 +192,17 @@ def cadre_photo(r, s, racine, extra=''):
 
 
 def lien(r, racine):
-    return f'{racine}recettes/{r["slug"]}/' if libre(r) else f'{racine}recettes.html#fiche/{r["slug"]}'
+    return f'{racine}recettes/{r["slug"]}/'
 
 
 def carte(r, cles, racine, i, note=False):
     s = cles[r['situation']]
-    pastille = '' if libre(r) else '<span class="pastille">Recette membre</span>'
     txt = note_courte(r) if note else ''
     txt_note = f'<span class="note">{e(txt)}</span>' if txt else ''
     return (f'<li class="carte" style="--c:{s["couleur"]}"><a href="{lien(r, racine)}" style="--i:{i}">{cadre_photo(r, s, racine)}'
             f'<div class="corps"><span class="sit">{e(s["nom"])}</span><h3>{e(r["titre"])}</h3>'
             f'<span class="meta"><span>{r["temps_minutes"]} min</span><span>{euro(r["budget_portion"])} / pers.</span></span>'
-            f'{pastille}{txt_note}</div></a></li>')
+            f'{txt_note}</div></a></li>')
 
 
 def principaux(r):
@@ -252,11 +235,11 @@ def description(r, s):
 
 
 def voisines(r, recettes):
-    """3 recettes de la même situation : les gratuites d'abord, puis les recettes membres."""
-    meme = sorted((x for x in recettes if x['situation'] == r['situation']), key=lambda x: x['id'])
-    k = meme.index(r)
-    tour = meme[k + 1:] + meme[:k]
-    return ([x for x in tour if libre(x)] + [x for x in tour if not libre(x)])[:NB_LIENS]
+    """3 recettes gratuites : même situation d'abord, puis même type (salé ou sucré)."""
+    autres = sorted((x for x in recettes if x is not r), key=lambda x: x['id'])
+    meme = [x for x in autres if x['situation'] == r['situation']]
+    reste = [x for x in autres if x['situation'] != r['situation'] and x['type'] == r['type']]
+    return (meme + reste)[:NB_LIENS]
 
 
 def json_ld(r, s, url):
@@ -301,6 +284,7 @@ def page_recette(r, cles, recettes):
     et = ''.join(f'<li><span class="n" style="--c:{s["couleur"]};color:{s["ink"]}" aria-hidden="true">{i}</span><span>{e(t)}</span></li>'
                  for i, t in enumerate(r['etapes'], 1))
     liens = ''.join(carte(x, cles, racine, i) for i, x in enumerate(voisines(r, recettes)))
+    titre_liens = 'Dans le même intercalaire.' if all(x['situation'] == r['situation'] for x in voisines(r, recettes)) else 'À cuisiner aussi.'
     courte = note_courte(r)
     note = f'<p style="margin-top:22px"><span class="note">{e(courte)}</span></p>' if courte else ''
     sans = ''
@@ -361,7 +345,7 @@ def page_recette(r, cles, recettes):
   </div>
 </article>
 <section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
-  <h2 class="t-l">Dans le même intercalaire.</h2>
+  <h2 class="t-l">{titre_liens}</h2>
   <ul class="cartes" style="margin-top:20px">{liens}</ul>
 </section>
 </main>

@@ -20,7 +20,7 @@ Le fichier `.nojekyll` empêche GitHub de retraiter le site.
 - `tarifs.html` : gratuit, membre (mis en avant), classeur PDF, feuille du jeudi, tableau comparatif.
 - `classeur.html` : page de vente du classeur PDF à 24,90 €.
 - `feuille-du-jeudi.html` : inscription à la newsletter.
-- `email/feuille-du-jeudi.html` : modèle d'email à coller dans votre outil d'emailing (mode d'emploi en tête du fichier).
+- `email/feuille-du-jeudi.html` : modèle d'email à coller dans votre outil d'emailing, gardé sur cet ordinateur (ignoré par Git).
 
 ### Styles et scripts
 - `css/mille-feuilles.css` : la feuille de style unique (couleurs, typographie, boutons, intercalaires, cartes, outil, animations, réduction des mouvements).
@@ -30,8 +30,8 @@ Le fichier `.nojekyll` empêche GitHub de retraiter le site.
 - `js/pages.js` : piles de recettes, exemples, aperçus du classeur, formulaires d'inscription, bascule année ou mois.
 - `js/outil.js` : l'outil complet (filtres, quantités, variantes avec et sans viande, semaine, glisser pour changer, liste de courses, état gardé dans le navigateur).
 - `js/fiche.js` : construit les fiches A4 à partir des données.
-- `data/recettes.json` : les 50 recettes gratuites, seules publiées en entier. `data/membres-apercu.json` : titres et filtres des recettes membres, sans contenu, recalculé par le script. `recettes-membres.json` : les 677 recettes membres complètes, ignoré par Git : **ce fichier n'existe que sur cet ordinateur, sauvegardez-le**. Pour rendre une recette gratuite, déplacez-la de ce fichier vers `data/recettes.json`, puis lancez le script. Champs : id, slug, titre, type, situation, regime, budget_portion, temps_minutes, personnes_base, batch, saison, allergenes, ingredients, etapes, version_sans_viande, gratuit, image, a_verifier. Les champs absents du PDF sont estimés et listés dans `a_verifier`.
-- `photos-a-faire.csv` : suivi des photos (id, titre, nom du fichier, statut). S'ouvre dans Excel ou Numbers. À ne pas forcément mettre en ligne.
+- `data/recettes.json` : les 50 recettes gratuites, seules publiées en entier. Aucune information sur les recettes membres n'est en ligne, pas même leur titre. `recettes-membres.json` : les 677 recettes membres complètes, ignoré par Git : **ce fichier n'existe que sur cet ordinateur, sauvegardez-le**. Pour rendre une recette gratuite, déplacez-la de ce fichier vers `data/recettes.json`. Champs : id, slug, titre, type, situation, regime, budget_portion, temps_minutes, personnes_base, batch, saison, allergenes, ingredients, etapes, version_sans_viande, gratuit, image, a_verifier. Les champs absents du PDF sont estimés et listés dans `a_verifier`.
+- `photos-a-faire.csv` : suivi des photos, gardé sur cet ordinateur (ignoré par Git). Ne déposez dans `images/recettes/` que les photos des recettes gratuites : le nom du fichier révélerait le titre.
 
 ### Ressources
 - `assets/logo.svg`, `assets/logo-lait.svg` : votre logo, en couleur sur fond clair et en version lait sur fond Encre.

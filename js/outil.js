@@ -1,7 +1,7 @@
 /* Mille Feuilles · l'outil « on mange quoi ? » (recettes.html).
    Écrans par ancre : #questions, #resultats, #fiche/<id>, #semaine, #membre/<raison>.
    L'état (personnes, filtres, semaine, cases cochées) est gardé dans le navigateur.
-   L'abonnement n'est pas ouvert : les recettes membres sont de simples aperçus, et l'outil renvoie vers la liste d'attente (tarifs.html#liste-attente). */
+   L'abonnement n'est pas ouvert : les recettes membres ne sont pas en ligne, et l'outil renvoie vers la liste d'attente (tarifs.html#liste-attente). */
 window.MFpret(function () {
   var app = document.getElementById('app');
   if (!app || !window.MF || !window.MFU) return;
@@ -57,7 +57,7 @@ window.MFpret(function () {
     return p.length >= 7 ? p : MF.RECETTES.filter(function (r) { return r.type !== 'sucré'; });
   }
   function remplirSemaine() {
-    var pref = ['couscous-express', 'recette-membre', 'chili-con-carne', 'recette-membre', 'dahl-de-lentilles-corails', 'recette-membre', 'recette-membre'];
+    var pref = ['couscous-express', 'poulet-aux-clementines', 'chili-con-carne', 'omelette-a-la-grecque', 'dahl-de-lentilles-corail', 'hachis-parmentier', 'chili-sin-carne'];
     var pool = poolSemaine();
     e.semaine = pref.every(function (id) { return pool.some(function (r) { return r.id === id; }); }) ? pref : JOURS.map(function (d, i) { return pool[i % pool.length].id; });
     garde();
@@ -162,7 +162,7 @@ window.MFpret(function () {
     if (e.membre) e.exclus.forEach(function (x) { actifs.push(['Sans ' + x, 'f-exclus', x]); });
     return '<section class="wrap ecran" data-label="b. Résultats">' +
       '<div class="row" style="justify-content:space-between;align-items:flex-end"><div><h1 class="t-l">' + res.length + (res.length > 1 ? ' idées' : ' idée') + ' pour ' + pW(e.p) + '</h1>' +
-      '<p style="margin-top:8px">' + (e.membre ? 'Toutes les recettes, triées par temps de préparation.' : libres + ' gratuites, les autres sont réservées aux membres.') + '</p></div>' +
+      '<p style="margin-top:8px">' + (e.membre ? 'Toutes les recettes, triées par temps de préparation.' : libres + ' recettes gratuites. Les autres seront réservées aux membres.') + '</p></div>' +
       '<button type="button" class="btn btn--contour bouton-filtres" data-a="toggle-filtres" aria-expanded="' + e.filtres + '" aria-controls="panneau">' + (e.filtres ? 'Fermer les filtres' : 'Filtres' + (actifs.length ? ' (' + actifs.length + ')' : '')) + '</button></div>' +
       (actifs.length ? '<div class="actifs">' + actifs.map(function (a) { return '<button type="button" class="actif" data-a="' + a[1] + '" data-v="' + esc(a[2]) + '" aria-label="Retirer le filtre ' + esc(a[0]) + '">' + esc(a[0]) + ' <span aria-hidden="true">×</span></button>'; }).join('') + '</div>' : '') +
       '<div class="resultats-grille' + (e.filtres ? ' filtres-ouverts' : '') + '">' +
@@ -173,6 +173,7 @@ window.MFpret(function () {
   }
 
   function ecranFiche(id) {
+    if (id && !MF.recette(id)) return '<section class="wrap ecran"><a href="#resultats" style="font-weight:700;text-decoration:none">← Retour aux idées</a><div class="encart" style="--c:var(--boucle-dor);margin-top:26px"><p style="font-weight:800;font-size:24px;line-height:1.2">Cette recette est réservée aux membres.</p><p>L\u2019abonnement n\u2019est pas encore ouvert : rejoignez la liste d\u2019attente. Les 50 recettes gratuites restent à vous.</p><a class="btn btn--encre" href="tarifs.html#liste-attente">Rejoindre la liste d\u2019attente <span class="fl" aria-hidden="true">→</span></a></div></section>';
     var r = MF.recette(id) || MF.RECETTES[0], s = MF.situation(r.situation), P = e.fp || e.p, verrou = !r.libre && !e.membre;
     var groupesIng = []; r.ingredients.forEach(function (it) { var g = groupesIng[groupesIng.length - 1]; if (!g || g.t !== it.groupe) { g = { t: it.groupe || '', items: [] }; groupesIng.push(g); } g.items.push(U.quantite(it, P)); });
     if (!groupesIng.length) groupesIng.push({ t: '', items: [] });
