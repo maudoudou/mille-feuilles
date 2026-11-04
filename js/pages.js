@@ -15,15 +15,6 @@ window.MFpret(function () {
     pile(document.getElementById('pile-accueil'), ['recette-membre', 'chili-con-carne', 'tartiflette'], 'toutes testées chez nous');
     pile(document.getElementById('pile-classeur'), ['dahl-de-lentilles-corails', 'tiramisu-express', 'quiche-lorraine']);
     pile(document.getElementById('pile-produit'), ['recette-membre', 'ratatouille', 'couscous-express'], '500 comme ça');
-    var ex = document.getElementById('exemples-accueil');
-    if (ex) {
-      ex.innerHTML = ['couscous-express', 'chili-con-carne', 'dahl-de-lentilles-corails', 'one-pot-pasta-tomates-et-thon', 'hachis-parmentier', 'recette-membre'].map(function (id, i) {
-        var r = MF.recette(id); if (!r) return ''; var s = MF.situation(r.situation);
-        return '<li class="carte" style="--c:' + s.couleur + '"><a href="recettes.html#fiche/' + r.id + '" style="--i:' + i + '">' + U.cadrePhoto(r, s) +
-          '<div class="corps"><span class="sit">' + U.esc(s.nom) + '</span><h3>' + U.esc(r.titre) + '</h3><span class="meta"><span>' + r.prep + ' min</span><span>' + U.euro(r.budget) + ' / pers.</span></span>' +
-          (r.note && i % 2 === 0 ? '<span class="note">' + U.esc(r.note) + '</span>' : '') + '</div></a></li>';
-      }).join('');
-    }
     var ap = document.getElementById('apercus');
     if (ap) {
       ap.innerHTML = [['chili-con-carne', 'Une base, deux assiettes'], ['recette-membre', 'Dimanche, on retrousse les manches'], ['dahl-de-lentilles-corails', 'Petit budget'], ['recette-membre', 'On reçoit']].map(function (x) {

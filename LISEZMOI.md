@@ -39,6 +39,11 @@ Le fichier `.nojekyll` empêche GitHub de retraiter le site.
 - `images/recettes/` : déposez `<slug>.webp` (exemple : `chili-con-carne.webp`, 1 200 × 900 px). La photo remplace la carte typographique partout : cartes, fiche, A4.
 - `fonts/` : Pacaembu (licence d'essai : vérifiez la licence avant la mise en ligne publique) et IM Fell English. L'écriture manuscrite Kalam vient de Google Fonts.
 
+## Pages recettes et sitemap
+Modifiez `data/recettes.json` (ou ajoutez une photo) et poussez sur `main` : l'action `.github/workflows/generer-recettes.yml` lance `scripts/generer_recettes.py`, puis enregistre le résultat sur `main`. Faites ensuite « Pull » avant votre prochaine modification.
+Le script crée `recettes/<slug>/` pour chaque recette `"gratuit": "oui"`, la liste de `recettes.html`, les exemples de l'accueil et `sitemap.xml`. Ne modifiez pas ces contenus à la main. À la main, si besoin : `python3 scripts/generer_recettes.py`.
+Champ facultatif : `"intro": "Votre texte."` remplace l'introduction automatique d'une recette.
+
 ## Palette
 - Pot au Lait #F8F5F4 : fond. Texte Encre toutes tailles.
 - Encre #534741 : texte, pied de page, intercalaire « Petit budget » (texte Pot au Lait).

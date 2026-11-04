@@ -259,6 +259,9 @@ window.MFpret(function () {
     else html = questions();
     app.innerHTML = html;
     U.maj(app);
+    // La liste statique reste dans la page ; elle s'efface quand l'outil affiche un autre écran que les questions.
+    var liste = document.getElementById('liste-gratuite');
+    if (liste) liste.hidden = !(parts[0] === 'questions' || !location.hash);
     if (derniere !== h) { window.scrollTo(0, 0); derniere = h; }
   }
   window.addEventListener('hashchange', function () { if (!/^#fiche/.test(location.hash)) e.fp = null; e.ajoute = null; rendre(); });
