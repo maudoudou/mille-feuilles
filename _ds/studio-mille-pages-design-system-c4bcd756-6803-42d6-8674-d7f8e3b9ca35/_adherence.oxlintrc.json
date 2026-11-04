@@ -1,0 +1,430 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/actions/**",
+              "components/brand/**",
+              "components/content/**",
+              "components/forms/**",
+              "components/navigation/**",
+              "components/type/**",
+              "ui_kits/site/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Pacaembu|IM Fell English))/i]",
+        "message": "Font not provided by the design system. Available: Pacaembu, IM Fell English."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: children, tone, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:boucle-dor|haricot|violet|violet-2|blanc)$/]",
+        "message": "<Badge> tone must be one of 'boucle-dor' | 'haricot' | 'violet' | 'violet-2' | 'blanc'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|size|href|arrow|plis|disabled|type|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, size, href, arrow, plis, disabled, type, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:boucle-dor|haricot|violet|encre|lait|ghost)$/]",
+        "message": "<Button> variant must be one of 'boucle-dor' | 'haricot' | 'violet' | 'encre' | 'lait' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:md|sm)$/]",
+        "message": "<Button> size must be one of 'md' | 'sm'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|surface|padding|plis|as|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: children, surface, padding, plis, as, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='surface'] > Literal[value!=/^(?:blanc|lait)$/]",
+        "message": "<Card> surface must be one of 'blanc' | 'lait'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:div|article|section|form)$/]",
+        "message": "<Card> as must be one of 'div' | 'article' | 'section' | 'form'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Facts'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|style|key|ref|className|style|children)$/]",
+        "message": "<Facts> doesn't accept that prop. Declared props: items, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|children|hint|style|key|ref|className|style|children)$/]",
+        "message": "<Field> doesn't accept that prop. Declared props: label, children, hint, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FilterChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|active|count|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<FilterChip> doesn't accept that prop. Declared props: children, active, count, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|pli|as|tone|style|key|ref|className|style|children)$/]",
+        "message": "<Kicker> doesn't accept that prop. Declared props: children, pli, as, tone, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute[name.name='pli'] > Literal[value!=/^(?:haricot|boucle-dor|violet)$/]",
+        "message": "<Kicker> pli must be one of 'haricot' | 'boucle-dor' | 'violet'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:p|span|div)$/]",
+        "message": "<Kicker> as must be one of 'p' | 'span' | 'div'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:encre|lait)$/]",
+        "message": "<Kicker> tone must be one of 'encre' | 'lait'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Logo'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|tone|width|base|protect|alt|style|key|ref|className|style|children)$/]",
+        "message": "<Logo> doesn't accept that prop. Declared props: variant, tone, width, base, protect, alt, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Logo'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:horizontal|carre|rond)$/]",
+        "message": "<Logo> variant must be one of 'horizontal' | 'carre' | 'rond'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Logo'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:couleur|encre|lait)$/]",
+        "message": "<Logo> tone must be one of 'couleur' | 'encre' | 'lait'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pager'] > JSXAttribute > JSXIdentifier[name!=/^(?:page|pages|onChange|style|key|ref|className|style|children)$/]",
+        "message": "<Pager> doesn't accept that prop. Declared props: page, pages, onChange, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Panel'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|bleed|padding|as|style|key|ref|className|style|children)$/]",
+        "message": "<Panel> doesn't accept that prop. Declared props: children, tone, bleed, padding, as, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Panel'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:encre|haricot|boucle-dor|violet|violet-2)$/]",
+        "message": "<Panel> tone must be one of 'encre' | 'haricot' | 'boucle-dor' | 'violet' | 'violet-2'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Panel'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:section|div|aside)$/]",
+        "message": "<Panel> as must be one of 'section' | 'div' | 'aside'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Plis'] > JSXAttribute > JSXIdentifier[name!=/^(?:height|tone|pair|single|animate|hidden|play|title|style|key|ref|className|style|children)$/]",
+        "message": "<Plis> doesn't accept that prop. Declared props: height, tone, pair, single, animate, hidden, play, title, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Plis'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:couleur|encre|lait)$/]",
+        "message": "<Plis> tone must be one of 'couleur' | 'encre' | 'lait'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RomanNumeral'] > JSXAttribute > JSXIdentifier[name!=/^(?:n|tone|size|style|key|ref|className|style|children)$/]",
+        "message": "<RomanNumeral> doesn't accept that prop. Declared props: n, tone, size, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RomanNumeral'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:encre|lait)$/]",
+        "message": "<RomanNumeral> tone must be one of 'encre' | 'lait'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionTitle'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|as|plis|align|tone|size|style|key|ref|className|style|children)$/]",
+        "message": "<SectionTitle> doesn't accept that prop. Declared props: children, as, plis, align, tone, size, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionTitle'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:h1|h2|h3)$/]",
+        "message": "<SectionTitle> as must be one of 'h1' | 'h2' | 'h3'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionTitle'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<SectionTitle> align must be one of 'left' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionTitle'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:encre|lait)$/]",
+        "message": "<SectionTitle> tone must be one of 'encre' | 'lait'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Step'] > JSXAttribute > JSXIdentifier[name!=/^(?:n|title|children|style|key|ref|className|style|children)$/]",
+        "message": "<Step> doesn't accept that prop. Declared props: n, title, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextLink'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|href|variant|active|tone|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<TextLink> doesn't accept that prop. Declared props: children, href, variant, active, tone, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextLink'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:inline|nav|more)$/]",
+        "message": "<TextLink> variant must be one of 'inline' | 'nav' | 'more'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextLink'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:encre|lait)$/]",
+        "message": "<TextLink> tone must be one of 'encre' | 'lait'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Facts": {
+        "replaces": []
+      },
+      "Field": {
+        "replaces": []
+      },
+      "FilterChip": {
+        "replaces": []
+      },
+      "Kicker": {
+        "replaces": []
+      },
+      "Logo": {
+        "replaces": []
+      },
+      "Pager": {
+        "replaces": []
+      },
+      "Panel": {
+        "replaces": []
+      },
+      "Plis": {
+        "replaces": []
+      },
+      "RomanNumeral": {
+        "replaces": []
+      },
+      "SectionTitle": {
+        "replaces": []
+      },
+      "Step": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      },
+      "TextLink": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--blanc",
+      "--border-1",
+      "--border-2",
+      "--border-card",
+      "--boucle-dor",
+      "--boucle-dor-2",
+      "--duration-hover",
+      "--duration-plis",
+      "--ease",
+      "--ease-plis",
+      "--encre",
+      "--encre-80",
+      "--encre-90",
+      "--encre-hover",
+      "--encre-muted",
+      "--filet",
+      "--filet-fort",
+      "--filet-lait",
+      "--focus-ring",
+      "--font-sans",
+      "--font-serif",
+      "--gutter",
+      "--haricot",
+      "--haricot-2",
+      "--lait-80",
+      "--leading-body",
+      "--leading-lede",
+      "--leading-title",
+      "--link",
+      "--main",
+      "--pli-angle",
+      "--pli-encre-2",
+      "--pli-h",
+      "--pli-lait-2",
+      "--pli-offset",
+      "--pli-w",
+      "--pot-au-lait",
+      "--radius-carte",
+      "--radius-carte-sm",
+      "--radius-champ",
+      "--radius-panneau",
+      "--radius-pastille",
+      "--radius-photo",
+      "--selection",
+      "--size-body",
+      "--size-caption",
+      "--size-for",
+      "--size-h3",
+      "--size-hero",
+      "--size-kicker",
+      "--size-label",
+      "--size-lede",
+      "--size-page-title",
+      "--size-roman",
+      "--size-section",
+      "--size-small",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--surface-card",
+      "--surface-card-flat",
+      "--surface-page",
+      "--surface-sombre",
+      "--text-body",
+      "--text-button-weight",
+      "--text-muted",
+      "--text-on-pli",
+      "--text-on-sombre",
+      "--text-ouvrage-family",
+      "--text-title-family",
+      "--text-title-weight",
+      "--tracking-kicker",
+      "--tracking-label",
+      "--tracking-title",
+      "--violet",
+      "--violet-2",
+      "--weight-black",
+      "--weight-bold",
+      "--weight-light",
+      "--weight-medium",
+      "--weight-regular"
+    ],
+    "tokenKinds": {
+      "--pot-au-lait": "color",
+      "--encre": "color",
+      "--blanc": "color",
+      "--haricot": "color",
+      "--haricot-2": "color",
+      "--boucle-dor": "color",
+      "--boucle-dor-2": "color",
+      "--violet": "color",
+      "--violet-2": "color",
+      "--encre-hover": "color",
+      "--encre-90": "color",
+      "--encre-80": "color",
+      "--encre-muted": "color",
+      "--lait-80": "color",
+      "--filet": "color",
+      "--filet-fort": "color",
+      "--filet-lait": "color",
+      "--pli-encre-2": "color",
+      "--pli-lait-2": "color",
+      "--surface-page": "color",
+      "--surface-card": "color",
+      "--surface-card-flat": "color",
+      "--surface-sombre": "color",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-on-sombre": "font",
+      "--text-on-pli": "font",
+      "--link": "color",
+      "--border-card": "color",
+      "--focus-ring": "color",
+      "--selection": "color",
+      "--font-sans": "font",
+      "--font-serif": "font",
+      "--weight-light": "font",
+      "--weight-regular": "font",
+      "--weight-medium": "font",
+      "--weight-bold": "font",
+      "--weight-black": "font",
+      "--size-hero": "spacing",
+      "--size-page-title": "spacing",
+      "--size-section": "spacing",
+      "--size-roman": "spacing",
+      "--size-h3": "spacing",
+      "--size-lede": "spacing",
+      "--size-for": "spacing",
+      "--size-body": "spacing",
+      "--size-small": "spacing",
+      "--size-caption": "spacing",
+      "--size-kicker": "spacing",
+      "--size-label": "spacing",
+      "--leading-body": "font",
+      "--leading-lede": "font",
+      "--leading-title": "font",
+      "--tracking-title": "font",
+      "--tracking-kicker": "font",
+      "--tracking-label": "font",
+      "--text-title-family": "font",
+      "--text-title-weight": "font",
+      "--text-button-weight": "font",
+      "--text-ouvrage-family": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--gutter": "spacing",
+      "--main": "spacing",
+      "--radius-photo": "radius",
+      "--radius-champ": "radius",
+      "--radius-carte": "radius",
+      "--radius-carte-sm": "radius",
+      "--radius-panneau": "radius",
+      "--radius-pastille": "radius",
+      "--border-1": "spacing",
+      "--border-2": "spacing",
+      "--pli-w": "other",
+      "--pli-h": "other",
+      "--pli-offset": "other",
+      "--pli-angle": "other",
+      "--ease": "other",
+      "--ease-plis": "other",
+      "--duration-hover": "other",
+      "--duration-plis": "other"
+    },
+    "fontFamilies": [
+      "IM Fell English",
+      "Pacaembu"
+    ]
+  }
+}

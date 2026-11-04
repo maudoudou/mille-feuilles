@@ -1,0 +1,32 @@
+/* Studio Mille Pages · espacements, rayons, mouvement.
+   space-4 = la largeur d'un pli du logo, et la zone de protection du logo. */
+:root{
+  --space-1:6px;   /* décalage d'un pli */
+  --space-2:12px;
+  --space-3:22px;
+  --space-4:34px;  /* largeur d'un pli */
+  --space-5:56px;
+  --space-6:96px;
+  --gutter:40px;
+  --main:1080px;
+
+  --radius-photo:6px;
+  --radius-champ:10px;
+  --radius-carte:20px;
+  --radius-carte-sm:16px;
+  --radius-panneau:24px;
+  --radius-pastille:999px;
+
+  --border-1:1px;
+  --border-2:1.5px;
+
+  --pli-w:34; /* @kind other */
+  --pli-h:48; /* @kind other */
+  --pli-offset:6; /* @kind other */
+  --pli-angle:10deg; /* @kind other */
+
+  --ease:cubic-bezier(.2,.7,.3,1); /* @kind other */
+  --ease-plis:cubic-bezier(.3,.7,.4,1); /* @kind other */
+  --duration-hover:.15s; /* @kind other */
+  --duration-plis:.4s; /* @kind other */
+}

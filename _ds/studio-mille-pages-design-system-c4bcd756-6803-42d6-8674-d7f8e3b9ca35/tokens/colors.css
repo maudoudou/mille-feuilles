@@ -1,0 +1,40 @@
+/* Studio Mille Pages · couleurs (valeurs de style.css, site studiomillepages.fr).
+   Fond nu Pot au Lait, texte Encre. Les six plis, dans l'ordre du logo, jamais modifié.
+   Contrastes WCAG : Encre / Pot au Lait 8,25 ; Encre / Boucle d'Or 5,85 ; Encre / Haricot 3,56 ;
+   Encre / Violet 3,42 ; Encre / Violet-2 4,19. Aucun accent ne passe 3:1 sur Pot au Lait. */
+:root{
+  --pot-au-lait:#F8F5F4;
+  --encre:#534741;
+  --blanc:#FFFFFF;
+  --haricot:#62B47E;
+  --haricot-2:#55A270;
+  --boucle-dor:#F4CC71;
+  --boucle-dor-2:#EBBE5C;
+  --violet:#9599EA;
+  --violet-2:#A9ACEF;
+  --encre-hover:#3F3631;
+  --encre-90:rgba(83,71,65,.9);
+  --encre-80:rgba(83,71,65,.82);
+  --encre-muted:rgba(83,71,65,.78);
+  --lait-80:rgba(248,245,244,.8);
+  --filet:rgba(83,71,65,.12);
+  --filet-fort:rgba(83,71,65,.28);
+  --filet-lait:rgba(248,245,244,.4);
+  /* plis du logo (version encre et lait) */
+  --pli-encre-2:#6E625C;
+  --pli-lait-2:#D9CFCA;
+
+  /* alias sémantiques */
+  --surface-page:var(--pot-au-lait);
+  --surface-card:var(--blanc);
+  --surface-card-flat:var(--pot-au-lait);
+  --surface-sombre:var(--encre);
+  --text-body:var(--encre);
+  --text-muted:var(--encre-muted);
+  --text-on-sombre:var(--pot-au-lait);
+  --text-on-pli:var(--encre);
+  --link:var(--encre);
+  --border-card:var(--filet);
+  --focus-ring:0 0 0 2px var(--pot-au-lait),0 0 0 4.5px var(--encre);
+  --selection:var(--boucle-dor);
+}
