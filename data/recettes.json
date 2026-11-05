@@ -1,0 +1,4913 @@
+{
+  "version": 2,
+  "genere_le": "2026-11-04",
+  "source": "classeur Mille Feuilles",
+  "regles": {
+    "image": "slug + .webp, rangé dans images/recettes/",
+    "quantites": "pour personnes_base personnes ; le site recalcule",
+    "a_verifier": "champs estimés, absents du PDF"
+  },
+  "situations": [
+    {
+      "key": "chrono",
+      "nom": "20 minutes chrono",
+      "couleur": "#F4CC71"
+    },
+    {
+      "key": "frigo",
+      "nom": "Frigo presque vide",
+      "couleur": "#9CCBEF"
+    },
+    {
+      "key": "base",
+      "nom": "Une base, deux assiettes",
+      "couleur": "#9599EA"
+    },
+    {
+      "key": "manches",
+      "nom": "Dimanche, on retrousse les manches",
+      "couleur": "#FF8FC2"
+    },
+    {
+      "key": "recoit",
+      "nom": "On reçoit",
+      "couleur": "#62B47E"
+    },
+    {
+      "key": "reconfort",
+      "nom": "Réconfort",
+      "couleur": "#F6AA95"
+    },
+    {
+      "key": "budget",
+      "nom": "Petit budget",
+      "couleur": "#534741"
+    }
+  ],
+  "recettes": [
+    {
+      "id": 2,
+      "slug": "chili-con-carne",
+      "titre": "Chili con carne",
+      "type": "salé",
+      "categorie_pdf": "Grands plats mijotés",
+      "page_pdf": 5,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 45,
+      "preparation_minutes": 25,
+      "cuisson_minutes": 20,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "oui",
+      "saison": "toute l’année",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "400 g de viande hachée",
+          "quantite": 400,
+          "unite": "g",
+          "nom": "viande hachée",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "400 g de tomates pelées",
+          "quantite": 400,
+          "unite": "g",
+          "nom": "tomates pelées",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "400 g de haricots rouges",
+          "quantite": 400,
+          "unite": "g",
+          "nom": "haricots rouges",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 boîte de maïs",
+          "quantite": 1,
+          "unite": "boîte",
+          "nom": "maïs",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "huile d’olive",
+          "quantite": null,
+          "unite": "",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 à 3 gouttes de tabasco",
+          "quantite": null,
+          "unite": "gouttes",
+          "nom": "tabasco",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càc de chili en poudre",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "chili en poudre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Hacher oignon et ail.",
+        "Faire chauffer l’huile dans une cocotte, faire fondre l’oignon et l’ail.",
+        "Ajouter la viande hachée, la laisser prendre couleur.",
+        "Ajouter la poudre à chili (suivant les goûts, + ou - pimenté).",
+        "Égoutter les haricots, les verser dans la cocotte",
+        "Faire de même avec les tomates.",
+        "Remuer et assaisonner. Laisser frémir 20 minutes.",
+        "Déguster."
+      ],
+      "viande_pdf": "viande hachée de bœuf",
+      "notes": null,
+      "version_sans_viande": {
+        "type": "recette_soeur",
+        "recette_id": 24,
+        "titre": "Chili sin carne",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "chili-con-carne.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "dahl-de-lentilles-corail",
+      "titre": "Dahl de lentilles corail",
+      "type": "salé",
+      "categorie_pdf": "Grands plats mijotés",
+      "page_pdf": 14,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 60,
+      "preparation_minutes": 40,
+      "cuisson_minutes": 20,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "oui",
+      "saison": "été",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "150 g lentilles corail",
+          "quantite": 150,
+          "unite": "g",
+          "nom": "lentilles corail",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càc huile d’olive",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 à 2 gousses d’ail",
+          "quantite": null,
+          "unite": "gousses",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 carotte",
+          "quantite": 1,
+          "unite": "",
+          "nom": "carotte",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "20 cl lait de coco",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "lait de coco",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càc de curry",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "curry",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càc de mélange tandoori",
+          "quantite": 1,
+          "unite": "càc",
+          "nom": "mélange tandoori",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 pincée de cannelle",
+          "quantite": 1,
+          "unite": "pincée",
+          "nom": "cannelle",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1-2 càs de concentré de tomate",
+          "quantite": null,
+          "unite": "càs",
+          "nom": "concentré de tomate",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "20 cl d’eau",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Émincer l’oignon, couper la carotte en dés.",
+        "Dans une casserole, à feu moyen-fort, faire revenir l’oignon et les gousses d’ail écrasées dans de l’huile d’olive, avec les épices pendant 10-15 minutes.",
+        "Remuer régulièrement pour que les oignons ne brûlent pas.",
+        "Une fois que les oignons sont tendres et translucides ajouter les lentilles corail, les carottes, le lait de coco, le concentré de tomate et l’eau. Ne surtout pas ajouter de sel avant que les lentilles corail soient cuites, au risque de les transformer en purée.",
+        "Laisser cuire 15 minutes en mélangeant régulièrement. Ne pas hésiter à ajouter de l’eau si nécessaire pour obtenir la texture souhaitée. Les lentilles corail ont tendance à se transformer en purée. Pour éviter ça, il faut qu’elles soient à peine cuites.",
+        "Ajouter en fin de cuisson le sel et le poivre"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "dahl-de-lentilles-corail.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "chili-sin-carne",
+      "titre": "Chili sin carne",
+      "type": "salé",
+      "categorie_pdf": "Grands plats mijotés",
+      "page_pdf": 27,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 60,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 40,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "oui",
+      "saison": "été, automne",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 gousses d’ail",
+          "quantite": 2,
+          "unite": "gousses",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 poivron rouge",
+          "quantite": 1,
+          "unite": "",
+          "nom": "poivron rouge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "300 g de butternut en dés",
+          "quantite": 300,
+          "unite": "g",
+          "nom": "butternut en dés",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 càc de cumin",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "cumin",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càc de paprika fumé",
+          "quantite": 1,
+          "unite": "càc",
+          "nom": "paprika fumé",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "½ càc de piment (selon goût)",
+          "quantite": 0.5,
+          "unite": "càc",
+          "nom": "piment (selon goût)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 boîte de tomates concassées (400 g)",
+          "quantite": 1,
+          "unite": "",
+          "nom": "boîte de tomates concassées (400 g)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 boîtes de haricots rouges (2 × 250 g égouttés)",
+          "quantite": 2,
+          "unite": "",
+          "nom": "boîtes de haricots rouges (2 × 250 g égouttés)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 petite boîte de maïs",
+          "quantite": 1,
+          "unite": "",
+          "nom": "petite boîte de maïs",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs d’huile d’olive",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Émincer l’oignon et l’ail, couper le poivron en dés",
+        "Faire revenir l’oignon dans l’huile 5 min, ajouter l’ail et les épices 1 min",
+        "Ajouter le poivron et la butternut, remuer 3 min",
+        "Verser les tomates et 15 cl d’eau, couvrir et laisser mijoter 20 min",
+        "Ajouter les haricots rincés et le maïs, poursuivre 15 min à découvert",
+        "Rectifier l’assaisonnement et servir avec riz ou tortillas"
+      ],
+      "viande_pdf": null,
+      "notes": "Se garde 4 jours au frais ; se congèle très bien en portions",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "chili-sin-carne.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 27,
+      "slug": "couscous-express",
+      "titre": "Couscous express",
+      "type": "salé",
+      "categorie_pdf": "Grands plats mijotés",
+      "page_pdf": 30,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3.4,
+      "temps_minutes": 50,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 30,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "oui",
+      "saison": "automne, hiver",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "4 hauts de cuisse de poulet ou 4 merguez de volaille",
+          "quantite": 4,
+          "unite": "",
+          "nom": "hauts de cuisse de poulet ou 4 merguez de volaille",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "1 boîte de pois chiches (250 g égouttés)",
+          "quantite": 1,
+          "unite": "",
+          "nom": "boîte de pois chiches (250 g égouttés)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "300 g de courge",
+          "quantite": 300,
+          "unite": "g",
+          "nom": "courge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 navets",
+          "quantite": 2,
+          "unite": "",
+          "nom": "navets",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 carottes",
+          "quantite": 2,
+          "unite": "",
+          "nom": "carottes",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 boîte de tomates concassées",
+          "quantite": 1,
+          "unite": "",
+          "nom": "boîte de tomates concassées",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càc de ras el hanout",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "ras el hanout",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "300 g de semoule",
+          "quantite": 300,
+          "unite": "g",
+          "nom": "semoule",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 poignée de raisins secs",
+          "quantite": 1,
+          "unite": "poignée",
+          "nom": "raisins secs",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "harissa",
+          "quantite": null,
+          "unite": "",
+          "nom": "harissa",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs d’huile d’olive",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Dorer la viande dans une cocotte avec l’huile, ajouter l’oignon émincé",
+        "Ajouter le ras el hanout, les tomates et 75 cl d’eau",
+        "Ajouter carottes et navets en tronçons, cuire 15 min",
+        "Ajouter la courge en cubes et les pois chiches, cuire 15 min",
+        "Préparer la semoule : même volume d’eau bouillante salée, couvrir 5 min, égrainer à la fourchette",
+        "Servir avec raisins secs et harissa à part"
+      ],
+      "viande_pdf": null,
+      "notes": "Végan : remplacer la viande par un deuxième légume et des pois chiches en plus",
+      "version_sans_viande": {
+        "type": "remplacement",
+        "texte": "Végan : remplacer la viande par un deuxième légume et des pois chiches en plus.",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "couscous-express.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 52,
+      "slug": "brochettes-de-poulet-a-la-cannelle-et-au-miel",
+      "titre": "Brochettes de poulet à la cannelle et au miel",
+      "type": "salé",
+      "categorie_pdf": "Au four",
+      "page_pdf": 58,
+      "situation": "chrono",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 15,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 5,
+      "personnes_base": 4,
+      "portions_pdf": "4 (8 bro.)",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "2 filets de poulet",
+          "quantite": 2,
+          "unite": "filets",
+          "nom": "poulet",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "2 càc rases de cannelle",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "rases de cannelle",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs d’huile d’olive",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càs de miel",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "miel",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel et poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel et poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Couper le poulet en petits morceaux.",
+        "Les disposer dans un saladier et ajouter dessus tous les autres ingrédients.",
+        "Mélanger, couvrir et laisser mariner au frigo pendant 1 h minimum.",
+        "Embrocher le poulet sur vos pics à brochettes. Faire cuire dans une poêle bien chaude (environ 5 min de chaque côté)."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "brochettes-de-poulet-a-la-cannelle-et-au-miel.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 54,
+      "slug": "poulet-aux-clementines",
+      "titre": "Poulet aux clémentines",
+      "type": "salé",
+      "categorie_pdf": "Au four",
+      "page_pdf": 60,
+      "situation": "recoit",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 30,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 20,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "hiver",
+      "allergenes": [
+        "gluten",
+        "soja",
+        "sésame",
+        "sulfites"
+      ],
+      "ingredients": [
+        {
+          "texte": "600 g d’émincé de poulet",
+          "quantite": 600,
+          "unite": "g",
+          "nom": "émincé de poulet",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "2 à 3 clémentines",
+          "quantite": null,
+          "unite": "ml",
+          "nom": "émentines",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "40 ml de sauce soja salée",
+          "quantite": 40,
+          "unite": "ml",
+          "nom": "sauce soja salée",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "20 g de miel (ou de cassonade)",
+          "quantite": 20,
+          "unite": "g",
+          "nom": "miel (ou de cassonade)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "huile de sésame",
+          "quantite": null,
+          "unite": "",
+          "nom": "huile de sésame",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "10 ml de vinaigre de riz",
+          "quantite": 10,
+          "unite": "ml",
+          "nom": "vinaigre de riz",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "10 g + 1 càs de maïzena",
+          "quantite": 10,
+          "unite": "g",
+          "nom": "+ 1 càs de maïzena",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Gingembre en poudre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Gingembre en poudre",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Couper les filets de poulet en petits émincés",
+        "Mélanger les émincés de poulet avec la cuillère à soupe de maïzena. Réserver.",
+        "Émincer l’oignon et la gousse. Les faire revenir à l’huile de sésame dans un wok jusqu’à ce qu’ils soient dorés. Il faut compter environ 5 minutes.",
+        "Ajouter ensuite les émincés de poulet et les faire griller pendant 15 minutes.",
+        "Pendant ce temps, retirer la peau des clémentines, mixer la chair et la passer au tamis afin de récupérer leur jus.",
+        "Mélanger le jus de clémentines avec la sauce soja salée, le miel, le vinaigre de riz, 10 g de maïzena et le gingembre en poudre.",
+        "Verser cette sauce sur le poulet lorsque ce dernier est cuit.",
+        "Remuer sans arrêt jusqu’à ce que la sauce épaississe. Il faut compter environ 5 minutes.",
+        "Servir le poulet aux clémentines avec du riz basmati cuit et des légumes à choix (de saison de préférence)."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "poulet-aux-clementines.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 55,
+      "slug": "poulet-farci-aux-tomates-sechees",
+      "titre": "Poulet farci aux tomates séchées",
+      "type": "salé",
+      "categorie_pdf": "Au four",
+      "page_pdf": 61,
+      "situation": "recoit",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 40,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 30,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "100 g de tomates séchées",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "tomates séchées",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "200 g de fromage blanc, skyr ou yaourt végétal",
+          "quantite": null,
+          "unite": "g",
+          "nom": "fromage blanc, skyr ou yaourt végétal",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "2 gousses d’ail",
+          "quantite": 2,
+          "unite": "gousses",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 cuillères à soupe d’huile d’olive",
+          "quantite": 2,
+          "unite": "",
+          "nom": "cuillères à soupe d’huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "4 filets de poulet",
+          "quantite": 4,
+          "unite": "filets",
+          "nom": "poulet",
+          "rayon": "Boucherie, poisson"
+        }
+      ],
+      "etapes": [
+        "Mixer les tomates séchées, le fromage blanc, l’ail et l’huile",
+        "Faire des entailles dans les poulets et y déposer la farce",
+        "Enfourner 30 min à 180 °C"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "poulet-farci-aux-tomates-sechees.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 65,
+      "slug": "hachis-parmentier",
+      "titre": "Hachis parmentier",
+      "type": "salé",
+      "categorie_pdf": "Au four",
+      "page_pdf": 71,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 60,
+      "preparation_minutes": 30,
+      "cuisson_minutes": 30,
+      "personnes_base": 4,
+      "portions_pdf": "4 personnes",
+      "batch": "non",
+      "saison": "automne",
+      "allergenes": [
+        "œufs",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "600 g de restes de pot-au-feu ou de bœuf haché",
+          "quantite": 600,
+          "unite": "g",
+          "nom": "restes de pot-au-feu ou de bœuf haché",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 kg de pommes de terre",
+          "quantite": null,
+          "unite": "g",
+          "nom": "pommes de terre",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "2 oignons",
+          "quantite": 2,
+          "unite": "",
+          "nom": "oignons",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "20 cl de lait",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "lait",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "20 g de beurre",
+          "quantite": 20,
+          "unite": "g",
+          "nom": "beurre",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "Persil",
+          "quantite": null,
+          "unite": "",
+          "nom": "Persil",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "50 g de gruyère râpé",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "gruyère râpé",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Cuire les pommes de terre, les écraser en purée avec le lait chaud et le beurre.",
+        "Faire revenir les oignons et l’ail, ajouter la viande hachée et le persil.",
+        "Disposer la viande dans un plat, couvrir de purée, parsemer de fromage.",
+        "Gratiner 25 minutes à 200 °C."
+      ],
+      "viande_pdf": "bœuf · ou poulet rôti effiloché, ou cabillaud",
+      "notes": "Variante : avec un reste de poulet rôti effiloché, ou du poisson pour un parmentier de cabillaud.",
+      "version_sans_viande": {
+        "type": "remplacement",
+        "texte": "Une version sans viande existe, réservée aux membres.",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "hachis-parmentier.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 82,
+      "slug": "boulettes-de-thon",
+      "titre": "Boulettes de thon",
+      "type": "salé",
+      "categorie_pdf": "Boulettes, croquettes, nems",
+      "page_pdf": 90,
+      "situation": "frigo",
+      "regime": "poisson",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 35,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 20,
+      "personnes_base": 1,
+      "portions_pdf": "1 per",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "poisson"
+      ],
+      "ingredients": [
+        {
+          "texte": "250 g de thon au naturel",
+          "quantite": 250,
+          "unite": "g",
+          "nom": "thon au naturel",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "20 g de flocons d’avoine (ou directement farine ou son d’avoine)",
+          "quantite": 20,
+          "unite": "g",
+          "nom": "flocons d’avoine (ou directement farine ou son d’avoine)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 œuf",
+          "quantite": 1,
+          "unite": "",
+          "nom": "œuf",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "ail en poudre",
+          "quantite": null,
+          "unite": "",
+          "nom": "ail en poudre",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Moudre ou mixer les flocons d’avoine jusqu’à obtenir une poudre fine.",
+        "Dans un bol, mélanger l’avoine avec le thon égoutté, l’œuf et les épices selon votre goût.",
+        "Former 8 boulettes avec la pâte et les déposer sur une plaque recouverte de papier cuisson.",
+        "Cuire à 180 °C pendant 20 minutes.",
+        "Servir les boulettes chaudes de préférence avec du yaourt, de l’aneth ou de la sauce tomate."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "boulettes-de-thon.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 102,
+      "slug": "nuggets-de-poulet-au-quinoa",
+      "titre": "Nuggets de poulet au quinoa",
+      "type": "salé",
+      "categorie_pdf": "Boulettes, croquettes, nems",
+      "page_pdf": 110,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 45,
+      "preparation_minutes": 25,
+      "cuisson_minutes": 20,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "œufs"
+      ],
+      "ingredients": [
+        {
+          "texte": "120 g de quinoa cuit",
+          "quantite": 120,
+          "unite": "g",
+          "nom": "quinoa cuit",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 g de farine ou de maïzena",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "farine ou de maïzena",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 blancs de poulet",
+          "quantite": 2,
+          "unite": "",
+          "nom": "blancs de poulet",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "3 œufs",
+          "quantite": 3,
+          "unite": "",
+          "nom": "œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Préchauffer le four à 200 °C. Couper les blancs de poulet en morceaux de la taille de nuggets",
+        "Placer la farine dans un saladier",
+        "Puis les œufs battus dans un autre",
+        "Faire de même avec le quinoa cuit",
+        "Tremper les morceaux de blanc de poulet successivement dans la farine, dans les œufs puis dans le quinoa.",
+        "Veiller à ce que le poulet soit bien recouvert.",
+        "Placer sur une plaque recouverte de papier cuisson et enfourner 20 minutes."
+      ],
+      "viande_pdf": null,
+      "notes": "sans gluten si farine adéquate ; idéale avec un reste de quinoa cuit !",
+      "version_sans_viande": {
+        "type": "remplacement",
+        "texte": "Une version sans viande existe, réservée aux membres.",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "nuggets-de-poulet-au-quinoa.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 108,
+      "slug": "omelette-a-la-grecque",
+      "titre": "Omelette à la grecque",
+      "type": "salé",
+      "categorie_pdf": "Œufs",
+      "page_pdf": 118,
+      "situation": "chrono",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 25,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 5,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "œufs",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "8 œufs",
+          "quantite": 8,
+          "unite": "",
+          "nom": "œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 oignon rouge coupé en lamelles",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon rouge coupé en lamelles",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "3 tomates coupées en dés",
+          "quantite": 3,
+          "unite": "",
+          "nom": "tomates coupées en dés",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Olives noires dénoyautées",
+          "quantite": null,
+          "unite": "",
+          "nom": "Olives noires dénoyautées",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 g de feta",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "feta",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "Persil frais",
+          "quantite": null,
+          "unite": "",
+          "nom": "Persil frais",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 càs d’huile d’olive",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Préchauffer le gril de votre four.",
+        "Dans une poêle, verser l’huile d’olive. Ajouter les oignons et les laisser dorer quelques instants. Pendant ce temps, battre les œufs en omelette dans un saladier avec le persil haché, le sel et le poivre.",
+        "Avec les oignons, ajouter les tomates coupées en dés et les olives. Laisser cuire 1 à 2 min jusqu’à ce que les tomates soient tendres.",
+        "Baisser le feu et verser les œufs battus dans la poêle. Remuer quelques instants. Quand l’omelette est cuite de moitié, parsemer le dessus de feta émiettée et éteindre le feu.",
+        "Enfourner l’omelette pendant 5 min (jusqu’à ce que l’omelette gonfle et que le fromage soit bien doré).",
+        "Servir directement de la poêle !"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "omelette-a-la-grecque.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 111,
+      "slug": "souffles-de-potimarron-et-chevre-au-vitaliseur",
+      "titre": "Soufflés de potimarron et chèvre au Vitaliseur",
+      "type": "salé",
+      "categorie_pdf": "Œufs",
+      "page_pdf": 121,
+      "situation": "recoit",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 30,
+      "preparation_minutes": 30,
+      "cuisson_minutes": null,
+      "personnes_base": 4,
+      "portions_pdf": "4 à 6",
+      "batch": "non",
+      "saison": "automne",
+      "allergenes": [
+        "fruits à coque"
+      ],
+      "ingredients": [
+        {
+          "texte": "1 potimarron de 600 g environ",
+          "quantite": 1,
+          "unite": "",
+          "nom": "potimarron de 600 g environ",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "50 g de chèvre frais",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "chèvre frais",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "3 œufs",
+          "quantite": 3,
+          "unite": "",
+          "nom": "œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "3 càs de purée de noisette ou amandes",
+          "quantite": 3,
+          "unite": "càs",
+          "nom": "purée de noisette ou amandes",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "épices si envie",
+          "quantite": null,
+          "unite": "",
+          "nom": "épices si envie",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Faire chauffer l’eau de la cuve du Vitaliseur.",
+        "Déposer le potimarron en entier dans le tamis du Vitaliseur sans le découper et le cuire 30 min",
+        "Une fois cuit, le couper en deux, retirer la peau et prélever les graines.",
+        "L’écraser en purée et ajouter le sel, le poivre et les épices, les jaunes d’œufs et la purée choisie.",
+        "Monter les blancs en neige.",
+        "Les incorporer délicatement à la préparation.",
+        "Remplir des ramequins à moitié avec la préparation.",
+        "Déposer du chèvre et recouvrir de pâte à nouveau.",
+        "Placer les ramequins dans le Vitaliseur pendant 25 min."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "souffles-de-potimarron-et-chevre-au-vitaliseur.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 112,
+      "slug": "wraps-omelette-crudites-et-leurs-assaisonnements",
+      "titre": "Wraps omelette crudités et leurs assaisonnements",
+      "type": "salé",
+      "categorie_pdf": "Œufs",
+      "page_pdf": 122,
+      "situation": "chrono",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 10,
+      "preparation_minutes": 10,
+      "cuisson_minutes": null,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "oui",
+      "saison": "automne, hiver",
+      "allergenes": [
+        "gluten",
+        "soja",
+        "lait",
+        "sésame",
+        "sulfites"
+      ],
+      "ingredients": [
+        {
+          "texte": "2 wraps",
+          "quantite": 2,
+          "unite": "",
+          "nom": "wraps",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 œufs",
+          "quantite": 2,
+          "unite": "",
+          "nom": "œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "sauce ou tartinade au choix (tzatziki, sauce skyr/levure maltée, tartinades…)",
+          "quantite": null,
+          "unite": "",
+          "nom": "sauce ou tartinade au choix (tzatziki, sauce skyr/levure maltée, tartinades…)",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "carottes râpées (assaisonnement opt. - vinaigrette – raisins secs – persil)",
+          "quantite": null,
+          "unite": "",
+          "nom": "carottes râpées (assaisonnement opt. - vinaigrette – raisins secs – persil)",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "chou rouge râpé (assaisonnement opt. – huile d’olive – sauce soja – graines de sésame)",
+          "quantite": null,
+          "unite": "",
+          "nom": "chou rouge râpé (assaisonnement opt. – huile d’olive – sauce soja – graines de sésame)",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Si ce n’est pas déjà fait, préparer les crudités",
+        "Battre les œufs en omelette et les faire cuire dans une poêle avec un peu d’huile",
+        "Pendant ce temps, tartiner les wraps avec la sauce choisie (seulement au centre du wrap)",
+        "Ajouter par-dessus un morceau d’omelette",
+        "Puis les crudités assaisonnées",
+        "Plier le wrap et déguster !"
+      ],
+      "viande_pdf": null,
+      "notes": "sans gluten (si wraps adéquats) ; se conserve bien au frais",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "wraps-omelette-crudites-et-leurs-assaisonnements.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 143,
+      "slug": "one-pot-pasta-tomates-et-thon",
+      "titre": "One pot pasta tomates et thon",
+      "type": "salé",
+      "categorie_pdf": "Poisson",
+      "page_pdf": 155,
+      "situation": "budget",
+      "regime": "poisson",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 30,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "poisson",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "400 ml de bouillon de légumes",
+          "quantite": 400,
+          "unite": "ml",
+          "nom": "bouillon de légumes",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 g de pâtes complètes (poids cru)",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "pâtes complètes (poids cru)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 boîte de thon au naturel",
+          "quantite": 1,
+          "unite": "",
+          "nom": "boîte de thon au naturel",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "1 poivron rouge",
+          "quantite": 1,
+          "unite": "",
+          "nom": "poivron rouge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "130 g de sauce tomate",
+          "quantite": 130,
+          "unite": "g",
+          "nom": "sauce tomate",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "25 g fromage râpé",
+          "quantite": 25,
+          "unite": "g",
+          "nom": "fromage râpé",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 oignon rouge",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon rouge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "olives noires et/ou câpres",
+          "quantite": null,
+          "unite": "",
+          "nom": "olives noires et/ou câpres",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "ail et origan",
+          "quantite": null,
+          "unite": "",
+          "nom": "ail et origan",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Faire bouillir le bouillon de légumes.",
+        "Pendant ce temps, couper en lamelles le poivron rouge, émincer l’oignon et couper les olives noires en rondelles.",
+        "Lorsque le bouillon bout, ajouter les pâtes ainsi que le poivron en lamelles, l’oignon émincé ainsi que les assaisonnements (sel, poivre, ail et origan).",
+        "Cuire pendant 9 à 12 minutes.",
+        "Égoutter le thon en conserve et l’ajouter aux pâtes 2 à 3 minutes avant la fin de la cuisson.",
+        "Incorporer également les olives en rondelles, les câpres et la sauce tomate.",
+        "Remuer sans arrêt pour les dernières minutes de cuisson et que cela ne refroidisse pas.",
+        "Goûter et rectifier l’assaisonnement si nécessaire.",
+        "Servir et saupoudrer de fromage râpé."
+      ],
+      "viande_pdf": null,
+      "notes": "sans gluten (si pâtes adéquates)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "one-pot-pasta-tomates-et-thon.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 145,
+      "slug": "terrine-skyr-saumon-fume",
+      "titre": "Terrine skyr saumon fumé",
+      "type": "salé",
+      "categorie_pdf": "Poisson",
+      "page_pdf": 157,
+      "situation": "chrono",
+      "regime": "poisson",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 10,
+      "preparation_minutes": 10,
+      "cuisson_minutes": null,
+      "personnes_base": 6,
+      "portions_pdf": "6",
+      "batch": "oui",
+      "saison": "été",
+      "allergenes": [
+        "poisson",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "250 g de fromage frais ou skyr",
+          "quantite": 250,
+          "unite": "g",
+          "nom": "fromage frais ou skyr",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "2 cuillères à soupe de skyr",
+          "quantite": 2,
+          "unite": "",
+          "nom": "cuillères à soupe de skyr",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1/2 concombre",
+          "quantite": 0.5,
+          "unite": "",
+          "nom": "concombre",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "5 tranches de saumon fumé",
+          "quantite": 5,
+          "unite": "tranches",
+          "nom": "saumon fumé",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "Aneth frais",
+          "quantite": null,
+          "unite": "",
+          "nom": "Aneth frais",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Après avoir épluché et découper le concombre en dés, le laisser essorer dans un torchon propre",
+        "Dans le fond d’un petit plat type terrine, déposer du film plastique",
+        "Ajouter des tranches de saumon fumé (de façon à ce qu’au démoulage, le saumon recouvre toute la terrine). Réserver au frais.",
+        "Mélanger le fromage frais, le skyr, le concombre en dés, le reste du saumon fumé en morceaux et l’aneth.",
+        "Ajouter le mélange dans votre plat et le recouvrir de film plastique",
+        "Réserver 1 h 30-2 h au frais.",
+        "Démouler votre terrine et déguster avec du pain frais !"
+      ],
+      "viande_pdf": null,
+      "notes": "se conserve au frais",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "terrine-skyr-saumon-fume.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 162,
+      "slug": "maquereaux-au-vin-blanc",
+      "titre": "Maquereaux au vin blanc",
+      "type": "salé",
+      "categorie_pdf": "Poisson",
+      "page_pdf": 174,
+      "situation": "chrono",
+      "regime": "poisson",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 20,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 10,
+      "personnes_base": 4,
+      "portions_pdf": "4 personnes",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "poisson",
+        "sulfites"
+      ],
+      "ingredients": [
+        {
+          "texte": "4 maquereaux en filets",
+          "quantite": 4,
+          "unite": "",
+          "nom": "maquereaux en filets",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "25 cl de vin blanc sec",
+          "quantite": 250,
+          "unite": "ml",
+          "nom": "vin blanc sec",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "10 cl de vinaigre de cidre",
+          "quantite": 100,
+          "unite": "ml",
+          "nom": "vinaigre de cidre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 carotte",
+          "quantite": 1,
+          "unite": "",
+          "nom": "carotte",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 citron",
+          "quantite": 1,
+          "unite": "",
+          "nom": "citron",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "Laurier",
+          "quantite": null,
+          "unite": "",
+          "nom": "Laurier",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Thym",
+          "quantite": null,
+          "unite": "",
+          "nom": "Thym",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Grains de poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Grains de poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Coriandre en graines",
+          "quantite": null,
+          "unite": "",
+          "nom": "Coriandre en graines",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Porter à ébullition le vin, le vinaigre, l’oignon et la carotte en rondelles, le citron et les aromates. Cuire 10 minutes.",
+        "Ranger les filets dans un plat, verser la marinade bouillante dessus.",
+        "Laisser refroidir, puis réserver 24 heures au frais. Servir avec du pain grillé."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "maquereaux-au-vin-blanc.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 177,
+      "slug": "coquillettes-tofu-epinards-et-fromage",
+      "titre": "Coquillettes, tofu, épinards & fromage",
+      "type": "salé",
+      "categorie_pdf": "Végétal bien cuisiné",
+      "page_pdf": 191,
+      "situation": "chrono",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 25,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2 à 4",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "soja"
+      ],
+      "ingredients": [
+        {
+          "texte": "200 g de coquillettes crues",
+          "quantite": 200,
+          "unite": "g",
+          "nom": "coquillettes crues",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "200 g de tofu fumé",
+          "quantite": 200,
+          "unite": "g",
+          "nom": "tofu fumé",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "2 belles poignées d’épinards",
+          "quantite": 2,
+          "unite": "",
+          "nom": "belles poignées d’épinards",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "60 g de fromage râpé (végétal ou non)",
+          "quantite": 60,
+          "unite": "g",
+          "nom": "fromage râpé (végétal ou non)",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "feuille de sauge",
+          "quantite": null,
+          "unite": "",
+          "nom": "feuille de sauge",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "huile d’olive",
+          "quantite": null,
+          "unite": "",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Préalablement, faire bouillir l’eau des pâtes et couper le tofu en allumettes",
+        "Faire cuire les pâtes dans une casserole d’eau bouillante.",
+        "En parallèle, faire revenir la sauge avec les lardons de tofu fumé dans une poêle chaude et huilée. Une fois bien dorés, ajouter les épinards et laisser revenir quelques minutes.",
+        "Ajouter ensuite les pâtes cuites et égouttées ainsi que le fromage.",
+        "Bien mélanger le tout et servir chaud."
+      ],
+      "viande_pdf": null,
+      "notes": "végan (si fromage adéquat)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "coquillettes-tofu-epinards-et-fromage.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 180,
+      "slug": "paves-d-avoine",
+      "titre": "Pavés d’avoine",
+      "type": "salé",
+      "categorie_pdf": "Végétal bien cuisiné",
+      "page_pdf": 194,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 35,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 20,
+      "personnes_base": 8,
+      "portions_pdf": "8",
+      "batch": "non",
+      "saison": "automne",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "3 càs de farine d’avoine",
+          "quantite": 3,
+          "unite": "càs",
+          "nom": "farine d’avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càs de farine de pois chiche",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "farine de pois chiche",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "3 càs de flocons d’avoine",
+          "quantite": 3,
+          "unite": "càs",
+          "nom": "flocons d’avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "olives (tomates séchées ou autre garniture au choix)",
+          "quantite": null,
+          "unite": "",
+          "nom": "olives (tomates séchées ou autre garniture au choix)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "graines de courge",
+          "quantite": null,
+          "unite": "",
+          "nom": "graines de courge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 càs d’huile d’olive",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "3 càs d’eau",
+          "quantite": 3,
+          "unite": "càs",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càs de sirop d’agave",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "sirop d’agave",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Dans un saladier, mélanger les flocons d’avoine avec les farines d’avoine et de pois chiche",
+        "Émincer les olives (ou autres garnitures) et les ajouter au mélange",
+        "Mettre les graines de courge et le sel",
+        "Ajouter l’huile, l’eau et le sirop puis mélanger",
+        "Diviser la pâte en 8 petits pavés sur une plaque antiadhésive",
+        "Enfourner à 180 °C pendant 20 minutes"
+      ],
+      "viande_pdf": null,
+      "notes": "parfait à l’apéro ou en salade !",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "paves-d-avoine.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 183,
+      "slug": "tofu-brouille",
+      "titre": "Tofu brouillé",
+      "type": "salé",
+      "categorie_pdf": "Végétal bien cuisiné",
+      "page_pdf": 197,
+      "situation": "chrono",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 20,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 5,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "oui",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "soja"
+      ],
+      "ingredients": [
+        {
+          "texte": "300 g tofu ferme",
+          "quantite": 300,
+          "unite": "g",
+          "nom": "tofu ferme",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "½ oignon rouge",
+          "quantite": 0.5,
+          "unite": "",
+          "nom": "oignon rouge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 filet huile d’olive",
+          "quantite": 1,
+          "unite": "filet",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "½ poivron rouge",
+          "quantite": 0.5,
+          "unite": "",
+          "nom": "poivron rouge",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 càc curcuma",
+          "quantite": 1,
+          "unite": "càc",
+          "nom": "curcuma",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs levure maltée",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "levure maltée",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "½ càc Kala Namak",
+          "quantite": 0.5,
+          "unite": "càc",
+          "nom": "Kala Namak",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Laver, éplucher et émincer l’oignon et l’ail",
+        "Les faire revenir dans une poêle avec de l’huile d’olive 2-3 minutes à feu moyen.",
+        "Pendant ce temps, hacher le poivron et l’ajouter à la poêle, avec un filet d’eau si nécessaire.",
+        "Émietter le tofu avec les mains pour créer une texture semblable à celle d’un œuf brouillé.",
+        "Incorporer le Kala Namak, le curcuma et la levure maltée. Continuer la cuisson pendant environ 1-2 minutes.",
+        "Retirer du feu et rectifier l’assaisonnement.",
+        "Servir ce tofu brouillé sur un toast de pain au levain, avec des patates douces, … selon les envies !"
+      ],
+      "viande_pdf": null,
+      "notes": "se conserve au frais",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "tofu-brouille.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 217,
+      "slug": "soupe-de-lasagne",
+      "titre": "Soupe de lasagne",
+      "type": "salé",
+      "categorie_pdf": "Soupes",
+      "page_pdf": 233,
+      "situation": "recoit",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 30,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 20,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "oui",
+      "saison": "été",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "180 g de haché végétal (ou non)",
+          "quantite": 180,
+          "unite": "g",
+          "nom": "haché végétal (ou non)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "120 g de pâtes à lasagne (sans gluten ou non)",
+          "quantite": 120,
+          "unite": "g",
+          "nom": "pâtes à lasagne (sans gluten ou non)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "450 ml de pulpe de tomates (ou tomates concassées)",
+          "quantite": 450,
+          "unite": "ml",
+          "nom": "pulpe de tomates (ou tomates concassées)",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "450 ml d’eau",
+          "quantite": 450,
+          "unite": "ml",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "une belle poignée d’épinards",
+          "quantite": null,
+          "unite": "",
+          "nom": "une belle poignée d’épinards",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "épices : sel, paprika fumé, piment, thym",
+          "quantite": null,
+          "unite": "",
+          "nom": "épices : sel, paprika fumé, piment, thym",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Faire revenir l’oignon dans un peu d’huile avec les épices",
+        "Puis ajouter le haché et cuire 5 min",
+        "Verser la pulpe de tomate, l’eau et porter à ébullition",
+        "Casser grossièrement les pâtes à lasagne",
+        "Ajouter les morceaux de lasagne à la poêle et faire cuire à couvert environ 10 min (le temps varie selon l’épaisseur des pâtes)",
+        "Ajouter les épinards, mélanger un peu et c’est prêt !"
+      ],
+      "viande_pdf": "haché végétal ou viande",
+      "notes": "végan (si haché adéquat) ; sans gluten (si pâtes adéquates)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "soupe-de-lasagne.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 218,
+      "slug": "soupe-facon-chili-sin-carne",
+      "titre": "Soupe façon chili sin carne",
+      "type": "salé",
+      "categorie_pdf": "Soupes",
+      "page_pdf": 234,
+      "situation": "reconfort",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 35,
+      "preparation_minutes": 25,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2 à 4",
+      "batch": "oui",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "2 càs d’huile d’olive",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "épices : cumin, paprika fumé, piment de cayenne",
+          "quantite": null,
+          "unite": "",
+          "nom": "épices : cumin, paprika fumé, piment de cayenne",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "180 g de haché végétal (opt. mais rajouter des haricots)",
+          "quantite": 180,
+          "unite": "g",
+          "nom": "haché végétal (opt. mais rajouter des haricots)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "250 g de haricots rouges",
+          "quantite": 250,
+          "unite": "g",
+          "nom": "haricots rouges",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 petite boîte de maïs (140 g)",
+          "quantite": 1,
+          "unite": "",
+          "nom": "petite boîte de maïs (140 g)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 boîtes de tomates concassées (800 g)",
+          "quantite": 2,
+          "unite": "boîtes",
+          "nom": "tomates concassées (800 g)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "pour servir : chips tortillas, avocat et faux-mage",
+          "quantite": null,
+          "unite": "",
+          "nom": "pour servir : chips tortillas, avocat et faux-mage",
+          "rayon": "Fruits"
+        }
+      ],
+      "etapes": [
+        "Faire revenir l’oignon et les épices dans l’huile",
+        "Ajouter le haché végétal et cuire 5 min",
+        "Ajouter les haricots, le maïs égouttés et les boîtes de tomates concassées et faire cuire 5 min supplémentaires",
+        "Servir avec du fromage frais vegan, de l’avocat & des tortilla chips !"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "soupe-facon-chili-sin-carne.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 239,
+      "slug": "potimarron-et-chataignes",
+      "titre": "Potimarron & châtaignes",
+      "type": "salé",
+      "categorie_pdf": "Soupes",
+      "page_pdf": 255,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": true,
+      "budget_portion": 3,
+      "temps_minutes": 40,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 30,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "oui",
+      "saison": "automne",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "1 potimarron",
+          "quantite": 1,
+          "unite": "",
+          "nom": "potimarron",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "200 g de châtaignes cuites",
+          "quantite": 200,
+          "unite": "g",
+          "nom": "châtaignes cuites",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 l de bouillon",
+          "quantite": 1000,
+          "unite": "ml",
+          "nom": "bouillon",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "10 cl de crème",
+          "quantite": 100,
+          "unite": "ml",
+          "nom": "crème",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "lardons de volaille (facultatif)",
+          "quantite": null,
+          "unite": "",
+          "nom": "lardons de volaille (facultatif)",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Couper le potimarron en cubes sans l’éplucher",
+        "Faire revenir l’oignon, ajouter potimarron, châtaignes (en garder quelques-unes) et bouillon",
+        "Cuire 25 min, mixer avec la crème",
+        "Servir avec les châtaignes émiettées et les lardons grillés"
+      ],
+      "viande_pdf": null,
+      "notes": "Végan avec crème végétale et sans lardons",
+      "version_sans_viande": {
+        "type": "remplacement",
+        "texte": "Végan avec crème végétale et sans lardons.",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "potimarron-et-chataignes.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 243,
+      "slug": "pizza-dilla",
+      "titre": "Pizza-dilla",
+      "type": "salé",
+      "categorie_pdf": "Wraps et galettes",
+      "page_pdf": 261,
+      "situation": "frigo",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 28,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 8,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "soja"
+      ],
+      "ingredients": [
+        {
+          "texte": "2 tortillas moyennes",
+          "quantite": 2,
+          "unite": "",
+          "nom": "tortillas moyennes",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "200 g de tofu parfumé",
+          "quantite": 200,
+          "unite": "g",
+          "nom": "tofu parfumé",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "7-8 cl de crème végétale",
+          "quantite": null,
+          "unite": "ml",
+          "nom": "crème végétale",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sauce tomate",
+          "quantite": null,
+          "unite": "",
+          "nom": "sauce tomate",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Faux-mage",
+          "quantite": null,
+          "unite": "",
+          "nom": "Faux-mage",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Émietter grossièrement le tofu choisi et verser la crème végétale",
+        "Écraser le tout à l’aide d’une fourchette pour obtenir une sorte de haché/tartinade pour farcir",
+        "Étaler ce mélange sur la moitié d’une tortilla et replier la partie restante au-dessus",
+        "Faire de même avec la seconde tortilla",
+        "Couper ces tortillas en 3 triangles chacune (comme des parts de pizza) et rassembler sur une plaque de cuisson pour former un cercle",
+        "Mettre sur le dessus de chaque triangle, ½ càs de sauce tomate et étaler",
+        "Ajouter un peu de crème et de fromage, des olives et ce que l’on veut dessus…",
+        "Enfourner 8 minutes à 180 °C"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "pizza-dilla.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 244,
+      "slug": "galette-de-sarrasin-a-la-ratatouille",
+      "titre": "Galette de sarrasin à la ratatouille",
+      "type": "salé",
+      "categorie_pdf": "Wraps et galettes",
+      "page_pdf": 262,
+      "situation": "chrono",
+      "regime": "viande",
+      "contient_porc": true,
+      "budget_portion": 2.2,
+      "temps_minutes": 25,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 5,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "1 galette de blé noir/sarrasin",
+          "quantite": 1,
+          "unite": "",
+          "nom": "galette de blé noir/sarrasin",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "3 càs de ratatouille",
+          "quantite": 3,
+          "unite": "càs",
+          "nom": "ratatouille",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 tranche de jambon",
+          "quantite": 1,
+          "unite": "tranche",
+          "nom": "jambon",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "feta et/ou gruyère",
+          "quantite": null,
+          "unite": "",
+          "nom": "feta et/ou gruyère",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "quelques olives vertes",
+          "quantite": null,
+          "unite": "",
+          "nom": "quelques olives vertes",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Dans une poêle anti-adhésive, étaler la galette de blé noir/sarrasin",
+        "Déposer à l’intérieur une tranche de jambon (coupée en plusieurs morceaux)",
+        "Par-dessus mettre la ratatouille, les olives, saler et poivrer",
+        "Émietter quelques morceaux de feta (et/ou ajouter du gruyère)",
+        "Replier les bords de façon à former un carré",
+        "Recouvrir d’un couvercle et mettre à cuire à feu moyen/fort 3 à 8 minutes"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "galette-de-sarrasin-a-la-ratatouille.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 245,
+      "slug": "galette-geante-fourree-fromage-et-poireaux",
+      "titre": "Galette géante fourrée fromage et poireaux",
+      "type": "salé",
+      "categorie_pdf": "Wraps et galettes",
+      "page_pdf": 263,
+      "situation": "frigo",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 35,
+      "preparation_minutes": 25,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2 à 4",
+      "batch": "non",
+      "saison": "automne, hiver",
+      "allergenes": [
+        "gluten",
+        "œufs",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "2 œufs",
+          "quantite": 2,
+          "unite": "",
+          "nom": "œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "70 g eau bouillante (opt. végan : uniquement 250 ml de lait végétal)",
+          "quantite": 70,
+          "unite": "g",
+          "nom": "eau bouillante (opt. végan : uniquement 250 ml de lait végétal)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "60 g flocons d’avoine",
+          "quantite": 60,
+          "unite": "g",
+          "nom": "flocons d’avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 poireau",
+          "quantite": 1,
+          "unite": "",
+          "nom": "poireau",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "Sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Fromage au choix",
+          "quantite": null,
+          "unite": "",
+          "nom": "Fromage au choix",
+          "rayon": "Crèmerie, œufs"
+        }
+      ],
+      "etapes": [
+        "Casser les œufs et les battre",
+        "Ajouter les flocons d’avoine et l’eau bouillante, mélanger bien",
+        "Laisser reposer 10 minutes (les flocons d’avoine vont gonfler)",
+        "Pour la version végane, faire un porridge avec l’avoine et le lait végétal",
+        "Pendant ce temps, émincer le poireau et le faire revenir à la poêle dans un peu d’huile d’olive.",
+        "Ajouter sel et poivre et réserver dans un récipient.",
+        "Dans la poêle (feu moyen), verser la moitié de la « pâte d’avoine » puis les poireaux",
+        "Mettre le fromage, et verser l’autre moitié de la pâte par-dessus, étaler pour fermer la galette.",
+        "Cuire à couvert pendant 10 minutes.",
+        "Retourner la galette et cuire à nouveau à couvert pendant 5 minutes."
+      ],
+      "viande_pdf": null,
+      "notes": "végan (si version adéquate)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "galette-geante-fourree-fromage-et-poireaux.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 270,
+      "slug": "carres-de-poireaux-polenta-et-feta",
+      "titre": "Carrés de poireaux polenta & feta",
+      "type": "salé",
+      "categorie_pdf": "Tartes et cakes",
+      "page_pdf": 291,
+      "situation": "frigo",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 35,
+      "preparation_minutes": 25,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "automne, hiver",
+      "allergenes": [
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "1 poireau",
+          "quantite": 1,
+          "unite": "",
+          "nom": "poireau",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "50 g polenta",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "polenta",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "50 g feta (ou autres ingrédients)",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "feta (ou autres ingrédients)",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "200 ml eau",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Enlever les 4 couches extérieures du poireau en entaillant le poireau dans le sens de la longueur, les réserver (on doit obtenir 4 « tissus » / « feuilles » de poireaux assez longues)",
+        "Émincer le reste du poireau et le faire revenir dans de l’huile d’olive",
+        "Cuire la polenta 2 minutes dans les 200 ml d’eau bouillante",
+        "L’ajouter au poireau émincé dans la poêle",
+        "Émietter la feta sur la poêlée, assaisonner",
+        "Tremper les couches extérieures du poireau 5 minutes dans les 200 ml d’eau bouillante",
+        "En disposer une sur 1 plaque, puis 1 deuxième perpendiculairement",
+        "Farcir le poireau avec la poêlée de polenta",
+        "Refermer le poireau en rabattant les bords pour former un carré",
+        "Faire la même chose pour le deuxième carré",
+        "Dans la poêle faire dorer les carrés, 2 minutes de chaque côté"
+      ],
+      "viande_pdf": null,
+      "notes": "végan (si ingrédients adéquats)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "carres-de-poireaux-polenta-et-feta.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 286,
+      "slug": "tarte-ou-tartelette-bolo",
+      "titre": "Tarte ou tartelette bolo",
+      "type": "salé",
+      "categorie_pdf": "Tartes et cakes",
+      "page_pdf": 307,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 30,
+      "preparation_minutes": 30,
+      "cuisson_minutes": null,
+      "personnes_base": 4,
+      "portions_pdf": "4 à 6",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "soja",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "1 pâte brisée maison",
+          "quantite": 1,
+          "unite": "",
+          "nom": "pâte brisée maison",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "3 carottes",
+          "quantite": 3,
+          "unite": "",
+          "nom": "carottes",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "200 ml coulis de tomates",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "coulis de tomates",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "200 g viande hachée 5% ou tofu râpé",
+          "quantite": 200,
+          "unite": "g",
+          "nom": "viande hachée 5% ou tofu râpé",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "Sel, poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel, poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "herbes de Provence",
+          "quantite": null,
+          "unite": "",
+          "nom": "herbes de Provence",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 poignées de fromage ou faux-mage (opt.)",
+          "quantite": 2,
+          "unite": "poignées",
+          "nom": "fromage ou faux-mage (opt.)",
+          "rayon": "Crèmerie, œufs"
+        }
+      ],
+      "etapes": [
+        "Laver les carottes et éplucher l’oignon",
+        "Les émincer en petits cubes et les faire cuire dans un filet d’huile d’olive 15 min",
+        "Une fois bien dorés, ajouter la viande ou le tofu, le coulis de tomate et les herbes de Provence",
+        "Laisser mijoter à découvert (il faut que le coulis de tomate s’évapore)",
+        "Pendant ce temps, faire préchauffer le four à 180 °C",
+        "Et étaler la pâte brisée puis couper des petits cercles avec un emporte-pièce (si option tartelettes)",
+        "Mettre la pâte dans un plat allant au four ou dans des petits moules adéquats",
+        "Déposer la préparation sur la pâte brisée, et ajouter du fromage ou faux-mage si l’on souhaite",
+        "Enfourner à 180 °C, 45 min (pour la grande tarte) et 20 à 25 minutes (pour les tartelettes)"
+      ],
+      "viande_pdf": "viande hachée ou tofu râpé",
+      "notes": "sans gluten (si pâte adéquate) ; végan (si option adéquate)",
+      "version_sans_viande": {
+        "type": "remplacement",
+        "texte": "Prendre viande hachée ou tofu râpé.",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "tarte-ou-tartelette-bolo.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 308,
+      "slug": "flammekueche-traditionnelle",
+      "titre": "Flammekueche traditionnelle",
+      "type": "salé",
+      "categorie_pdf": "Tartes et cakes",
+      "page_pdf": 329,
+      "situation": "base",
+      "regime": "viande",
+      "contient_porc": true,
+      "budget_portion": 3,
+      "temps_minutes": 30,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 15,
+      "personnes_base": 4,
+      "portions_pdf": "4 personnes",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "1 pâte à pain fine",
+          "quantite": 1,
+          "unite": "",
+          "nom": "pâte à pain fine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "20 cl de fromage blanc",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "fromage blanc",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "10 cl de crème fraîche",
+          "quantite": 100,
+          "unite": "ml",
+          "nom": "crème fraîche",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 oignons",
+          "quantite": 2,
+          "unite": "",
+          "nom": "oignons",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "150 g de lardons",
+          "quantite": 150,
+          "unite": "g",
+          "nom": "lardons",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "Muscade",
+          "quantite": null,
+          "unite": "",
+          "nom": "Muscade",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Étaler la pâte très finement sur une plaque.",
+        "Mélanger fromage blanc, crème, muscade et poivre, étaler sur la pâte.",
+        "Répartir les oignons émincés très fins et les lardons crus.",
+        "Cuire 12 à 15 minutes à 250 °C, four le plus chaud possible. Servir avec une salade verte."
+      ],
+      "viande_pdf": "lardons de volaille",
+      "notes": null,
+      "version_sans_viande": {
+        "type": "remplacement",
+        "texte": "Une version sans viande existe, réservée aux membres.",
+        "source": "pdf"
+      },
+      "gratuit": "oui",
+      "image": "flammekueche-traditionnelle.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 323,
+      "slug": "croque-monsieur",
+      "titre": "Croque-monsieur",
+      "type": "salé",
+      "categorie_pdf": "Gaufres, croques et pancakes salés",
+      "page_pdf": 345,
+      "situation": "chrono",
+      "regime": "viande",
+      "contient_porc": true,
+      "budget_portion": 3,
+      "temps_minutes": 25,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 15,
+      "personnes_base": 4,
+      "portions_pdf": "4 personnes",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "8 tranches de pain de mie",
+          "quantite": 8,
+          "unite": "tranches",
+          "nom": "pain de mie",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "4 tranches de jambon",
+          "quantite": 4,
+          "unite": "tranches",
+          "nom": "jambon",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "100 g de gruyère râpé",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "gruyère râpé",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "20 g de beurre",
+          "quantite": 20,
+          "unite": "g",
+          "nom": "beurre",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "20 g de farine",
+          "quantite": 20,
+          "unite": "g",
+          "nom": "farine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "25 cl de lait",
+          "quantite": 250,
+          "unite": "ml",
+          "nom": "lait",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "Muscade",
+          "quantite": null,
+          "unite": "",
+          "nom": "Muscade",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Préparer une béchamel épaisse avec le beurre, la farine, le lait et la muscade.",
+        "Tartiner les tranches de pain de béchamel, garnir de jambon et d’un peu de fromage, refermer.",
+        "Couvrir le dessus d’un peu de béchamel et du reste de fromage.",
+        "Cuire 10 minutes à 200 °C puis 2 minutes sous le gril. Servir avec une salade."
+      ],
+      "viande_pdf": "jambon de volaille",
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "croque-monsieur.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 324,
+      "slug": "pain-perdu-sale-aux-restes",
+      "titre": "Pain perdu salé aux restes",
+      "type": "salé",
+      "categorie_pdf": "Gaufres, croques et pancakes salés",
+      "page_pdf": 346,
+      "situation": "chrono",
+      "regime": "viande",
+      "contient_porc": true,
+      "budget_portion": 2.2,
+      "temps_minutes": 20,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "4 tranches de pain rassis",
+          "quantite": 4,
+          "unite": "tranches",
+          "nom": "pain rassis",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "3 œufs",
+          "quantite": 3,
+          "unite": "",
+          "nom": "œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "15 cl de lait",
+          "quantite": 150,
+          "unite": "ml",
+          "nom": "lait",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "50 g de fromage râpé",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "fromage râpé",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "restes de légumes cuits",
+          "quantite": null,
+          "unite": "",
+          "nom": "restes de légumes cuits",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 tranches de jambon",
+          "quantite": 2,
+          "unite": "tranches",
+          "nom": "jambon",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "1 noix de beurre",
+          "quantite": 1,
+          "unite": "noix",
+          "nom": "beurre",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Battre œufs, lait, sel et poivre",
+        "Tremper les tranches de pain des deux côtés",
+        "Les dorer au beurre 2 min, retourner",
+        "Garnir de restes de légumes, jambon et fromage",
+        "Couvrir 3 min jusqu’à ce que le fromage fonde"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "pain-perdu-sale-aux-restes.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 325,
+      "slug": "porridge-au-four-version-mexicaine",
+      "titre": "Porridge au four (version mexicaine)",
+      "type": "salé",
+      "categorie_pdf": "Salades et bowls",
+      "page_pdf": 349,
+      "situation": "frigo",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 35,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 20,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "50 g avoine",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "5 tomates cerises",
+          "quantite": 5,
+          "unite": "",
+          "nom": "tomates cerises",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "poivrons & oignons grillés",
+          "quantite": null,
+          "unite": "",
+          "nom": "poivrons & oignons grillés",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "80 ml lait végétal sans sucre",
+          "quantite": 80,
+          "unite": "ml",
+          "nom": "lait végétal sans sucre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "80 ml eau",
+          "quantite": 80,
+          "unite": "ml",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "ail & épices mexicaines",
+          "quantite": null,
+          "unite": "",
+          "nom": "ail & épices mexicaines",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Faire griller des oignons et poivrons dans une poêle",
+        "Laver puis découper les tomates cerises en deux",
+        "Dans un bol, ou un plat, mettre l’avoine, les tomates coupées et la poêlée de légumes",
+        "Ajouter le lait végétal, l’eau, l’ail et les épices puis mélanger",
+        "Enfourner à 180 °C pendant 20 minutes"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "porridge-au-four-version-mexicaine.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 326,
+      "slug": "porridge-sale-aux-herbes-de-provence",
+      "titre": "Porridge salé aux herbes de Provence",
+      "type": "salé",
+      "categorie_pdf": "Salades et bowls",
+      "page_pdf": 350,
+      "situation": "chrono",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 13,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 3,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "soja",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "40 g flocons d’avoine",
+          "quantite": 40,
+          "unite": "g",
+          "nom": "flocons d’avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1-2 càs de levure de bière",
+          "quantite": null,
+          "unite": "càs",
+          "nom": "levure de bière",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Herbes de Provence",
+          "quantite": null,
+          "unite": "",
+          "nom": "Herbes de Provence",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "½ càc bouillon de légumes",
+          "quantite": null,
+          "unite": "",
+          "nom": "c. à café bouillon de légumes",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 ml environ eau bouillante",
+          "quantite": 100,
+          "unite": "ml",
+          "nom": "environ eau bouillante",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Poivrons surgelés vapeur",
+          "quantite": null,
+          "unite": "",
+          "nom": "Poivrons surgelés vapeur",
+          "rayon": "Surgelés"
+        },
+        {
+          "texte": "Épinards vapeur",
+          "quantite": null,
+          "unite": "",
+          "nom": "Épinards vapeur",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Tofu à l’ail des ours",
+          "quantite": null,
+          "unite": "",
+          "nom": "Tofu à l’ail des ours",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "Tomates séchées",
+          "quantite": null,
+          "unite": "",
+          "nom": "Tomates séchées",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sauce yaourt soja + levure de bière + basilic + citron",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sauce yaourt soja + levure de bière + basilic + citron",
+          "rayon": "Crèmerie, œufs"
+        }
+      ],
+      "etapes": [
+        "Dans un saladier mélanger les ingrédients secs",
+        "Recouvrir d’eau bouillante et couvrir",
+        "Pendant que les flocons d’avoine gonflent, préparer les légumes, le tofu, la sauce et votre assiette",
+        "Verser le porridge encore chaud et déguster !"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "porridge-sale-aux-herbes-de-provence.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 327,
+      "slug": "salade-d-automne",
+      "titre": "Salade d’automne",
+      "type": "salé",
+      "categorie_pdf": "Salades et bowls",
+      "page_pdf": 351,
+      "situation": "frigo",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 40,
+      "preparation_minutes": 40,
+      "cuisson_minutes": null,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "automne, hiver",
+      "allergenes": [
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "½ potimarron",
+          "quantite": 0.5,
+          "unite": "",
+          "nom": "potimarron",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 verres de lentilles",
+          "quantite": 2,
+          "unite": "verres",
+          "nom": "lentilles",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "6 verres d’eau",
+          "quantite": 6,
+          "unite": "verres",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 ou 2 endives",
+          "quantite": null,
+          "unite": "",
+          "nom": "endives",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "figues",
+          "quantite": null,
+          "unite": "",
+          "nom": "figues",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "(fromage frais)",
+          "quantite": null,
+          "unite": "",
+          "nom": "(fromage frais)",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 filet d’huile d’olive",
+          "quantite": 1,
+          "unite": "filet",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "épices de votre choix (cumin, paprika, curry, mélange 4 épices…)",
+          "quantite": null,
+          "unite": "",
+          "nom": "épices de votre choix (cumin, paprika, curry, mélange 4 épices…)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "persil frais",
+          "quantite": null,
+          "unite": "",
+          "nom": "persil frais",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel & poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "(Facultatif : Avoir préalablement fait tremper les lentilles 1 nuit dans un grand volume d’eau)",
+        "Couper le potimarron en deux, puis en tranches",
+        "Sur une plaque de cuisson, disposer les tranches de potimarron, mettre un filet d’huile d’olive et quelques épices, saler et poivrer",
+        "Enfourner pendant 30 minutes à 180 °C",
+        "Pendant ce temps-là, dans une casserole mettre les lentilles, les 6 verres d’eau, et saler",
+        "Porter l’eau à ébullition et faire cuire 20 à 25 minutes",
+        "Pendant ce temps, découper l’endive, les figues et hacher du persil frais",
+        "Une fois les lentilles et potimarron cuits, disposer les ingrédients dans une assiette creuse et ajouter un peu de fromage frais sur le dessus (optionnel)"
+      ],
+      "viande_pdf": null,
+      "notes": "alternative végan",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "salade-d-automne.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 361,
+      "slug": "dahl-de-lentilles-aux-carottes-et-tomates",
+      "titre": "Dahl de lentilles aux carottes et tomates",
+      "type": "salé",
+      "categorie_pdf": "Cuisine du monde",
+      "page_pdf": 388,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.5,
+      "temps_minutes": 40,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 20,
+      "personnes_base": 4,
+      "portions_pdf": "4 per.",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "1 boîte de tomates pelées",
+          "quantite": 1,
+          "unite": "",
+          "nom": "boîte de tomates pelées",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 carottes",
+          "quantite": 2,
+          "unite": "",
+          "nom": "carottes",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "250 g de lentilles corail",
+          "quantite": 250,
+          "unite": "g",
+          "nom": "lentilles corail",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "750 g d’eau",
+          "quantite": 750,
+          "unite": "g",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càc d’épices (curry, piment doux)",
+          "quantite": null,
+          "unite": "càc",
+          "nom": "épices (curry, piment doux)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "sel & poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel & poivre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "huile d’olive",
+          "quantite": null,
+          "unite": "",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Émincer l’oignon et le faire revenir avec la gousse d’ail pressée dans l’huile d’olive.",
+        "Pendant ce temps, émincer les carottes en petits dés et couper les tomates de la boîte.",
+        "Lorsque les oignons sont fondants, ajouter les carottes, les tomates pelées et les épices dans la casserole. Laisser mijoter 10 minutes.",
+        "Rincer plusieurs fois à l’eau claire les lentilles corail (pour les débarrasser des poussières et autres impuretés).",
+        "Ajouter les lentilles corail et l’eau dans la casserole et laisser cuire à feu moyen une vingtaine de minutes.",
+        "Servir chaud, accompagné de naans ou de riz basmati."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "dahl-de-lentilles-aux-carottes-et-tomates.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 370,
+      "slug": "nouilles-au-curry",
+      "titre": "Nouilles au curry",
+      "type": "salé",
+      "categorie_pdf": "Cuisine du monde",
+      "page_pdf": 397,
+      "situation": "reconfort",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 30,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 10,
+      "personnes_base": 2,
+      "portions_pdf": "2-4",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "soja"
+      ],
+      "ingredients": [
+        {
+          "texte": "150 g de nouilles de riz ou 250 g de pâtes classiques",
+          "quantite": 150,
+          "unite": "g",
+          "nom": "nouilles de riz ou 250 g de pâtes classiques",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "150 ml de lait de coco",
+          "quantite": 150,
+          "unite": "ml",
+          "nom": "lait de coco",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càs de pâte de curry (jaune ou rouge)",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "pâte de curry (jaune ou rouge)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Edamame, lentilles, tofu (au choix)",
+          "quantite": null,
+          "unite": "",
+          "nom": "Edamame, lentilles, tofu (au choix)",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "Légumes au choix (carottes, tomates, brocolis, épinards…)",
+          "quantite": null,
+          "unite": "",
+          "nom": "Légumes au choix (carottes, tomates, brocolis, épinards…)",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Coriandre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Coriandre",
+          "rayon": "Légumes"
+        }
+      ],
+      "etapes": [
+        "Faire cuire les pâtes selon les instructions du paquet en réduisant de 1 ou 2 minutes la cuisson.",
+        "Pendant ce temps, verser le lait de coco dans une poêle avec la pâte de curry et faire chauffer l’ensemble à feu moyen",
+        "Une fois que la pâte est bien diluée et que la sauce est bien chaude, verser les pâtes et laisser mijoter dans la sauce quelques minutes",
+        "Ajouter à la fin la source de protéine et les légumes choisis",
+        "Servir et disposer un peu de coriandre"
+      ],
+      "viande_pdf": null,
+      "notes": "sans gluten (si pâtes adéquates)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "nouilles-au-curry.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 372,
+      "slug": "nouilles-instantanees-maison",
+      "titre": "Nouilles instantanées maison",
+      "type": "salé",
+      "categorie_pdf": "Cuisine du monde",
+      "page_pdf": 399,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 2.2,
+      "temps_minutes": 28,
+      "preparation_minutes": 20,
+      "cuisson_minutes": 8,
+      "personnes_base": 3,
+      "portions_pdf": "3",
+      "batch": "oui",
+      "saison": "été, automne, hiver",
+      "allergenes": [
+        "gluten",
+        "soja"
+      ],
+      "ingredients": [
+        {
+          "texte": "Nouilles vermicelle de riz",
+          "quantite": null,
+          "unite": "",
+          "nom": "Nouilles vermicelle de riz",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Tofu ferme en cubes",
+          "quantite": null,
+          "unite": "",
+          "nom": "Tofu ferme en cubes",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "Carotte râpée",
+          "quantite": null,
+          "unite": "",
+          "nom": "Carotte râpée",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Courgettes râpées",
+          "quantite": null,
+          "unite": "",
+          "nom": "Courgettes râpées",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Chou tranché finement",
+          "quantite": null,
+          "unite": "",
+          "nom": "Chou tranché finement",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Coriandre hachée",
+          "quantite": null,
+          "unite": "",
+          "nom": "Coriandre hachée",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Oignon haché",
+          "quantite": null,
+          "unite": "",
+          "nom": "Oignon haché",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 càs d’épices au choix",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "épices au choix",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càc de poudre de piment",
+          "quantite": 1,
+          "unite": "càc",
+          "nom": "poudre de piment",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Préparer tous les ingrédients",
+        "Ajouter tous vos ingrédients dans des boîtes ou un récipient",
+        "Conserver au frigo jusqu’au repas souhaité",
+        "Une fois le déjeuner ou le dîner proche, remplir d’eau bouillante juste pour couvrir les nouilles et les légumes",
+        "Couvrir avec le couvercle, laisser reposer pendant 5 - 10 minutes, laisser la magie se produire et déguster !"
+      ],
+      "viande_pdf": null,
+      "notes": "idéal pour un meal prep",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "nouilles-instantanees-maison.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 422,
+      "slug": "galettes-de-poulet-au-basilic",
+      "titre": "Galettes de poulet au basilic",
+      "type": "salé",
+      "categorie_pdf": "Poulet, dinde et volaille",
+      "page_pdf": 451,
+      "situation": "reconfort",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 27,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 17,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "500 g de filets de poulet",
+          "quantite": 500,
+          "unite": "g",
+          "nom": "filets de poulet",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "50 g de chèvre frais",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "chèvre frais",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 bouquet de basilic",
+          "quantite": 1,
+          "unite": "bouquet",
+          "nom": "basilic",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 càc de pistou",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "pistou",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 œuf",
+          "quantite": 1,
+          "unite": "",
+          "nom": "œuf",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "2 oignons",
+          "quantite": 2,
+          "unite": "",
+          "nom": "oignons",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "Huile d’olive",
+          "quantite": null,
+          "unite": "",
+          "nom": "Huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel et poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel et poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Émincer les oignons et les faire fondre dans une poêle avec un peu d’huile.",
+        "Couper 250 g de poulet en petits dés.",
+        "Mixer le reste du poulet avec l’œuf, les oignons, le chèvre, le basilic, le pistou, le sel et le poivre.",
+        "Mélanger avec les dés de poulet.",
+        "Former des galettes sur une plaque légèrement huilée.",
+        "Enfourner environ 12 minutes à 210 °C.",
+        "Pour les dorer, les passer quelques minutes à la poêle ou sous le gril."
+      ],
+      "viande_pdf": null,
+      "notes": "Avec des courgettes sautées.",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "galettes-de-poulet-au-basilic.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 423,
+      "slug": "saute-de-poulet-aux-asperges-et-a-l-origan",
+      "titre": "Sauté de poulet aux asperges et à l’origan",
+      "type": "salé",
+      "categorie_pdf": "Poulet, dinde et volaille",
+      "page_pdf": 452,
+      "situation": "reconfort",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 35,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 20,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "printemps",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "250 g de poulet émincé",
+          "quantite": 250,
+          "unite": "g",
+          "nom": "poulet émincé",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "500 g d’asperges vertes",
+          "quantite": 500,
+          "unite": "g",
+          "nom": "asperges vertes",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "150 ml de crème demi-épaisse",
+          "quantite": 150,
+          "unite": "ml",
+          "nom": "crème demi-épaisse",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 ml de bouillon de légumes",
+          "quantite": 100,
+          "unite": "ml",
+          "nom": "bouillon de légumes",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 petit oignon",
+          "quantite": 1,
+          "unite": "",
+          "nom": "petit oignon",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "2 càs d’origan",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "origan",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs d’huile d’olive",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel et poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel et poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Couper 3 cm à la base des asperges, éplucher le tiers inférieur si besoin, puis les couper en trois.",
+        "Hacher finement l’oignon et l’ail.",
+        "Les faire revenir à l’huile dans un wok ou une sauteuse, ajouter les asperges et faire sauter 3 à 4 minutes.",
+        "Verser le bouillon et 1 càs d’origan. Cuire à demi-couvert jusqu’à ce que les asperges soient juste tendres. Réserver avec leur jus.",
+        "Dans la même poêle, faire dorer le poulet.",
+        "Ajouter la crème, le reste d’origan, sel et poivre. Laisser bouillir 1 minute.",
+        "Remettre les asperges et leur jus, mélanger délicatement et servir bien chaud."
+      ],
+      "viande_pdf": null,
+      "notes": "Avec du pain ou du riz.",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "saute-de-poulet-aux-asperges-et-a-l-origan.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 424,
+      "slug": "escalopes-de-poulet-a-la-cardamome",
+      "titre": "Escalopes de poulet à la cardamome",
+      "type": "salé",
+      "categorie_pdf": "Poulet, dinde et volaille",
+      "page_pdf": 453,
+      "situation": "recoit",
+      "regime": "viande",
+      "contient_porc": false,
+      "budget_portion": 3,
+      "temps_minutes": 27,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 17,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "4 escalopes de poulet",
+          "quantite": 4,
+          "unite": "",
+          "nom": "escalopes de poulet",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "2 oignons",
+          "quantite": 2,
+          "unite": "",
+          "nom": "oignons",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "1 gousse d’ail",
+          "quantite": 1,
+          "unite": "gousse",
+          "nom": "ail",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "6 graines de cardamome",
+          "quantite": 6,
+          "unite": "",
+          "nom": "graines de cardamome",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "180 g de crème fraîche",
+          "quantite": 180,
+          "unite": "g",
+          "nom": "crème fraîche",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1/2 cube de bouillon",
+          "quantite": 0.5,
+          "unite": "cube",
+          "nom": "bouillon",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càc d’huile d’olive",
+          "quantite": 2,
+          "unite": "càc",
+          "nom": "huile d’olive",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Sel et poivre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Sel et poivre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Ouvrir les capsules de cardamome et récupérer les graines ; les broyer légèrement si souhaité.",
+        "Hacher les oignons et l’ail.",
+        "Les faire revenir à l’huile avec la cardamome jusqu’à ce que les oignons soient translucides.",
+        "Ajouter les escalopes, saler, poivrer et cuire à feu moyen ; les retourner après 5 minutes.",
+        "Après 10 minutes de cuisson, ajouter la crème et émietter le demi-cube de bouillon.",
+        "Mélanger et poursuivre 2 minutes à feu doux, jusqu’à ce que le poulet soit cuit à cœur."
+      ],
+      "viande_pdf": null,
+      "notes": "Avec du riz nature.",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "escalopes-de-poulet-a-la-cardamome.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 447,
+      "slug": "beignets-de-calamar-d-aubergines",
+      "titre": "Beignets de « calamar » d’aubergines",
+      "type": "salé",
+      "categorie_pdf": "À-côtés, crudités et sauces",
+      "page_pdf": 479,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1.2,
+      "temps_minutes": 35,
+      "preparation_minutes": 25,
+      "cuisson_minutes": 10,
+      "personnes_base": 3,
+      "portions_pdf": "3-4",
+      "batch": "non",
+      "saison": "été",
+      "allergenes": [
+        "gluten",
+        "poisson",
+        "soja"
+      ],
+      "ingredients": [
+        {
+          "texte": "2 aubergines",
+          "quantite": 2,
+          "unite": "",
+          "nom": "aubergines",
+          "rayon": "Légumes"
+        },
+        {
+          "texte": "eau",
+          "quantite": null,
+          "unite": "",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càs de sauce soja ou de sauce de poisson végan",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "sauce soja ou de sauce de poisson végan",
+          "rayon": "Boucherie, poisson"
+        },
+        {
+          "texte": "1 càc de sel",
+          "quantite": 1,
+          "unite": "càc",
+          "nom": "sel",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "jus de citron",
+          "quantite": null,
+          "unite": "",
+          "nom": "jus de citron",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "1 feuille nori",
+          "quantite": 1,
+          "unite": "feuille",
+          "nom": "nori",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "60 g farine (au choix)",
+          "quantite": 60,
+          "unite": "g",
+          "nom": "farine (au choix)",
+          "rayon": "Épicerie",
+          "groupe": "jus de 1 citron Pour la chapelure"
+        },
+        {
+          "texte": "sel et poivre au goût",
+          "quantite": null,
+          "unite": "",
+          "nom": "sel et poivre au goût",
+          "rayon": "Épicerie",
+          "groupe": "jus de 1 citron Pour la chapelure"
+        },
+        {
+          "texte": "½ càc de poudre d’ail",
+          "quantite": 0.5,
+          "unite": "càc",
+          "nom": "poudre d’ail",
+          "rayon": "Légumes",
+          "groupe": "jus de 1 citron Pour la chapelure"
+        },
+        {
+          "texte": "180 ml de lait végétal",
+          "quantite": 180,
+          "unite": "ml",
+          "nom": "lait végétal",
+          "rayon": "Épicerie",
+          "groupe": "jus de 1 citron Pour la chapelure"
+        },
+        {
+          "texte": "chapelure (au choix)",
+          "quantite": null,
+          "unite": "",
+          "nom": "chapelure (au choix)",
+          "rayon": "Épicerie",
+          "groupe": "jus de 1 citron Pour la chapelure"
+        }
+      ],
+      "etapes": [
+        "Éplucher les aubergines, les couper en tranches et les trouer au centre avec le bouchon de la sauce soja (ou autre petit emporte-pièce).",
+        "Mettre de l’eau à bouillir avec la sauce soja, le sel, la feuille nori en morceaux et le jus de citron",
+        "Faire cuire les aubergines dans cette eau 5/10 minutes.",
+        "Les égoutter et bien les sécher.",
+        "Fouetter la farine, le lait, et la poudre d’ail. Saler et poivrer.",
+        "Verser la chapelure choisie dans un autre récipient",
+        "Tremper l’aubergine dans la pâte et puis la chapelure.",
+        "Faire revenir dans l’huile ou rôtir au four jusqu’à ce que cela soit croustillant."
+      ],
+      "viande_pdf": null,
+      "notes": "sans gluten (si opt. adéquates)",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "beignets-de-calamar-d-aubergines.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 529,
+      "slug": "bounty-baked-oats",
+      "titre": "Bounty baked oats",
+      "type": "sucré",
+      "categorie_pdf": "Petits-déjeuners",
+      "page_pdf": 573,
+      "situation": "budget",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 0.6,
+      "temps_minutes": 25,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 15,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "non",
+      "saison": "automne",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "60 g avoine",
+          "quantite": 60,
+          "unite": "g",
+          "nom": "avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "½ càc de cacao",
+          "quantite": 0.5,
+          "unite": "càc",
+          "nom": "cacao",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "noix de coco râpée",
+          "quantite": null,
+          "unite": "",
+          "nom": "noix de coco râpée",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 càs compote de pommes",
+          "quantite": 2,
+          "unite": "càs",
+          "nom": "compote de pommes",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "60 à 70 ml lait végétal",
+          "quantite": null,
+          "unite": "ml",
+          "nom": "lait végétal",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "toppings au choix",
+          "quantite": null,
+          "unite": "",
+          "nom": "toppings au choix",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Mélanger tous les ingrédients dans un récipient en verre",
+        "Ajouter les toppings avant ou après la cuisson",
+        "Cuire à 180 °C, 10 minutes à l’Air Fryer ou 15/20 minutes au four"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "bounty-baked-oats.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 530,
+      "slug": "bowl-choco-sarrasin-au-vitaliseur",
+      "titre": "Bowl choco-sarrasin au Vitaliseur",
+      "type": "sucré",
+      "categorie_pdf": "Petits-déjeuners",
+      "page_pdf": 574,
+      "situation": "chrono",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1,
+      "temps_minutes": 20,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 10,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "fruits à coque"
+      ],
+      "ingredients": [
+        {
+          "texte": "40 g de flocons de sarrasin",
+          "quantite": 40,
+          "unite": "g",
+          "nom": "flocons de sarrasin",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "200 ml de lait d’amande",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "lait d’amande",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "½ càc rase de sirop d’agave ou de sucre complet",
+          "quantite": null,
+          "unite": "",
+          "nom": "⁄2 càc rase de sirop d’agave ou de sucre complet",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càc de cacao non sucré",
+          "quantite": 1,
+          "unite": "càc",
+          "nom": "cacao non sucré",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 carré de chocolat noir",
+          "quantite": 1,
+          "unite": "",
+          "nom": "carré de chocolat noir",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs de poudre de noisette (opt.)",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "poudre de noisette (opt.)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "noisettes et chocolat, ou kasha (opt.)",
+          "quantite": null,
+          "unite": "",
+          "nom": "noisettes et chocolat, ou kasha (opt.)",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Remplir un quart de la cuve du Vitaliseur d’eau et porter à ébullition.",
+        "Dans un bol mélanger les flocons de sarrasin, le lait d’amande, le sirop d’agave ou le sucre et le cacao.",
+        "Déposer le bol sur le tamis du Vitaliseur pour 10 minutes de cuisson en remuant la préparation de temps en temps.",
+        "Mettre le carré de chocolat au centre avant de servir",
+        "Parsemer la poudre de noisette et les noisettes, le chocolat ou le kasha."
+      ],
+      "viande_pdf": null,
+      "notes": "À garnir selon les envies !",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "bowl-choco-sarrasin-au-vitaliseur.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 531,
+      "slug": "bowl-flan-choco-noisette",
+      "titre": "Bowl-flan choco-noisette",
+      "type": "sucré",
+      "categorie_pdf": "Petits-déjeuners",
+      "page_pdf": 575,
+      "situation": "chrono",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1,
+      "temps_minutes": 10,
+      "preparation_minutes": 10,
+      "cuisson_minutes": null,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten",
+        "fruits à coque"
+      ],
+      "ingredients": [
+        {
+          "texte": "60 g avoine",
+          "quantite": 60,
+          "unite": "g",
+          "nom": "avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "200 ml lait végétal ou eau",
+          "quantite": 200,
+          "unite": "ml",
+          "nom": "lait végétal ou eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "poudre de noisette",
+          "quantite": null,
+          "unite": "",
+          "nom": "poudre de noisette",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 càs cacao pur en poudre",
+          "quantite": 1,
+          "unite": "càs",
+          "nom": "cacao pur en poudre",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Chocolat fondu",
+          "quantite": null,
+          "unite": "",
+          "nom": "Chocolat fondu",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Noisettes concassées",
+          "quantite": null,
+          "unite": "",
+          "nom": "Noisettes concassées",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Dans une casserole verser l’avoine, le lait végétal ou l’eau, la poudre de noisette et le cacao en poudre",
+        "Faire chauffer à feu moyen-doux pour que l’avoine gonfle afin d’obtenir un porridge",
+        "Le verser dans un bol et le laisser une nuit au frais",
+        "Le lendemain matin, démouler le bowl flan",
+        "Faire fondre du chocolat et le recouvrir puis ajouter des noisettes concassées"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "bowl-flan-choco-noisette.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 581,
+      "slug": "brownie-aux-haricots-rouges",
+      "titre": "Brownie aux haricots rouges",
+      "type": "sucré",
+      "categorie_pdf": "Gâteaux et goûters",
+      "page_pdf": 636,
+      "situation": "manches",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1,
+      "temps_minutes": 40,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 30,
+      "personnes_base": 6,
+      "portions_pdf": "6 à 8",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "fruits à coque"
+      ],
+      "ingredients": [
+        {
+          "texte": "250 g haricots rouges",
+          "quantite": 250,
+          "unite": "g",
+          "nom": "haricots rouges",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "15 g cacao maigre non sucré",
+          "quantite": 15,
+          "unite": "g",
+          "nom": "cacao maigre non sucré",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "15 g protéine en poudre chocolat (ou utiliser 30 g de cacao)",
+          "quantite": 15,
+          "unite": "g",
+          "nom": "protéine en poudre chocolat (ou utiliser 30 g de cacao)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "5 g café soluble (optionnel)",
+          "quantite": 5,
+          "unite": "g",
+          "nom": "café soluble (optionnel)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "maxi 30 g de sucrant au choix",
+          "quantite": null,
+          "unite": "",
+          "nom": "maxi 30 g de sucrant au choix",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "90 ml d’eau",
+          "quantite": 90,
+          "unite": "ml",
+          "nom": "eau",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "30 g huile de coco",
+          "quantite": 30,
+          "unite": "g",
+          "nom": "huile de coco",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "quelques noix",
+          "quantite": null,
+          "unite": "",
+          "nom": "quelques noix",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Préchauffer le four à 180 °C",
+        "Dans un blender, mixer tous les ingrédients sauf les noix",
+        "Ajouter les noix et mélanger",
+        "Verser dans un moule chemisé et cuire 30 minutes"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "brownie-aux-haricots-rouges.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 585,
+      "slug": "cake-aux-fruits",
+      "titre": "Cake aux fruits",
+      "type": "sucré",
+      "categorie_pdf": "Gâteaux et goûters",
+      "page_pdf": 640,
+      "situation": "manches",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 0.6,
+      "temps_minutes": 35,
+      "preparation_minutes": 15,
+      "cuisson_minutes": 20,
+      "personnes_base": 6,
+      "portions_pdf": "6",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "150 g de fruits (frais ou surgelés)",
+          "quantite": 150,
+          "unite": "g",
+          "nom": "fruits (frais ou surgelés)",
+          "rayon": "Surgelés"
+        },
+        {
+          "texte": "1/2 banane (ou 1 compote)",
+          "quantite": 0.5,
+          "unite": "",
+          "nom": "banane (ou 1 compote)",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "50 g de flocons d’avoine",
+          "quantite": 50,
+          "unite": "g",
+          "nom": "flocons d’avoine",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 œuf entier",
+          "quantite": 1,
+          "unite": "",
+          "nom": "œuf entier",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "3 blancs d’œufs",
+          "quantite": 3,
+          "unite": "",
+          "nom": "blancs d’œufs",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 petit verre d’eau ou de lait végétal",
+          "quantite": 1,
+          "unite": "",
+          "nom": "petit verre d’eau ou de lait végétal",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Placer les fruits au fond du moule",
+        "Dans un saladier, écraser la banane (ou mettre la compote)",
+        "Ajouter les flocons d’avoine, l’œuf entier et les 3 blancs d’œufs",
+        "Ajouter l’eau ou le lait et mélanger",
+        "Verser la préparation dans le moule",
+        "Rajouter quelques fruits si l’on veut décorer",
+        "Enfourner à 180 °C pendant 20 minutes"
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "cake-aux-fruits.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 590,
+      "slug": "cheesecake-rapide",
+      "titre": "Cheesecake rapide",
+      "type": "sucré",
+      "categorie_pdf": "Gâteaux et goûters",
+      "page_pdf": 645,
+      "situation": "chrono",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 0.6,
+      "temps_minutes": 15,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 5,
+      "personnes_base": 2,
+      "portions_pdf": "2",
+      "batch": "non",
+      "saison": "toute l’année",
+      "allergenes": [
+        "gluten"
+      ],
+      "ingredients": [
+        {
+          "texte": "10 g de fécule de maïs",
+          "quantite": 10,
+          "unite": "g",
+          "nom": "fécule de maïs",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "20 g de sucre roux",
+          "quantite": 20,
+          "unite": "g",
+          "nom": "sucre roux",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 g de lait végétal",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "lait végétal",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 lichette de vanille",
+          "quantite": 1,
+          "unite": "",
+          "nom": "lichette de vanille",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 lichette de rhum (facultatif)",
+          "quantite": 1,
+          "unite": "",
+          "nom": "lichette de rhum (facultatif)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "100 g de yaourt végétal",
+          "quantite": 100,
+          "unite": "g",
+          "nom": "yaourt végétal",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "pâte de spéculoos",
+          "quantite": null,
+          "unite": "",
+          "nom": "pâte de spéculoos",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "lait végétal",
+          "quantite": null,
+          "unite": "",
+          "nom": "lait végétal",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "spéculoos",
+          "quantite": null,
+          "unite": "",
+          "nom": "spéculoos",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Dans un bol, bien mélanger la fécule et le sucre.",
+        "Délayer petit à petit avec le lait.",
+        "Faire chauffer à la casserole sans cesser de fouetter jusqu’à ce que le mélange boue et soit bien épais.",
+        "Hors du feu, ajouter la vanille, le rhum et le yaourt. Mélanger énergiquement.",
+        "Verser dans 2 ramequins et lisser le dessus.",
+        "Pour le topping : diluer un peu de pâte de spéculoos avec du lait végétal chaud, puis verser par-dessus le cheesecake.",
+        "Si possible, laisser prendre au froid une petite heure.",
+        "Avant de servir, émietter des spéculoos en petits morceaux."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "cheesecake-rapide.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 643,
+      "slug": "chiamisu-pudding-de-chia-facon-tiramisu",
+      "titre": "Chiamisu (pudding de chia façon tiramisu)",
+      "type": "sucré",
+      "categorie_pdf": "Desserts frais et crèmes",
+      "page_pdf": 702,
+      "situation": "chrono",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 0.6,
+      "temps_minutes": 15,
+      "preparation_minutes": 15,
+      "cuisson_minutes": null,
+      "personnes_base": 1,
+      "portions_pdf": "1",
+      "batch": "oui",
+      "saison": "toute l’année",
+      "allergenes": [
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "100 ml de lait végétal",
+          "quantite": 100,
+          "unite": "ml",
+          "nom": "lait végétal",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "40 ml de café (ou déca)",
+          "quantite": 40,
+          "unite": "ml",
+          "nom": "café (ou déca)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "15 g de sucrant au choix",
+          "quantite": 15,
+          "unite": "g",
+          "nom": "sucrant au choix",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "15 g de graines de chia",
+          "quantite": 15,
+          "unite": "g",
+          "nom": "graines de chia",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "1 Weetabix",
+          "quantite": 1,
+          "unite": "",
+          "nom": "weetabix",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "Cacao en poudre",
+          "quantite": null,
+          "unite": "",
+          "nom": "Cacao en poudre",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Mélanger les graines de chia et le lait pendant 5 minutes, puis réfrigérer 1 h",
+        "Ensuite, ajouter le sucrant dans le pudding et mélanger",
+        "Diviser le pudding en deux portions, une de 1/4 et une de 3/4 dans deux récipients différents",
+        "Faire couler un café et le verser ainsi que le Weetabix dans la portion 1/4",
+        "Verser cette partie au fond d’une verrine puis recouvrir du pudding de chia nature (la portion 3/4)",
+        "Saupoudrer de cacao",
+        "Déguster immédiatement pour la collation ou garder pour plus tard"
+      ],
+      "viande_pdf": null,
+      "notes": "se conserve bien au frais",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "chiamisu-pudding-de-chia-facon-tiramisu.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 644,
+      "slug": "compote-puree-pomme-pruneaux",
+      "titre": "Compote (purée) pomme-pruneaux",
+      "type": "sucré",
+      "categorie_pdf": "Desserts frais et crèmes",
+      "page_pdf": 703,
+      "situation": "manches",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 0.6,
+      "temps_minutes": 40,
+      "preparation_minutes": 10,
+      "cuisson_minutes": 30,
+      "personnes_base": 4,
+      "portions_pdf": "4",
+      "batch": "non",
+      "saison": "automne",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "12 pruneaux",
+          "quantite": 12,
+          "unite": "",
+          "nom": "pruneaux",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "6 pommes",
+          "quantite": 6,
+          "unite": "",
+          "nom": "pommes",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "1 sachet de thé Earl Grey (à la bergamote)",
+          "quantite": 1,
+          "unite": "sachet",
+          "nom": "thé Earl Grey (à la bergamote)",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "25 cl d’eau bouillante",
+          "quantite": 250,
+          "unite": "ml",
+          "nom": "eau bouillante",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "cannelle",
+          "quantite": null,
+          "unite": "",
+          "nom": "cannelle",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Éplucher les pommes, et les couper en morceaux.",
+        "Dénoyauter les pruneaux, et les couper en 3.",
+        "Faire infuser le thé pendant 3 min dans l’eau bouillante.",
+        "Verser les pommes et les pruneaux dans une casserole, ajouter un peu de thé, et mettre cuire à feu moyen pendant 10 min.",
+        "Remuer régulièrement, en mouillant avec le thé petit à petit.",
+        "Pour les 20 min restantes, saupoudrer le mélange de fruits avec la cannelle, remuer à nouveau, et baisser le feu pour laisser la compote se finir, en vérifiant régulièrement qu’elle n’attache pas."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "compote-puree-pomme-pruneaux.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 688,
+      "slug": "barres-de-cereales-aux-galettes-de-riz",
+      "titre": "Barres de céréales aux galettes de riz",
+      "type": "sucré",
+      "categorie_pdf": "Biscuits et petites douceurs",
+      "page_pdf": 751,
+      "situation": "chrono",
+      "regime": "végétarien",
+      "contient_porc": false,
+      "budget_portion": 1,
+      "temps_minutes": 10,
+      "preparation_minutes": 10,
+      "cuisson_minutes": null,
+      "personnes_base": 5,
+      "portions_pdf": "5",
+      "batch": "oui",
+      "saison": "toute l’année",
+      "allergenes": [
+        "arachides",
+        "lait"
+      ],
+      "ingredients": [
+        {
+          "texte": "5 galettes de riz",
+          "quantite": 5,
+          "unite": "",
+          "nom": "galettes de riz",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "2 ou 3 càc de beurre de cacahuètes",
+          "quantite": null,
+          "unite": "càc",
+          "nom": "beurre de cacahuètes",
+          "rayon": "Crèmerie, œufs"
+        },
+        {
+          "texte": "1 poignée de fruits séchés",
+          "quantite": 1,
+          "unite": "poignée",
+          "nom": "fruits séchés",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "40/50 g d’oléagineux",
+          "quantite": null,
+          "unite": "g",
+          "nom": "oléagineux",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "chocolat noir (optionnel)",
+          "quantite": null,
+          "unite": "",
+          "nom": "chocolat noir (optionnel)",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Écraser (réduire en miettes) les galettes de riz",
+        "Ajouter le beurre de cacahuètes et mélanger jusqu’à l’obtention d’une pâte un peu collante",
+        "Ajouter les fruits séchés et les oléagineux",
+        "Placer le tout dans un plat rectangulaire antiadhésif et étaler à l’aide d’une spatule afin de bien aplatir le tout",
+        "facultatif - faire fondre le chocolat et recouvrir le gâteau",
+        "Mettre au congélateur pendant 4 heures",
+        "Démouler et couper des petites barres de céréales"
+      ],
+      "viande_pdf": null,
+      "notes": "végan ; à garnir selon la saison et les envies ! ; se conserve au congélateur",
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "barres-de-cereales-aux-galettes-de-riz.webp",
+      "a_verifier": [
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    },
+    {
+      "id": 690,
+      "slug": "biscuits-choco-coco-sans-cuisson",
+      "titre": "Biscuits choco-coco sans cuisson",
+      "type": "sucré",
+      "categorie_pdf": "Biscuits et petites douceurs",
+      "page_pdf": 753,
+      "situation": "chrono",
+      "regime": "végan",
+      "contient_porc": false,
+      "budget_portion": 1,
+      "temps_minutes": 15,
+      "preparation_minutes": 15,
+      "cuisson_minutes": null,
+      "personnes_base": 6,
+      "portions_pdf": "6",
+      "batch": "oui",
+      "saison": "automne",
+      "allergenes": [],
+      "ingredients": [
+        {
+          "texte": "80 g de noix de coco râpée",
+          "quantite": 80,
+          "unite": "g",
+          "nom": "noix de coco râpée",
+          "rayon": "Épicerie"
+        },
+        {
+          "texte": "60 g de compote de pommes",
+          "quantite": 60,
+          "unite": "g",
+          "nom": "compote de pommes",
+          "rayon": "Fruits"
+        },
+        {
+          "texte": "80 g de chocolat noir",
+          "quantite": 80,
+          "unite": "g",
+          "nom": "chocolat noir",
+          "rayon": "Épicerie"
+        }
+      ],
+      "etapes": [
+        "Faire fondre le chocolat.",
+        "Dans un récipient mélanger la noix de coco, la compote et le chocolat fondu.",
+        "Mettre une feuille de papier cuisson sur une plaque ou une grande assiette (elle doit pouvoir être mise au réfrigérateur)",
+        "Mettre une grosse cuillère à soupe dans l’emporte-pièce (ici 8 cm, mais on peut les faire plus petits) et lisser la surface avec une petite cuillère.",
+        "Retirer l’emporte-pièce et continuer avec le reste de la préparation.",
+        "Mettre au réfrigérateur pendant 40 minutes pour que le chocolat durcisse.",
+        "Conserver les biscuits dans une boîte au réfrigérateur."
+      ],
+      "viande_pdf": null,
+      "notes": null,
+      "version_sans_viande": null,
+      "gratuit": "oui",
+      "image": "biscuits-choco-coco-sans-cuisson.webp",
+      "a_verifier": [
+        "batch",
+        "situation",
+        "budget_portion",
+        "saison",
+        "allergenes"
+      ]
+    }
+  ]
+}
