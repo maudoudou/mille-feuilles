@@ -3,3 +3,7 @@ recettes-membres.json
 a-verifier.csv
 photos-a-faire.csv
 email/
+sortie-classeur/
+.venv-classeur/
+*.pdf
+intercalaires/

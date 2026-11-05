@@ -44,6 +44,9 @@ Modifiez `data/recettes.json` (ou ajoutez une photo) et poussez sur `main` : l'a
 Le script crée `recettes/<slug>/` pour chaque recette `"gratuit": "oui"`, la liste de `recettes.html`, les exemples de l'accueil et `sitemap.xml`. Ne modifiez pas ces contenus à la main. À la main, si besoin : `python3 scripts/generer_recettes.py`.
 Champ facultatif : `"intro": "Votre texte."` remplace l'introduction automatique d'une recette.
 
+## Le classeur PDF
+`python3 scripts/generer_classeur.py` produit `sortie-classeur/Mille-Feuilles-classeur.pdf` et `rapport.txt` à partir de `data/recettes.json` et `recettes-membres.json`. Le premier lancement installe les outils dans `.venv-classeur/`. Facultatif, à la racine : `couverture.pdf`, et `intercalaires/<cle>.pdf` (chrono, frigo, base, manches, recoit, reconfort, budget). Tous ces fichiers sont ignorés par Git.
+
 ## Palette
 - Pot au Lait #F8F5F4 : fond. Texte Encre toutes tailles.
 - Encre #534741 : texte, pied de page, intercalaire « Petit budget » (texte Pot au Lait).
